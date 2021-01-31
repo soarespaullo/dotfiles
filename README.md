@@ -27,4 +27,4 @@ Configuração do monitor | [ARandR](https://christian.amsuess.com/tools/arandr/
 
 # Desktop
 
-![screenshot](/imagens/screenshot-01.png)
+![screenshot](/screenshots/screenshot01.png)
