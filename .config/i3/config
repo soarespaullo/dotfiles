@@ -1,0 +1,490 @@
+# Crédits: Franklin Souza
+# Telegram: @FranklinTech
+# Dúvidas: https://i3wm.org/docs/userguide.html
+
+# ██╗██████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
+# ██║╚════██╗    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
+# ██║ █████╔╝    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+# ██║ ╚═══██╗    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+# ██║██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+# ╚═╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
+                                                              
+####################################################################
+#                       P R I N C I P A L                          #
+####################################################################
+
+# Mod4 = Windows
+# Mod1 = Alt
+
+# $win = Tecla Windows
+
+set $win Mod4
+#set $alt Mod1
+
+####################################################################
+#                           FONTS                                  #
+####################################################################
+
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font pango:DejaVu Sans Mono 10
+#font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
+#font pango:Terminus 11px
+font pango:monospace 8
+
+#font pango:FiraCode 8
+#font pango:Fantasque Sans Mono 8
+#font pango:Bahamas 8
+#font pango:Poppins 8
+#font pango:DejaVu Sans Mono 8
+
+####################################################################
+#                         FLOATING MODE                            #
+####################################################################
+
+floating_modifier $win
+focus_on_window_activation focus
+#smart|urgent|focus|none
+#focus_on_window_activation smart|urgent|focus|none
+
+####################################################################
+#                           B O R D A S                            #
+####################################################################
+
+default_border pixel 2
+default_floating_border pixel 2
+new_window pixel 2
+#smart_borders on
+
+#hide_edge_borders smart
+#hide_edge_borders both
+
+# Bordas Arrendondadas
+# OBS: Tem que ter o pacote:
+# https://aur.archlinux.org/packages/i3-gaps-rounded-git
+#border_radius 5
+
+####################################################################
+#                          C O R E S                               #
+####################################################################
+
+# classe                borda   fundo   texto   ind.    borda filho
+client.focused          #458588 #458588 #458588 #458588   #458588
+client.focused_inactive #ffffff #ffffff #ffffff #ff5555   #ff5555
+client.unfocused        #ffffff #ff5555 #ffffff #ffffff   #ff5555
+client.urgent           #ff5555 #ff5555 #ff5555 #ff5555   #ff5555
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+####################################################################
+#                          A T A L H O S                           #
+####################################################################
+
+# Mover para scratchpad/mostra scratchpad
+bindsym $win+o move scratchpad
+bindsym $win+l scratchpad show
+
+# Upar imagens
+#bindsym $win+i exec --no-startup-id firefox https://imgur.com/upload
+bindsym $win+i exec --no-startup-id firefox https://postimages.org/
+
+# Teclado
+bindsym $win+u exec --no-startup-id setxkbmap us
+bindsym $win+b exec --no-startup-id setxkbmap br
+
+# Flameshot config
+bindsym $win+Shift+f exec --no-startup-id flameshot config
+
+# Matar Compositor
+bindsym $win+F4 exec --no-startup-id killall picom
+
+# Iniciar Compositor
+bindsym $win+F5 exec --no-startup-id picom -c
+
+# Sair do i3wm
+bindsym $win+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
+
+# Bloquear tela
+#bindsym $win+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
+
+# Iniciar Gravação de Tela (SimpleScreenRecorder)
+bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
+bindsym $win+Shift+s exec --no-startup-id killall simplescreenrecorder # -> Mata o ssr
+
+# Iniciar terminal
+bindsym $win+Return exec --no-startup-id termite
+
+# Iniciar terminal
+#bindsym $win+Return exec --no-startup-id kitty
+
+# Iniciar terminal
+#bindsym $win+Return exec --no-startup-id i3-sensible-terminal
+
+# Fechar janela focada
+bindsym $win+Shift+q kill
+
+####################################################################
+#                          FEATURES                                #
+####################################################################
+
+# Desenho de marcas na decoração da janela
+# show_marks yes
+
+# Atraso na redefinição da dica de urgência na alteração da área de trabalho
+# force_display_urgency_hint 500 ms
+
+# Alternância automática ao alternar para o espaço de trabalho atual
+# workspace_auto_back_and_forth no
+
+# Opções
+focus_follows_mouse yes
+mouse_warping none
+focus_wrapping yes
+
+# Alternar entre as janelas
+bindsym $win+Left focus left
+bindsym $win+Down focus down
+bindsym $win+Up focus up
+bindsym $win+Right focus right
+
+# Aternar Orientação da janela (Vertical e Horizontal)
+bindsym $win+semicolon  split toggle
+
+# Mover janela focada
+bindsym $win+Shift+Left move left
+bindsym $win+Shift+Down move down
+bindsym $win+Shift+Up move up
+bindsym $win+Shift+Right move right
+
+# Entrar em modo tela cheia
+bindsym $win+f fullscreen toggle
+
+# Mudar o layout do container (stacked, tabbed, toggle split)
+bindsym $win+s layout stacking
+bindsym $win+w layout tabbed
+bindsym $win+e layout toggle split
+
+# Mover a janela para o centro da tela
+bindsym $win+Shift+c move position center
+
+# Tela maximizada ou floating
+bindsym $win+Shift+space floating toggle
+
+# Restartar i3
+bindsym $win+Shift+r restart
+
+# Menu
+# bindsym $win+d exec --no-startup-id rofi -show drun -theme ps.rasi -icon-theme "Papirus" -show-icons 
+bindsym $win+d exec --no-startup-id rofi -show drun -theme "~/.config/rofi/arch.rasi"
+
+# Screenshot
+bindsym Print exec --no-startup-id flameshot gui
+
+####################################################################
+#                              WORKSPACE                           #
+####################################################################
+
+set $ws1 " 1:  "
+set $ws2 " 2:  "
+set $ws3 " 3:  "
+set $ws4 " 4:   "
+set $ws5 " 5:  "
+set $ws6 " 6:  "
+set $ws7 " 7: 金 "
+set $ws8 " 8:   "
+set $ws9 " 9:   "
+set $ws10 " 10:  "
+
+#set $ws1 "1"
+#set $ws2 "2"
+#set $ws3 "3"
+#set $ws4 "4"
+#set $ws5 "5"
+#set $ws6 "6"
+#set $ws7 "7"
+#set $ws8 "8"
+#set $ws9 "9"
+#set $ws10 "10"
+
+# Navegar pelas workspaces
+bindsym $win+1 workspace number $ws1
+bindsym $win+2 workspace number $ws2
+bindsym $win+3 workspace number $ws3
+bindsym $win+4 workspace number $ws4
+bindsym $win+5 workspace number $ws5
+bindsym $win+6 workspace number $ws6
+bindsym $win+7 workspace number $ws7
+bindsym $win+8 workspace number $ws8
+bindsym $win+9 workspace number $ws9
+bindsym $win+0 workspace number $ws10
+
+# Mover janela focada para ws escolhida
+bindsym $win+Shift+1 move container to workspace number $ws1
+bindsym $win+Shift+2 move container to workspace number $ws2
+bindsym $win+Shift+3 move container to workspace number $ws3
+bindsym $win+Shift+4 move container to workspace number $ws4
+bindsym $win+Shift+5 move container to workspace number $ws5
+bindsym $win+Shift+6 move container to workspace number $ws6
+bindsym $win+Shift+7 move container to workspace number $ws7
+bindsym $win+Shift+8 move container to workspace number $ws8
+bindsym $win+Shift+9 move container to workspace number $ws9
+bindsym $win+Shift+0 move container to workspace number $ws10
+
+####################################################################
+#                    APLICATIVOS ABERTOS NA WS                     #
+####################################################################
+
+# Ativar o floating e mover a janela para o centro:[..., floating enable, move position center
+
+ 
+# Browser - Firefox ws=1
+#for_window [class="(firefox)"] move to workspace $ws1 focus
+assign [class="(firefox)"] $ws1
+
+# Browser - Google Chrome ws=1
+for_window [class="(Google)"] move to workspace $ws1 focus
+
+# Terminal ws=2
+#for_window [class="(kitty)"] move to workspace $ws2
+
+# Terminal ws=2
+for_window [class="(Termite)"] move to workspace $ws2 focus
+
+# Telegram ws=3
+for_window [class="(Telegram)"] move to workspace $ws3 focus
+
+# Thunar ws=4
+for_window [class="Thunar"] move to workspace $ws4 focus
+
+# Deezer ws=5
+#for_window [class="(Deezer)"] move to workspace $ws5
+
+# Spotify ws=5
+#for_window [class="(Spotify)"] move to workspace $ws5
+
+# Freezer ws=5
+for_window [class="(freezer)"] move to workspace $ws5
+
+# Gimp ws=6
+for_window [class="(Gimp)"] move to workspace $ws6 focus
+
+# Inkscape ws=6
+for_window [class="(Inkscape)"] move to workspace $ws6
+
+# MPV ws=7
+for_window [class="(mpv)"] move to workspace $ws7 focus
+
+# Discord ws=8
+for_window [class="(discord)"] move to workspace $ws8
+
+# VirtualBox ws=8
+for_window [class="(VirtualBox)"] move to workspace $ws8 focus
+
+# Qbittorrent ws=9
+for_window [class="(qBittorrent)"] move to workspace $ws9 focus
+
+# Motrix ws=9
+for_window [class="(Motrix)"] move to workspace $ws9
+
+# Steam (Loja de games)
+for_window [class="(Steam)"] move to workspace $ws10 floating enable, move position center
+
+# Lutris ws=10
+#for_window [class="(Lutris)"] move to workspace $ws10
+
+# KeePassXC ws=10
+#for_window [class="(KeePassXC)"] move to workspace $ws10
+
+
+####################################################################
+#                           R E G R A S                            #
+####################################################################
+
+# Ativar o floating e mover a janela para o centro:[..., floating enable, move position center
+
+
+# Kitty (Terminal)
+for_window [class="(kitty)"]floating enable, move position center
+
+# Telegram (Desktop)
+for_window [class="(Telegram)"]floating enable, move position center
+
+# MPV (Player de música/Vídeo)
+for_window [class="(mpv)"]floating enable, move position center
+
+# Gerenciador de Arquivos
+for_window [class="Thunar"] move position center
+
+# Viewnior (Gerenciador de imagens)
+for_window [class="(Viewnior)"]floating enable
+
+# Gucharmap (Mapa de caracteres)
+for_window [class="(Gucharmap)"]floating enable
+
+# Qbittorrent (Gerenciador torrent)
+for_window [class="(qBittorrent)"]floating enable
+
+# Galculator (Calculadora)
+for_window [class="(Galculator)"]floating enable, move position center
+
+# Pavucontrol (Gerenciador de aúdio)
+for_window [class="(Pavucontrol)"]floating enable, move position center
+
+# LxAppearance (Gerenciador de Temas)
+for_window [class="(Lxappearance)"]floating enable, move position center
+
+# Discord (In-Game Chat)
+for_window [class="(discord)"]floating enable, move position center
+
+# SimpleScreenRecorder (ScreenCast)
+for_window [class="(SimpleScreenRecorder)"]floating enable, move position center
+
+# Bluetooth (Bluetooth)
+for_window [class="(Blueman-manager)"]floating enable
+
+# Steam (Loja de games)
+for_window [class="(Steam)"]floating enable, move position center
+
+# Lutris (Gerenciador de games)
+for_window [class="(Lutris)"]floating enable, move position center
+
+# VirtualBox (Maquina Virtual)
+for_window [class="(VirtualBox)"]floating enable, move position center
+
+# Evince (Leitor de PDF)
+for_window [class="(Evince)"]floating enable, move position center
+
+# Google (Browser)
+#for_window [class="(google)"]move position center
+
+# KeePassXC (Gerenciador de senhas)
+for_window [class="(KeePassXC)"]floating enable
+
+# Flameshot (PrintScreen)
+for_window [class="(flameshot)"]floating enable, move position center
+
+# Nitrogen
+for_window [class="(Nitrogen)"]floating enable, move position center 
+
+
+####################################################################
+#                           R E S I Z E                            #
+####################################################################
+
+# redimensionar janela (você também pode usar o mouse para isso)
+
+mode "resize" {
+        # Essas ligações são acionadas assim que você entra no modo de redimensionamento
+
+        # Pressionar à esquerda Rwill diminuirá a largura da janela.
+        # Pressionar à direita aumentará a largura da janela.
+        # Pressionar para cima diminuirá a altura da janela.
+        # Pressionar para baixo aumentará a altura da janela.
+
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # De volta ao normal: Enter ou Escape ou $ mod + r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $win+r mode "default"
+}
+ bindsym $win+r mode "resize"
+
+####################################################################
+#                           G A P S                                #
+####################################################################
+
+gaps inner 10
+gaps outer 0
+#smart_gaps on
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
+set $mode_gaps_inner Inner Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
+bindsym $win+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym d gaps inner current set $gaps_inner_default, mode "default"
+        bindsym Shift+d gaps inner all set $gaps_inner_default, mode "default"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym d gaps outer current set $gaps_outer_default, mode "default"
+        bindsym Shift+d gaps outer all set $gaps_outer_default, mode "default"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+####################################################################
+#                         CONTROLE DO AÚDIO                        #
+####################################################################
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+
+####################################################################
+#                         INICIAR COM O I3                         #
+####################################################################
+
+# i3Lock
+#exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
+
+# Polybar
+exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
+
+# Compositor
+#exec --no-startup-id picom --config ~/.config/picom/picom.conf
+
+# Wallpapers
+exec_always --no-startup-id nitrogen --restore
+
+# Flameshot
+exec --no-startup-id flameshot
+
+# Layout do teclado
+exec --no-startup-id setxkbmap br,us
+
+# Bluetooth
+#exec --no-startup-id blueman-applet
+
+# Volumeicon
+#exec --no-startup-id volumeicon # Tem que instalar o pacote, sudo pacman -S volumeicon
+
+# Compositor
+#exec --no-startup-id picom --config ~/.config/picom/picom.conf
+
+
