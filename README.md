@@ -3,6 +3,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/k4k4rot0/config?label=contribuidores)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
+![screenshot](/screenshots/dotfiles.png)
 
 # _Minhas configurações_:
 
