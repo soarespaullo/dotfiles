@@ -1,5 +1,4 @@
-# Crédits: Franklin Souza
-# Telegram: @FranklinTech
+# Crédits: Franklin SouzaQ
 # Dúvidas: https://i3wm.org/docs/userguide.html
 
 # ██╗██████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
@@ -467,9 +466,6 @@ exec --no-startup-id setxkbmap br,us
 
 # Bluetooth
 #exec --no-startup-id blueman-applet
-
-# Volumeicon
-#exec --no-startup-id volumeicon # Tem que instalar o pacote, sudo pacman -S volumeicon
 
 # Compositor
 #exec --no-startup-id picom --config ~/.config/picom/picom.conf
