@@ -58,11 +58,6 @@ new_window pixel 2
 #hide_edge_borders smart
 #hide_edge_borders both
 
-# Bordas Arrendondadas
-# OBS: Tem que ter o pacote:
-# https://aur.archlinux.org/packages/i3-gaps-rounded-git
-#border_radius 5
-
 ####################################################################
 #                          C O R E S                               #
 ####################################################################
@@ -82,10 +77,6 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 bindsym $win+o move scratchpad
 bindsym $win+l scratchpad show
 
-# Upar imagens
-#bindsym $win+i exec --no-startup-id firefox https://imgur.com/upload
-bindsym $win+i exec --no-startup-id firefox https://postimages.org/
-
 # Teclado
 bindsym $win+u exec --no-startup-id setxkbmap us
 bindsym $win+b exec --no-startup-id setxkbmap br
@@ -103,7 +94,7 @@ bindsym $win+F5 exec --no-startup-id picom -c
 bindsym $win+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
 
 # Bloquear tela
-#bindsym $win+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
+bindsym $win+x exec --no-startup-id $HOME/.local/bin/lockscreen
 
 # Iniciar Gravação de Tela (SimpleScreenRecorder)
 bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
@@ -172,7 +163,6 @@ bindsym $win+Shift+space floating toggle
 bindsym $win+Shift+r restart
 
 # Menu
-# bindsym $win+d exec --no-startup-id rofi -show drun -theme ps.rasi -icon-theme "Papirus" -show-icons 
 bindsym $win+d exec --no-startup-id rofi -show drun -theme "~/.config/rofi/arch.rasi"
 
 # Screenshot
@@ -459,9 +449,6 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 ####################################################################
 #                         INICIAR COM O I3                         #
 ####################################################################
-
-# i3Lock
-#exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
