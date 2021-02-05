@@ -1,13 +1,13 @@
-# Crédits: Franklin SouzaQ
+# Crédits: Franklin Souza
 # Dúvidas: https://i3wm.org/docs/userguide.html
 
-# ██╗██████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
-# ██║╚════██╗    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
+# ██╗██████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗
+# ██║╚════██╗    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝
 # ██║ █████╔╝    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
 # ██║ ╚═══██╗    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
 # ██║██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
-# ╚═╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
-                                                              
+# ╚═╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
+
 ####################################################################
 #                       P R I N C I P A L                          #
 ####################################################################
@@ -103,10 +103,10 @@ bindsym $win+Shift+s exec --no-startup-id killall simplescreenrecorder # -> Mata
 bindsym $win+Return exec --no-startup-id termite
 
 # Iniciar terminal
-#bindsym $win+Return exec --no-startup-id kitty
+# bindsym $win+Return exec --no-startup-id kitty
 
 # Iniciar terminal
-#bindsym $win+Return exec --no-startup-id i3-sensible-terminal
+# bindsym $win+Return exec --no-startup-id i3-sensible-terminal
 
 # Fechar janela focada
 bindsym $win+Shift+q kill
@@ -223,7 +223,7 @@ bindsym $win+Shift+0 move container to workspace number $ws10
 
 # Ativar o floating e mover a janela para o centro:[..., floating enable, move position center
 
- 
+
 # Browser - Firefox ws=1
 #for_window [class="(firefox)"] move to workspace $ws1 focus
 assign [class="(firefox)"] $ws1
@@ -276,12 +276,8 @@ for_window [class="(Motrix)"] move to workspace $ws9
 # Steam (Loja de games)
 for_window [class="(Steam)"] move to workspace $ws10 floating enable, move position center
 
-# Lutris ws=10
-#for_window [class="(Lutris)"] move to workspace $ws10
-
 # KeePassXC ws=10
 #for_window [class="(KeePassXC)"] move to workspace $ws10
-
 
 ####################################################################
 #                           R E G R A S                            #
@@ -332,9 +328,6 @@ for_window [class="(Blueman-manager)"]floating enable
 # Steam (Loja de games)
 for_window [class="(Steam)"]floating enable, move position center
 
-# Lutris (Gerenciador de games)
-for_window [class="(Lutris)"]floating enable, move position center
-
 # VirtualBox (Maquina Virtual)
 for_window [class="(VirtualBox)"]floating enable, move position center
 
@@ -351,8 +344,7 @@ for_window [class="(KeePassXC)"]floating enable
 for_window [class="(flameshot)"]floating enable, move position center
 
 # Nitrogen
-for_window [class="(Nitrogen)"]floating enable, move position center 
-
+for_window [class="(Nitrogen)"]floating enable, move position center
 
 ####################################################################
 #                           R E S I Z E                            #
@@ -469,5 +461,3 @@ exec --no-startup-id setxkbmap br,us
 
 # Compositor
 #exec --no-startup-id picom --config ~/.config/picom/picom.conf
-
-

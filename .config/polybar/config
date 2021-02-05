@@ -84,9 +84,9 @@ separator = |
 ;		       MÓDULOS BAR TOP                     ;
 ;==========================================================;
 
-modules-left = linux kernel mpd player-moc
+modules-left = linux kernel mpd 
 modules-center = xwindow 
-modules-right = pulse pacman calendar date pacman-updates aur-updates netdown netup powermenu
+modules-right = pulse pacman calendar date pacman-updates aur-updates powermenu
 
 ;==========================================================;
 ;			TRAY BAR TOP                       ;
@@ -693,7 +693,7 @@ margin-bottom = 5
 
 [module/uptime]
 type = custom/script
-#exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
+;exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
 exec = uptime --pretty | sed 's/up //' | sed 's/\ years\?,/y/' | sed 's/\ weeks\?,/w/' | sed 's/\ days\?,/d/' | sed 's/\ hours\?,\?/h/' | sed 's/\ minutes\?/m/'
 interval = 100
 label = Uptime : %output%
@@ -719,14 +719,16 @@ format-background = ${colors.background}
 format-prefix = "  "
 ;format-prefix-foreground = #FFBB00
 format-underline = #FFBB00
-
+;click-left = kitty -e sudo pacman -Syu
+ 
 ;==========================================================;
 ;			 AUR - UPDATES			   ;
 ;==========================================================;
 
 [module/aur-updates]
 type = custom/script
-exec = yay -u | wc -l
+;exec = yay -u | wc -l
+exec = yay -Qum | wc -l
 interval = 100
 label = Aur: %output%
 format-foreground = ${colors.foreground}
@@ -816,7 +818,7 @@ type = custom/text
 content = "%{F${colors.foreground}  %{F-} Menu"
 content-foreground = ${colors.foreground}
 ;content-underline = ${colors.foreground}
-click-left = rofi -show drun -theme ~/.config/rofi/drun.rasi &
+click-left = rofi -show drun -theme ~/.config/rofi/arch.rasi &
 
 ;==========================================================;
 ;			 MÓDULO FIREFOX		           ;
