@@ -28,7 +28,6 @@ secondary = #e60053
 
 alert = #bd2c40
 
-
 ;==========================================================;
 ;		          BARRA TOP                        ;
 ;==========================================================;
@@ -84,7 +83,7 @@ separator = |
 ;		       MÓDULOS BAR TOP                     ;
 ;==========================================================;
 
-modules-left = linux kernel mpd 
+modules-left = linux kernel mpd player-moc
 modules-center = xwindow 
 modules-right = pulse pacman calendar date pacman-updates aur-updates powermenu
 
@@ -606,6 +605,10 @@ format-underline = #ff0000
 
 [module/temperature]
 type = internal/temperature
+interval = 4
+;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 thermal-zone = 0
 warn-temperature = 60
 
@@ -775,9 +778,11 @@ label-disconnected-foreground = ${colors.foreground}
 
 ; NETSPEED DOWN
 
+; ip link , para pegar o nome da placa de rede.
+
 [module/netdown]
 type = internal/network
-interface = enp0s3
+interface = enp0s31f6
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = "  "
@@ -787,9 +792,11 @@ format-connected-prefix-foreground = #fefefe
 
 ; NETSPEED UP
 
+; ip link , para pegar o nome da placa de rede.
+
 [module/netup]
 type = internal/network
-interface = enp0s3
+interface = enp0s31f6
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
@@ -1009,5 +1016,4 @@ ramp-signal-2-foreground = #55ff00
 ;ramp-signal-4-foreground = #BADE72
 ;ramp-signal-5 = 
 ;ramp-signal-5-foreground = #96DE72
-
 
