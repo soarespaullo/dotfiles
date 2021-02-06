@@ -25,6 +25,7 @@ Barra de status | [Polybar](https://github.com/polybar/polybar)
 Visualizador de imagens | [Viewnior](http://siyanpanayotov.com/project/viewnior)
 Daemon de Notificação | [Dunst](https://github.com/dunst-project/dunst)
 Configuração do monitor | [ARandR](https://christian.amsuess.com/tools/arandr/)
+Tela de bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
 
 # Desktop
 
