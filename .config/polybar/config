@@ -83,7 +83,7 @@ separator = |
 ;		       MÓDULOS BAR TOP                     ;
 ;==========================================================;
 
-modules-left = linux kernel mpd player-moc
+modules-left = linux kernel mpd player-moc 
 modules-center = xwindow 
 modules-right = pulse pacman calendar date pacman-updates aur-updates powermenu
 
@@ -445,7 +445,7 @@ format-underline = #98971a
 [module/mpd]
 type = internal/mpd
 ;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-format-online = <label-song>   <bar-progress>   <label-time>  <icon-stop>  <toggle>
+format-online = <label-song> <bar-progress> <label-time> <icon-stop> <toggle>
 icon-prev = 
 icon-stop = 
 icon-play = 
@@ -534,14 +534,8 @@ label = %percentage_used%%
 type = internal/date
 interval = 1
 
-;date = "%a %d/%m/%y"
-;date-alt = " %a %d/%m/%y"
-
-time = %I:%M:%S %p
-;time = %I:%M %p
-;time = %H:%M
-;time = %H: %M: %S
-;time-alt = %H:%M:%S
+;time = %I:%M:%S %p
+time = %H:%M
 
 format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
@@ -715,7 +709,7 @@ format-underline = #C15D3E
 type = custom/script
 ;exec = pacman -Qu | wc -l
 exec = checkupdates | wc -l
-interval = 20
+interval = 10
 label = Repo: %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -732,7 +726,7 @@ format-underline = #FFBB00
 type = custom/script
 ;exec = yay -u | wc -l
 exec = yay -Qum | wc -l
-interval = 20
+interval = 10
 label = Aur: %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
