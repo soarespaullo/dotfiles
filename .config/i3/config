@@ -1,13 +1,14 @@
 ####################################################################
 # Dúvidas: https://i3wm.org/docs/userguide.html
-#
-# ██╗██████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
-# ██║╚════██╗    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
-# ██║ █████╔╝    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
-# ██║ ╚═══██╗    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
-# ██║██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
-# ╚═╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
-#                                                              
+#          _ ____                     __ _       
+#         (_)___ \                   / _(_)      
+#          _  __) |   ___ ___  _ __ | |_ _  __ _ 
+#         | ||__ <   / __/ _ \| '_ \|  _| |/ _` |
+#         | |___) | | (_| (_) | | | | | | | (_| |
+#         |_|____/   \___\___/|_| |_|_| |_|\__, |
+#                                           __/ |
+#                                          |___/ 
+# By: @k4k4rot0                                                             
 ####################################################################
 #                       P R I N C I P A L                          #
 ####################################################################
@@ -63,11 +64,6 @@ new_window pixel 2
 
 #hide_edge_borders smart
 #hide_edge_borders both
-
-# Bordas Arrendondadas
-# OBS: Tem que ter o pacote:
-# https://aur.archlinux.org/packages/i3-gaps-rounded-git
-#border_radius 5
 
 
 ####################################################################
@@ -278,7 +274,7 @@ for_window [class="(mpv)"] move to workspace $ws7 focus
 # Discord (Aplicativo de voz Sobre IP) ws=8
 for_window [class="(discord)"] move to workspace $ws8 focus
 
-# WoeUSB (Cria PenDrive de Boot) ws=8
+# WoeUSB (Crie USB inicializáveis ​​do Windows a Partir do Linux) ws=8
 for_window [class="(Woeusb)"] move to workspace $ws8 focus
 
 # VirtualBox (Máquina Virtual) ws=8
@@ -307,13 +303,13 @@ for_window [class="(kitty)"]floating enable, move position center
 # Telegram (Desktop)
 for_window [class="(Telegram)"]floating enable, move position center
 
-# MPV (Player de música/Vídeo)
+# MPV (Player de Música/Vídeo)
 for_window [class="(mpv)"]floating enable, move position center
 
-# Gerenciador de Arquivos
+# Thunar (Gerenciador de Arquivos)
 for_window [class="Thunar"] move position center
 
-# Viewnior (Gerenciador de imagens)
+# Viewnior (Gerenciador de Imagens)
 for_window [class="(Viewnior)"]floating enable
 
 # Gucharmap (Mapa de caracteres)
@@ -325,16 +321,16 @@ for_window [class="(qBittorrent)"]floating enable
 # Galculator (Calculadora)
 for_window [class="(Galculator)"]floating enable, move position center
 
-# Pavucontrol (Gerenciador de aúdio)
+# Pavucontrol (Gerenciador de Aúdio)
 for_window [class="(Pavucontrol)"]floating enable, move position center
 
 # LxAppearance (Gerenciador de Temas)
 for_window [class="(Lxappearance)"]floating enable, move position center
 
-# Discord (In-Game Chat)
+# Discord (Aplicativo de voz Sobre IP)
 for_window [class="(discord)"]floating enable, move position center
 
-# WoeUSB (Program de Boot)
+# WoeUSB (Crie USB inicializáveis ​​do Windows a Partir do Linux))
 for_window [class="(Woeusb)"]floating enable, move position center
 
 # SimpleScreenRecorder (ScreenCast)
@@ -490,3 +486,10 @@ exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Dunst - Notificação
 exec --no-startup-id dunst
+
+
+####################################################################
+#                         	FIM                                #
+####################################################################
+
+
