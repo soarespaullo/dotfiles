@@ -20,12 +20,12 @@ Editor de Vídeo | [Kdenlive](https://kdenlive.org/en/)
 Editor de Fotos | [GIMP](https://www.gimp.org/) e [Krita](https://krita.org/en/)
 Editor de Texto | [Nano](https://www.nano-editor.org/) e [Vim](https://www.vim.org/)
 Desenvolvimento | [Atom](https://atom.io/)
-Lançador de programa | [Rofi](https://github.com/davatorium/rofi)
+Lançador de Programa | [Rofi](https://github.com/davatorium/rofi)
 Barra de status | [Polybar](https://github.com/polybar/polybar)
-Visualizador de imagens | [Viewnior](http://siyanpanayotov.com/project/viewnior)
+Visualizador de Imagens | [Viewnior](http://siyanpanayotov.com/project/viewnior)
 Daemon de Notificação | [Dunst](https://github.com/dunst-project/dunst)
-Configuração do monitor | [ARandR](https://christian.amsuess.com/tools/arandr/)
-Tela de bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
+Configuração do Monitor | [ARandR](https://christian.amsuess.com/tools/arandr/)
+Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
 
 # Desktop
 
