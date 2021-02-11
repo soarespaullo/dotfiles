@@ -12,33 +12,18 @@
     #   keyboard: siga a janela com o foco do teclado
     #   none: não siga nada
     #
-    # "keyboard" needs a window manager that exports the
-    # _NET_ACTIVE_WINDOW property.
-    # This should be the case for almost all modern window managers.
-    #
-    # Se esta opção for definida para mouse ou teclado,
-    # a opção do monitor será ignorada.
+    # Se esta opção for definida para mouse ou teclado, a opção do monitor será ignorada.
     follow = mouse
 
-    # The geometry of the window:
-    #   [{width}]x{height}[+/-{x}+/-{y}]
-    # The geometry of the message window.
-    # The height is measured in number of notifications everything else
-    # in pixels.  If the width is omitted but the height is given
-    # ("-geometry x2"), the message window expands over the whole screen
-    # (dmenu-like).  If width is 0, the window expands to the longest
-    # message displayed.  A positive x is measured from the left, a
-    # negative from the right side of the screen.  Y is measured from
-    # the top and down respectively.
-    # The width can be negative.  In this case the actual width is the
-    # screen width minus the width defined in within the geometry option.
+    # Geometria da Janela: [{width}] x {height} [+/- {x} +/- {y}]
     geometry = "0x0-20+40"
 
     # Mostra quantas mensagens estão ocultas no momento (por causa da geometria).
     indicate_hidden = yes
 
     # Reduza a janela se for menor que a largura. Será ignorado se a largura for 0.
-    shrink = no
+    # shrink = no
+    shrink = yes
 
     # A transparência da janela. Faixa: [0; 100].
     # Esta opção só funcionará se um gerenciador de janela de composição estiver presente
@@ -51,7 +36,7 @@
 
     # Desenhe uma linha de altura de pixel de "separator_height" entre duas notificações.
     # Defina como 0 para desativar.
-    separator_height = 8
+    separator_height = 2
 
     # Preenchimento entre texto e separador.
     padding = 8
@@ -61,18 +46,19 @@
 
     # Define a largura em pixels do quadro ao redor da janela de notificação.
     # Defina como 0 para desativar.
-    frame_width = 2
+    frame_width = 3
 
     # Define a cor do quadro ao redor da janela de notificação.
-    frame_color = "#fdb748"
+    # frame_color = "#fdb748"
+    frame_color = "191919"
 
-    # Defina uma cor para o separador.
-    # os valores possíveis são:
+    # Defina uma cor para o separador. os valores possíveis são;
     #  * auto: dunst tenta encontrar uma cor adequada ao fundo;
     #  * foreground: use a mesma cor do primeiro plano;
     #  * frame: use a mesma cor da moldura;
     #  * qualquer outra coisa será interpretada como uma cor X.
-    separator_color = auto
+    # separator_color = auto
+    separator_color = "#cdae9c"
 
     # Classifique as mensagens por urgência.
     sort = yes
@@ -127,12 +113,14 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Marcação é permitida
-    format = "<b>%s</b>\n%b"
+    # format = "<b>%s</b>\n%b"
+    format = "<b>%s </b>\n%b" 
 
 
     # Alinhamento do texto da mensagem.
     # Os valores possíveis são "left", "center" e "right". 
-    alignment = center
+    alignment = left
+    
 
     # Mostra a idade da mensagem se a mensagem for mais antiga do que "show_age_threshold"
     # segundos.
@@ -159,7 +147,8 @@
     hide_duplicate_count = true
 
     # Indicadores de exibição para URLs (U) e ações (A).
-    show_indicators = yes
+    # show_indicators = yes
+    show_indicators = no
 
     ##################################################
     #			 Icons    		     #
@@ -194,7 +183,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Navegador para abrir urls no menu de contexto.
-    browser = /usr/bin/firefox
+    browser = /usr/bin/firefox new-tab
 
     # Sempre execute scripts definidos por regras, mesmo se a notificação for suprimida.
     always_run_script = true
@@ -224,7 +213,8 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 3
+    # corner_radius = 3
+    corner_radius = 0
     
     ##################################################
     #		         Legacy       	             #
@@ -278,10 +268,7 @@
     # Feche todas as notificações.
     close_all = ctrl+shift+space
 
-    # Redisplay last message(s).
-    # On the US keyboard layout "grave" is normally above TAB and left
-    # of "1". Make sure this key actually exists on your keyboard layout,
-    # e.g. check output of 'xmodmap -pke'
+    # Reexibir a (s) última (s) mensagem (ns). No layout de teclado dos EUA. 
     history = ctrl+grave
 
     # Menu contextual.
@@ -290,26 +277,30 @@
 [urgency_low]
     # IMPORTANTE: as cores devem ser definidas entre aspas.
     # Caso contrário, o "#" e o seguinte seriam interpretados como um comentário.
-    background = "#2b2b2b"
-    foreground = "#ffffff"
+
+    background = "#2E3440"
+    foreground = "#D8DEE9"
+    frame_color = "#191919"
     timeout = 5
     # Ícone para notificações com baixa urgência, descomente para ativar.
     icon = ~/.config/dunst/normal.png
 
 [urgency_normal]
-    background = "#2b2b2b"
-    foreground = "#ffffff"
-    timeout = 5
+    background = "#2E3440"
+    foreground = "#D8DEE9"
+    frame_color = "#191919"
+    timeout = 6
     # Ícone para notificações com urgência normal, descomente para ativar.
     icon = ~/.config/dunst/normal.png
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
-    frame_color = "#ff0000"
-    timeout = 5
+    background = "#2E3440"
+    foreground = "#D8DEE9"
+    frame_color = "#191919"
+    timeout = 8
     # Ícone para notificações com urgência crítica, descomente para ativar.
     icon = ~/.config/dunst/critical.png
+
 
 # Cada seção que não seja uma das anteriores é interpretada como uma regra para
 # anular as configurações de certas mensagens.
@@ -423,17 +414,9 @@
 #    urgency = normal
 #
 #[stack-volumes]
-#    appname = "some_volume_notifiers"
-#    set_stack_tag = "volume"
+#   appname = "some_volume_notifiers"
+#   set_stack_tag = "volume"
 #
-[world-info]
-    appname = fancy
-    format = "<span font='30' weight='500'>%s</span><span font_desc='VictorMono Nerd Font italic 15' weight='470'>%b</span>"
-
-[song-info]
-    appname = mpdunst
-    format = "<span size='xx-large' font_desc='VictorMono Nerd Font italic 13' weight='500'>%s</span>\n%b"
 #
 # vim: ft=cfg
 #
-

@@ -106,7 +106,7 @@ bindsym $win+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja
 
 # Bloquear tela
 # bindsym $win+x exec --no-startup-id $HOME/.local/bin/lockscreen
-bindsym $win+x exec betterlockscreen -l blur -t "Digite a senha para desbloquear"
+bindsym $win+x exec betterlockscreen -l dim -t "Digite a senha para Desbloquear"
 
 # Iniciar Gravação de Tela (SimpleScreenRecorder)
 bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
@@ -319,7 +319,7 @@ for_window [class="(Gucharmap)"]floating enable
 for_window [class="(qBittorrent)"]floating enable
 
 # Galculator (Calculadora)
-for_window [class="(Galculator)"]floating enable, move position center
+for_window [class="(Galculator)"]floating enable, move position center 
 
 # Pavucontrol (Gerenciador de Aúdio)
 for_window [class="(Pavucontrol)"]floating enable, move position center
@@ -345,14 +345,11 @@ for_window [class="(Steam)"]floating enable, move position center
 # Lutris (Gerenciador de games)
 for_window [class="(Lutris)"]floating enable, move position center
 
-# VirtualBox (Maquina Virtual)
+# VirtualBox (Maquina Virtual) 
 for_window [class="(VirtualBox)"]floating enable, move position center
 
 # Evince (Leitor de PDF)
 for_window [class="(Evince)"]floating enable, move position center
-
-# Google (Browser)
-#for_window [class="(google)"]move position center
 
 # KeePassXC (Gerenciador de senhas)
 for_window [class="(KeePassXC)"]floating enable
@@ -482,10 +479,10 @@ exec --no-startup-id setxkbmap br,us
 #exec --no-startup-id blueman-applet
 
 # Compositor
-exec --no-startup-id picom --config ~/.config/picom/picom.conf
+#exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Dunst - Notificação
-exec --no-startup-id dunst
+exec --no-startup-id dunst -b
 
 
 ####################################################################
