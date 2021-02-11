@@ -1,5 +1,5 @@
 [![Meu Telegram](https://img.shields.io/badge/Meu-Telegram-red)](https://t.me/k4k4rot0)
-![GitHub repo size](https://img.shields.io/github/repo-size/k4k4rot0/config?label=Tamanho)
+![GitHub repo size](https://img.shields.io/github/repo-size/k4k4rot0/dotfiles?label=Repositorio)
 ![GitHub contributors](https://img.shields.io/github/contributors/k4k4rot0/config?label=contribuidores)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
@@ -20,13 +20,17 @@ Editor de Vídeo | [Kdenlive](https://kdenlive.org/en/)
 Editor de Fotos | [GIMP](https://www.gimp.org/) e [Krita](https://krita.org/en/)
 Editor de Texto | [Nano](https://www.nano-editor.org/) e [Vim](https://www.vim.org/)
 Desenvolvimento | [Atom](https://atom.io/)
-Lançador de programa | [Rofi](https://github.com/davatorium/rofi)
-Barra de status | [Polybar](https://github.com/polybar/polybar)
-Visualizador de imagens | [Viewnior](http://siyanpanayotov.com/project/viewnior)
+Lançador de Programa | [Rofi](https://github.com/davatorium/rofi)
+Barra de Status | [Polybar](https://github.com/polybar/polybar)
+Visualizador de Imagens | [Viewnior](http://siyanpanayotov.com/project/viewnior)
 Daemon de Notificação | [Dunst](https://github.com/dunst-project/dunst)
-Configuração do monitor | [ARandR](https://christian.amsuess.com/tools/arandr/)
-Tela de bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
+Configuração do Monitor | [ARandR](https://christian.amsuess.com/tools/arandr/)
+Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
 
 # Desktop
 
 ![screenshot](/screenshots/screenshot01.png)
+
+# Tela de Bloqueio
+
+![screenshot](/screenshots/bloqueio.png)
