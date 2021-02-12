@@ -29,7 +29,7 @@ Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlocks
 
 # Desktop
 
-![screenshot](/screenshots/screenshot01.png)
+![screenshot](/screenshots/screenshot.png)
 
 # Tela de Bloqueio
 
