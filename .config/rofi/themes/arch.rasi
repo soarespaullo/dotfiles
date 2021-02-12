@@ -3,7 +3,6 @@ configuration {
   icon-theme: "Papirus";
   /*font: "FiraCode Regular Medium 11";*/
   font: "JetBrains Mono Medium 11";
-  /*font: "Bahamas 10";*/
   drun-display-format: "{icon} {name}";
   display-run: " ";
   display-drun: " ";
@@ -30,8 +29,8 @@ configuration {
     alternate-normal-foreground: @foreground;
     normal-background:           #1e1e1e;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  #cc881a;
-    border-color:                #cc881a;
+    selected-normal-background:  #6e88c1;
+    border-color:                #6e88c1;
     spacing:                     3;
     separatorcolor:              #2E3440;
     separator-style:             "solid";
@@ -80,7 +79,7 @@ configuration {
 
 #element {
     border:  0;
-    padding: 1px ;
+    padding: 2px ;
 }
 
 #element.normal.normal {
