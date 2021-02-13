@@ -16,7 +16,7 @@
     follow = mouse
 
     # Geometria da Janela: [{width}] x {height} [+/- {x} +/- {y}]
-    geometry = "0x0-20+40"
+    geometry = "300x50-20+40"
 
     # Mostra quantas mensagens estão ocultas no momento (por causa da geometria).
     indicate_hidden = yes
@@ -36,7 +36,7 @@
 
     # Desenhe uma linha de altura de pixel de "separator_height" entre duas notificações.
     # Defina como 0 para desativar.
-    separator_height = 2
+    separator_height = 3
 
     # Preenchimento entre texto e separador.
     padding = 8
@@ -46,7 +46,7 @@
 
     # Define a largura em pixels do quadro ao redor da janela de notificação.
     # Defina como 0 para desativar.
-    frame_width = 3
+    frame_width = 2
 
     # Define a cor do quadro ao redor da janela de notificação.
     frame_color = "#6e88c1"
@@ -197,20 +197,19 @@
     # dunst automaticamente após um travamento.
     startup_notification = false
 
-    # Manage dunst's desire for talking
-    # Can be one of the following values:
-    #  crit: Critical features. Dunst aborts
-    #  warn: Only non-fatal warnings
-    #  mesg: Important Messages
-    #  info: all unimportant stuff
-    # debug: all less than unimportant stuff
+    # Gerenciar o desejo de Dunst de falar
+    # Pode ser um dos seguintes valores;
+    #  crit: Recursos críticos. Dunst aborta
+    #  warn: Apenas avisos não fatais
+    #  mesg: Mensagens importantes
+    #  info: todas as coisas sem importância
+    # debug: todas as coisas menos importantes
     verbosity = mesg
 
-    # Define the corner radius of the notification window
-    # in pixel size. If the radius is 0, you have no rounded
-    # corners.
-    # The radius will be automatically lowered if it exceeds half of the
-    # notification height to avoid clipping text and/or icons.
+    # Defina o raio do canto da janela de notificação em tamanho de pixel.
+    # Se o raio for 0, você não tem cantos arredondados.
+    # O raio será reduzido automaticamente se exceder a metade da altura
+    # da notificação para evitar o corte de texto e / ou ícones.
     # corner_radius = 3
     corner_radius = 0
     

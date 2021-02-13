@@ -42,7 +42,7 @@ font pango:monospace 8
 
 
 ####################################################################
-#                         FLOATING MODE                            #
+#                         MODO FLUTUANTE                           #
 ####################################################################
 
 
@@ -84,7 +84,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 ####################################################################
 
 
-# Mover para scratchpad/mostra scratchpad
+# Mover para Scratchpad/mostra Scratchpad
 bindsym $win+o move scratchpad
 bindsym $win+l scratchpad show
 
@@ -92,7 +92,7 @@ bindsym $win+l scratchpad show
 bindsym $win+u exec --no-startup-id setxkbmap us
 bindsym $win+b exec --no-startup-id setxkbmap br
 
-# Flameshot config
+# Flameshot Config
 bindsym $win+Shift+f exec --no-startup-id flameshot config
 
 # Matar Compositor
@@ -104,21 +104,21 @@ bindsym $win+F5 exec --no-startup-id picom -c
 # Sair do i3wm
 bindsym $win+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
 
-# Bloquear tela
+# Bloquear Tela
 # bindsym $win+x exec --no-startup-id $HOME/.local/bin/lockscreen
-bindsym $win+x exec betterlockscreen -l dim -t "Digite a senha para Desbloquear"
+bindsym $win+x exec --no-startup-id betterlockscreen -l dim -t "Digite a senha para Desbloquear"
 
 # Iniciar Gravação de Tela (SimpleScreenRecorder)
 bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
 bindsym $win+Shift+s exec --no-startup-id killall simplescreenrecorder # -> Mata o ssr
 
-# Iniciar terminal
-bindsym $win+Return exec --no-startup-id termite
+# Iniciar Terminal
+#bindsym $win+Return exec --no-startup-id termite
 
-# Iniciar terminal
-#bindsym $win+Return exec --no-startup-id kitty
+# Iniciar Terminal
+bindsym $win+Return exec --no-startup-id kitty
 
-# Iniciar terminal
+# Iniciar Terminal
 #bindsym $win+Return exec --no-startup-id i3-sensible-terminal
 
 # Fechar janela focada
@@ -126,7 +126,7 @@ bindsym $win+Shift+q kill
 
 
 ####################################################################
-#                          FEATURES                                #
+#                            RECURSOS                              #
 ####################################################################
 
 
@@ -144,25 +144,25 @@ focus_follows_mouse yes
 mouse_warping none
 focus_wrapping yes
 
-# Alternar entre as janelas
+# Alternar Entre as Janelas
 bindsym $win+Left focus left
 bindsym $win+Down focus down
 bindsym $win+Up focus up
 bindsym $win+Right focus right
 
-# Aternar Orientação da janela (Vertical e Horizontal)
+# Aternar Orientação da Janela (Vertical e Horizontal)
 bindsym $win+semicolon  split toggle
 
-# Mover janela focada
+# Mover Janela Focada
 bindsym $win+Shift+Left move left
 bindsym $win+Shift+Down move down
 bindsym $win+Shift+Up move up
 bindsym $win+Shift+Right move right
 
-# Entrar em modo tela cheia
+# Entrar em Modo Tela Cheia
 bindsym $win+f fullscreen toggle
 
-# Mudar o layout do container (stacked, tabbed, toggle split)
+# Mudar o Layout do Container (stacked, tabbed, toggle split)
 bindsym $win+s layout stacking
 bindsym $win+w layout tabbed
 bindsym $win+e layout toggle split
@@ -170,7 +170,7 @@ bindsym $win+e layout toggle split
 # Mover a janela para o centro da tela
 bindsym $win+Shift+c move position center
 
-# Tela maximizada ou floating
+# Tela Maximizada ou Floating
 bindsym $win+Shift+space floating toggle
 
 # Restartar i3
@@ -184,7 +184,7 @@ bindsym Print exec --no-startup-id flameshot gui
 
 
 ####################################################################
-#                              WORKSPACE                           #
+#                         ÁREA DE TRABALHO                         #
 ####################################################################
 
 
@@ -199,16 +199,6 @@ set $ws8 " 8:   "
 set $ws9 " 9:   "
 set $ws10 " 10:  "
 
-#set $ws1 "1"
-#set $ws2 "2"
-#set $ws3 "3"
-#set $ws4 "4"
-#set $ws5 "5"
-#set $ws6 "6"
-#set $ws7 "7"
-#set $ws8 "8"
-#set $ws9 "9"
-#set $ws10 "10"
 
 # Navegar pelas workspaces
 bindsym $win+1 workspace number $ws1
@@ -222,7 +212,7 @@ bindsym $win+8 workspace number $ws8
 bindsym $win+9 workspace number $ws9
 bindsym $win+0 workspace number $ws10
 
-# Mover janela focada para ws escolhida
+# Mover Janela focada Para WS Escolhida
 bindsym $win+Shift+1 move container to workspace number $ws1
 bindsym $win+Shift+2 move container to workspace number $ws2
 bindsym $win+Shift+3 move container to workspace number $ws3
@@ -236,11 +226,11 @@ bindsym $win+Shift+0 move container to workspace number $ws10
 
 
 ####################################################################
-#                    APLICATIVOS ABERTOS NA WS                     #
+#            APLICATIVOS ABERTOS NA ÁREA DE TRABALHO               #
 ####################################################################
 
 
-# Ativar o floating e mover a janela para o centro:[..., floating enable, move position center
+# Ativar o floating e mover a janela para o centro:[..., floating enable, move position center]
 
  
 # Browser (Firefox) ws=1
@@ -250,13 +240,13 @@ assign [class="(firefox)"] $ws1
 # Browser (Google Chrome) ws=1
 for_window [class="(Google)"] move to workspace $ws1 focus
 
-# Terminal ws=2
-#for_window [class="(kitty)"] move to workspace $ws2
+# Terminal (Kitty) ws=2
+for_window [class="(kitty)"] move to workspace $ws2
 
-# Terminal ws=2
+# Terminal (Termite) ws=2
 for_window [class="(Termite)"] move to workspace $ws2 focus
 
-# Telegram (Serviço de Mensagens Instantâneas) ws=3
+# Telegram (Serviço de mensagens instantâneas) ws=3
 for_window [class="(Telegram)"] move to workspace $ws3 focus
 
 # Thunar (Gerenciador de Arquivos) ws=4
@@ -265,20 +255,26 @@ for_window [class="Thunar"] move to workspace $ws4 focus
 # Gimp (Programa de Criação e Edição de Imagens) ws=6
 for_window [class="(Gimp)"] move to workspace $ws6 focus
 
-# Inkscape (Software Para Editoração Eletrônica de Imagens) ws=6
+# Inkscape (Software para Editoração Eletrônica de Imagens) ws=6
 for_window [class="(Inkscape)"] move to workspace $ws6
 
 # MPV (Tocador de Mídia) ws=7
 for_window [class="(mpv)"] move to workspace $ws7 focus
 
-# Discord (Aplicativo de voz Sobre IP) ws=8
+# Discord (Aplicativo de Voz Sobre IP) ws=8
 for_window [class="(discord)"] move to workspace $ws8 focus
 
-# WoeUSB (Crie USB inicializáveis ​​do Windows a Partir do Linux) ws=8
+# BalenaEtcher (Crie USB inicializáveis) ws=8
+for_window [class="(etcher)"] move to workspace $ws8 focus
+
+# WoeUSB (Crie USB inicializáveis ​​do Windows a partir do Linux) ws=8
 for_window [class="(Woeusb)"] move to workspace $ws8 focus
 
-# VirtualBox (Máquina Virtual) ws=8
+# VirtualBox (Máquina virtual) ws=8
 for_window [class="(VirtualBox)"] move to workspace $ws8 focus
+
+# SimpleScreenRecorder (ScreenCast) ws=8
+for_window [class="(SimpleScreenRecorder)"] move to workspace $ws8
 
 # Qbittorrent (Cliente P2P) ws=9
 for_window [class="(qBittorrent)"] move to workspace $ws9 focus
@@ -294,11 +290,14 @@ for_window [class="(KeePassXC)"] move to workspace $ws10
 #                           R E G R A S                            #
 ####################################################################
 
-# Ativar o floating e mover a janela para o centro:[..., floating enable, move position center
+# Ativar o floating e mover a janela para o centro:[..., floating enable, move position center]
 
 
 # Kitty (Terminal)
 for_window [class="(kitty)"]floating enable, move position center
+
+# Termite (Terminal)
+for_window [class="(Termite)"]floating enable, move position center
 
 # Telegram (Desktop)
 for_window [class="(Telegram)"]floating enable, move position center
@@ -309,13 +308,16 @@ for_window [class="(mpv)"]floating enable, move position center
 # Thunar (Gerenciador de Arquivos)
 for_window [class="Thunar"] move position center
 
+# Leafpad (Bloco de Notas)
+for_window [class="Leafpad"]floating enable, move position center
+
 # Viewnior (Gerenciador de Imagens)
 for_window [class="(Viewnior)"]floating enable
 
-# Gucharmap (Mapa de caracteres)
+# Gucharmap (Mapa de Caracteres)
 for_window [class="(Gucharmap)"]floating enable
 
-# Qbittorrent (Gerenciador torrent)
+# Qbittorrent (Gerenciador Torrent)
 for_window [class="(qBittorrent)"]floating enable
 
 # Galculator (Calculadora)
@@ -366,7 +368,7 @@ for_window [class="(Nitrogen)"]floating enable, move position center
 ####################################################################
 
 
-# redimensionar janela (você também pode usar o mouse para isso)
+# Redimensionar janela (você também pode usar o mouse para isso)
 
 mode "resize" {
         # Essas ligações são acionadas assim que você entra no modo de redimensionamento
@@ -484,6 +486,8 @@ exec --no-startup-id setxkbmap br,us
 # Dunst - Notificação
 exec --no-startup-id dunst -b
 
+# Xrandir - Brilho de Tela
+exec --no-startup-id xrandr --output DP1 --brightness 0.7  
 
 ####################################################################
 #                         	FIM                                #

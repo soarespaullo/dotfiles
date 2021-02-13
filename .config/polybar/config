@@ -444,7 +444,7 @@ format-underline = #98971a
 [module/mpd]
 type = internal/mpd
 ;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-format-online = <label-song> <bar-progress> <label-time> <icon-stop> <toggle>
+format-online = <label-song> <bar-progress> <label-time> <icon-stop> <toggle> 
 icon-prev = 
 icon-stop = 
 icon-play = 
