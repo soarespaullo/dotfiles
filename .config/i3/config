@@ -106,7 +106,7 @@ bindsym $win+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja
 
 # Bloquear Tela
 # bindsym $win+x exec --no-startup-id $HOME/.local/bin/lockscreen
-bindsym $win+x exec --no-startup-id betterlockscreen -l dim -t "Digite a senha para Desbloquear"
+bindsym $win+x exec --no-startup-id betterlockscreen -l dim -t "Digite a senha para Desbloquear"  
 
 # Iniciar Gravação de Tela (SimpleScreenRecorder)
 bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
@@ -348,7 +348,7 @@ for_window [class="(Steam)"]floating enable, move position center
 for_window [class="(Lutris)"]floating enable, move position center
 
 # VirtualBox (Maquina Virtual) 
-for_window [class="(VirtualBox)"]floating enable, move position center
+for_window [class="(VirtualBox)"]floating enable,resize set 1280 800, move position center
 
 # Evince (Leitor de PDF)
 for_window [class="(Evince)"]floating enable, move position center
@@ -361,6 +361,24 @@ for_window [class="(flameshot)"]floating enable, move position center
 
 # Nitrogen
 for_window [class="(Nitrogen)"]floating enable, move position center 
+
+# Gparted (Edição de Partições)
+for_window [class="(GParted)"]floating enable, move position center
+
+# AnyDesk (Acesso Remoto)
+for_window [class="(Anydesk)"]floating enable, move position center
+
+# TeamViewer (Acesso Remoto)
+for_window [class="(TeamViewer)"]floating enable, move position center
+
+# Atom (Editor de Texto)
+for_window [class="(Atom)"]floating enable, move position center
+
+# Thunderbird (Cliente de E-mails)
+for_window [class="(Thunderbird)"]floating enable, move position center
+
+# ARandR (Editor de Disposição de Tela ARandR) 
+for_window [class="Arandr"]floating enable, resize set 740 580, move position center
 
 
 ####################################################################
