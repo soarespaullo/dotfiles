@@ -252,6 +252,9 @@ for_window [class="(Telegram)"] move to workspace $ws3 focus
 # Thunar (Gerenciador de Arquivos) ws=4
 for_window [class="Thunar"] move to workspace $ws4 focus
 
+# LibreOffice (Aplicativos Livre Para Escritório) ws=4
+for_window [class="libreoffice"] move to workspace $ws4 focus
+
 # Gimp (Programa de Criação e Edição de Imagens) ws=6
 for_window [class="(Gimp)"] move to workspace $ws6 focus
 
@@ -380,6 +383,9 @@ for_window [class="(Thunderbird)"]floating enable, move position center
 # ARandR (Editor de Disposição de Tela ARandR) 
 for_window [class="Arandr"]floating enable, resize set 740 580, move position center
 
+# libreoffice (Aplicativos Livre Para Escritório)
+for_window [class="(libreoffice)"]floating enable, resize set 1280 720, move position center
+
 
 ####################################################################
 #                           R E S I Z E                            #
@@ -504,11 +510,9 @@ exec --no-startup-id setxkbmap br,us
 # Dunst - Notificação
 exec --no-startup-id dunst -b
 
-# Xrandir - Brilho de Tela
+# Xrandr - Brilho de Tela
 exec --no-startup-id xrandr --output DP1 --brightness 0.7  
 
 ####################################################################
 #                         	FIM                                #
 ####################################################################
-
-
