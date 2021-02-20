@@ -31,6 +31,10 @@ Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlocks
 
 ![screenshot](/screenshots/screenshot.png)
 
+# Rofi - Menu
+
+![screenshot](/screenshots/rofi.png)
+
 # Tela de Bloqueio - Betterlockscreen
 
 ![screenshot](/screenshots/bloqueio.png)
