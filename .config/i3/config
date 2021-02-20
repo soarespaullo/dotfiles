@@ -32,9 +32,9 @@ set $win Mod4
 #font pango:DejaVu Sans Mono 10
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
 #font pango:Terminus 11px
-font pango:monospace 8
+#font pango:monospace 8
 
-#font pango:FiraCode 8
+font pango:FiraCode 8
 #font pango:Fantasque Sans Mono 8
 #font pango:Bahamas 8
 #font pango:Poppins 8
@@ -106,20 +106,14 @@ bindsym $win+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja
 
 # Bloquear Tela
 # bindsym $win+x exec --no-startup-id $HOME/.local/bin/lockscreen
-bindsym $win+x exec --no-startup-id betterlockscreen -l dim -t "Digite a senha para Desbloquear"  
+bindsym $win+x exec --no-startup-id betterlockscreen -l dim -t "Digite a senha para Desbloquear"
 
 # Iniciar Gravação de Tela (SimpleScreenRecorder)
 bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
 bindsym $win+Shift+s exec --no-startup-id killall simplescreenrecorder # -> Mata o ssr
 
 # Iniciar Terminal
-#bindsym $win+Return exec --no-startup-id termite
-
-# Iniciar Terminal
-bindsym $win+Return exec --no-startup-id kitty
-
-# Iniciar Terminal
-#bindsym $win+Return exec --no-startup-id i3-sensible-terminal
+bindsym $win+Return exec --no-startup-id i3-sensible-terminal
 
 # Fechar janela focada
 bindsym $win+Shift+q kill
@@ -321,7 +315,7 @@ for_window [class="(Viewnior)"]floating enable
 for_window [class="(Gucharmap)"]floating enable
 
 # Qbittorrent (Gerenciador Torrent)
-for_window [class="(qBittorrent)"]floating enable
+for_window [class="(qBittorrent)"]floating enable, move position center 
 
 # Galculator (Calculadora)
 for_window [class="(Galculator)"]floating enable, move position center 
@@ -350,8 +344,8 @@ for_window [class="(Steam)"]floating enable, move position center
 # Lutris (Gerenciador de games)
 for_window [class="(Lutris)"]floating enable, move position center
 
-# VirtualBox (Maquina Virtual) 
-for_window [class="(VirtualBox)"]floating enable,resize set 1280 800, move position center
+# VirtualBox (Maquina Virtual)
+for_window [class="(VirtualBox)"]floating enable, resize set 1280 800, move position center
 
 # Evince (Leitor de PDF)
 for_window [class="(Evince)"]floating enable, move position center
