@@ -31,6 +31,10 @@ Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlocks
 
 ![screenshot](/screenshots/screenshot.png)
 
+# Ncmpcpp - Player
+
+![screenshot](/screenshots/ncmpcpp.png)
+
 # Rofi - Menu
 
 ![screenshot](/screenshots/rofi.png)
