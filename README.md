@@ -27,10 +27,10 @@ Daemon de Notificação | [Dunst](https://github.com/dunst-project/dunst)
 Configuração do Monitor | [ARandR](https://christian.amsuess.com/tools/arandr/)
 Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
 
-# Desktop
+# Arch - Desktop
 
 ![screenshot](/screenshots/screenshot.png)
 
-# Tela de Bloqueio
+# Tela de Bloqueio - Betterlockscreen
 
 ![screenshot](/screenshots/bloqueio.png)
