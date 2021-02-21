@@ -4,6 +4,7 @@
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 ![screenshot](/screenshots/dotfiles.png)
+
 Repositório dedicado aos meus arquivos de configuração do meu ambiente Desktop, com o objetivo de backup e compartilhamento.
 
 # _Minhas configurações_:
