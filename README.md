@@ -47,3 +47,5 @@ Tema Cursor | [WinConceptOS Cursors](https://github.com/yeyushengfan258/WinSur-w
 # Tela de Bloqueio - Betterlockscreen
 
 ![screenshot](/screenshots/bloqueio.png)
+
+_Sinta-se livre para copiar e fazer sua própria alteração!;-)_
