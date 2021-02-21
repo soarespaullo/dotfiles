@@ -23,7 +23,7 @@ Editor de Texto | [Nano](https://www.nano-editor.org/) e [Vim](https://www.vim.o
 Desenvolvimento | [Atom](https://atom.io/)
 Lançador de Programa | [Rofi](https://github.com/davatorium/rofi)
 Barra de Status | [Polybar](https://github.com/polybar/polybar)
-Visualizador de Imagens | [Viewnior](http://siyanpanayotov.com/project/viewnior)
+Visualizador de Imagens | [Viewnior](http://siyanpanayotov.com/project/viewnior) e [Feh](https://feh.finalrewind.org/)
 Daemon de Notificação | [Dunst](https://github.com/dunst-project/dunst)
 Conf. do Monitor | [ARandR](https://christian.amsuess.com/tools/arandr/)
 Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
