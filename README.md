@@ -5,7 +5,8 @@
 
 ![screenshot](/screenshots/dotfiles.png)
 
-Repositório dedicado aos meus arquivos de configuração do meu ambiente Desktop, com o objetivo de backup e compartilhamento.
+Repositório dedicado aos meus arquivos de configuração do meu ambiente Desktop, com o objetivo de backup e 
+compartilhamento.
 
 # _Minhas configurações_:
 
