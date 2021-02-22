@@ -28,15 +28,9 @@ set $win Mod4
 ####################################################################
 
 
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-#font pango:DejaVu Sans Mono 10
-#font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
-#font pango:Terminus 11px
-#font pango:monospace 8
-
-font pango:FiraCode 8
+font pango:monospace 8
+#font pango:FiraCode 8
 #font pango:Fantasque Sans Mono 8
-#font pango:Bahamas 8
 #font pango:Poppins 8
 #font pango:DejaVu Sans Mono 8
 
@@ -48,8 +42,6 @@ font pango:FiraCode 8
 
 floating_modifier $win
 focus_on_window_activation focus
-#smart|urgent|focus|none
-#focus_on_window_activation smart|urgent|focus|none
 
 
 ####################################################################
@@ -60,10 +52,6 @@ focus_on_window_activation focus
 default_border pixel 2
 default_floating_border pixel 2
 new_window pixel 2
-#smart_borders on
-
-#hide_edge_borders smart
-#hide_edge_borders both
 
 
 ####################################################################
@@ -258,6 +246,9 @@ for_window [class="(Inkscape)"] move to workspace $ws6
 # MPV (Tocador de Mídia) ws=7
 for_window [class="(mpv)"] move to workspace $ws7 focus
 
+# SMPlayer (Tocador de Mídia) ws=7
+for_window [class="(smplayer)"] move to workspace $ws7 focus
+
 # Discord (Aplicativo de Voz Sobre IP) ws=8
 for_window [class="(discord)"] move to workspace $ws8 focus
 
@@ -379,6 +370,9 @@ for_window [class="Arandr"]floating enable, resize set 740 580, move position ce
 
 # libreoffice (Aplicativos Livre Para Escritório)
 for_window [class="(libreoffice)"]floating enable, resize set 1280 720, move position center
+
+# SMPlayer (Tocador de Mídia)
+for_window [class="(smplayer)"]floating enable, move position center
 
 
 ####################################################################
@@ -506,6 +500,7 @@ exec --no-startup-id dunst -b
 
 # Xrandr - Brilho de Tela
 exec --no-startup-id xrandr --output DP1 --brightness 0.7  
+
 
 ####################################################################
 #                         	FIM                                #
