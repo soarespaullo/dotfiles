@@ -5,6 +5,8 @@
 
 ![screenshot](/screenshots/dotfiles.png)
 
+Repositório dedicado aos meus arquivos de configuração do meu ambiente Desktop, com o objetivo de backup e<br/>compartilhamento.
+
 # _Minhas configurações_:
 
 **Tipo**        | **Software**
@@ -15,17 +17,20 @@ Gerenciador de Janelas | [i3-Gaps](https://github.com/Airblader/i3)
 Shell | [ZSH](https://wiki.archlinux.org/index.php/Zsh)
 Gravador de Tela | [Simple Screen Recorder](https://www.maartenbaert.be/simplescreenrecorder/)
 Captura de Tela | [Flameshot](https://github.com/lupoDharkael/flameshot)
-Vídeo Player    | [VLC](https://www.videolan.org/vlc/index.pt-BR.html) e [MPV](https://mpv.io/)
+Player de Vídeo | [SMPlayer](https://www.smplayer.info/) e [MPV](https://mpv.io/)
+Player de Música | [Ncmpcpp](https://rybczak.net/ncmpcpp/) + [Mpd](https://github.com/MusicPlayerDaemon/MPD)
 Editor de Vídeo | [Kdenlive](https://kdenlive.org/en/)
 Editor de Fotos | [GIMP](https://www.gimp.org/) e [Krita](https://krita.org/en/)
 Editor de Texto | [Nano](https://www.nano-editor.org/) e [Vim](https://www.vim.org/)
 Desenvolvimento | [Atom](https://atom.io/)
 Lançador de Programa | [Rofi](https://github.com/davatorium/rofi)
 Barra de Status | [Polybar](https://github.com/polybar/polybar)
-Visualizador de Imagens | [Viewnior](http://siyanpanayotov.com/project/viewnior)
+Visualizador de Imagens | [Viewnior](http://siyanpanayotov.com/project/viewnior) e [Feh](https://feh.finalrewind.org/)
 Daemon de Notificação | [Dunst](https://github.com/dunst-project/dunst)
-Configuração do Monitor | [ARandR](https://christian.amsuess.com/tools/arandr/)
+Conf. do Monitor | [ARandR](https://christian.amsuess.com/tools/arandr/)
 Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
+Tema GTK | [Arc-Theme](https://github.com/horst3180/arc-theme)
+Tema Cursor | [WinConceptOS Cursors](https://github.com/yeyushengfan258/WinSur-white-cursors)
 
 # Arch - Desktop
 
@@ -42,3 +47,5 @@ Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlocks
 # Tela de Bloqueio - Betterlockscreen
 
 ![screenshot](/screenshots/bloqueio.png)
+
+_Sinta-se livre para copiar e fazer sua própria alteração!;-)_
