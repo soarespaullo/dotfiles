@@ -75,7 +75,7 @@ font-5 = siji:pixelsize=10;1
 ;		      SEPARADOR BAR TOP                    ;
 ;==========================================================;
 
-separator = |
+;separator = |
 ;separator = /
 
 ;==========================================================;
@@ -84,7 +84,7 @@ separator = |
 
 modules-left = linux kernel mpd player-moc 
 modules-center = xwindow 
-modules-right = pulse pacman calendar date pacman-updates aur-updates powermenu
+modules-right = pulse pacman calendar date pacman-updates aur-updates rede powermenu
 
 ;==========================================================;
 ;			TRAY BAR TOP                       ;
@@ -163,14 +163,14 @@ font-5 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 ;		       SEPARADOR BAR TOP                   ;
 ;==========================================================;
 
-separator = |
+;separator = |
 ;separator = /
 
 ;==========================================================;
 ;		      MÓDULOS BAR BOTTOM                   ;
 ;==========================================================;
 
-modules-left = i3
+modules-left = i3 sep telegram google thunar gimp terminal refresh 
 modules-center = memory cpu filesystem filesystem2 temperature
 modules-right = xkeyboard protonmail uptime trash showdesktop
 
@@ -199,11 +199,11 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 
-;format =   <label>
-format-foreground = ${colors.foreground}
+format =     <label>
+format-foreground = #d65d0e
 format-background = ${colors.background}
 ;format-underline = ${colors.foreground}
-label-underline = ${colors.foreground}
+;label-underline = ${colors.foreground}
 
 label = %title%
 label-foreground = ${colors.foreground}
@@ -222,18 +222,18 @@ type = internal/xkeyboard
 blacklist-1 = num lock
 
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
+format-prefix-foreground = #d65d0e
+;format-prefix-underline = #3ecfb2
 format-prefix-background = ${colors.background}
-format-prefix-underline = #3ecfb2
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 label-layout = %layout%
-label-layout-underline = #3ecfb2
+;label-layout-underline = #3ecfb2
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.background}
-label-indicator-underline = ${colors.foreground}
+;label-indicator-underline = ${colors.foreground}
 
 ;==========================================================;
 ;	           MÓDULO FILESISTEM - HOME                ;
@@ -248,10 +248,9 @@ mount-0 = /home
 ;spacing = 2
 
 format-mounted-prefix = "  "
-;format-mounted-prefix = "  "
-format-mounted-prefix-foreground = ${colors.foreground}
-label-mounted-underline = #ffffff
-format-mounted-prefix-underline = #ffffff
+format-mounted-prefix-foreground = #d65d0e
+;label-mounted-underline = #ffffff
+;format-mounted-prefix-underline = #ffffff
 format = <label>
 
 format-mounted = <label-mounted>
@@ -274,12 +273,12 @@ mount-0 = /
 ;spacing = 2
 
 format-mounted-prefix = " 濫 "
-format-mounted-prefix-foreground = ${colors.foreground}
-format-mounted-foreground = ${colors.foreground}
+format-mounted-prefix-foreground = #d65d0e
+;format-mounted-foreground = ${colors.foreground}
 ;label-mounted-underline = ${colors.foreground}
 ;format-mounted-prefix-underline = ${colors.foreground}
-format-mounted-prefix-underline = #3ecfb2 
-label-mounted-underline = #3ecfb2 
+;format-mounted-prefix-underline = #3ecfb2 
+;label-mounted-underline = #3ecfb2 
 
 format = <label>
 
@@ -393,8 +392,8 @@ label-mode-underline = ${colors.alert}
 label-mode-padding = 2
 
 label-focused = %name%
-label-focused-foreground = ${colors.background}
-label-focused-background = ${colors.foreground} 
+label-focused-foreground = #fff
+label-focused-background = #d65d0e 
 label-focused-underline = ${colors.alert}
 label-focused-padding = 2
 
@@ -443,8 +442,8 @@ format-underline = #98971a
 
 [module/mpd]
 type = internal/mpd
-;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-format-online = <label-song> <bar-progress> <label-time> <icon-stop> <toggle> 
+format-online = <label-song> <bar-progress> <icon-prev> <toggle> <icon-next> <icon-repeatone> <label-time> <icon-stop>
+
 icon-prev = 
 icon-stop = 
 icon-play = 
@@ -465,8 +464,6 @@ bar-progress-fill = "─"
 bar-progress-fill-foreground = ${colors.alert}
 bar-progress-empty = "─"
 
-;label-song-maxlen = 25
-;label-song-ellipsis = true
 label-song = %{F${colors.foreground} %{F-} %title%%{F-}
 
 ;==========================================================;
@@ -507,9 +504,8 @@ card = intel_backlight
 type = internal/cpu
 interval = 1.5
 format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-;format-underline = ${colors.foreground}
-format-underline = #98971a
+format-prefix-foreground = #d65d0e
+;format-underline = #98971a
 label = %percentage%%
 
 ;==========================================================;
@@ -520,9 +516,8 @@ label = %percentage%%
 type = internal/memory
 interval = 2
 format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-;format-underline = ${colors.foreground}
-format-underline = #c15d3e
+format-prefix-foreground = #d65d0e
+;format-underline = #c15d3e
 label = %percentage_used%%
 
 ;==========================================================;
@@ -537,8 +532,8 @@ interval = 1
 time = %H:%M
 
 format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-format-underline = #cc241d
+format-prefix-foreground = #d65d0e
+;format-underline = #cc241d
 ;format-background = #cc241d
 
 label = %date% %time%
@@ -552,11 +547,11 @@ type = internal/pulseaudio
 use-ui-max = true
 
 format-volume = <label-volume>
-format-volume-underline = #458588
+;format-volume-underline = #458588
 ;format-volume-background = #458588
-;label-volume = 墳 %percentage%%
-label-volume =  %percentage%%
-label-volume-foreground = ${colors.foreground}
+format-volume-prefix = "  " 
+format-volume-prefix-foreground = #d65d0e
+label-volume = %percentage%%
 
 label-muted =  Sem som
 label-muted-foreground = ${colors.alert}
@@ -590,7 +585,8 @@ type = custom/script
 exec = echo " "
 click-left = exec i3-msg move scratchpad
 click-right = exec i3-msg [class=.*] scratchpad show
-format-underline = #ff0000
+format-foreground = #d65d0e
+;format-underline = #ff0000
 
 ;==========================================================;
 ;     		   MÓDULO TEMPERADURA - CPU     	   ;		
@@ -606,7 +602,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #cc241d
+;format-underline = #cc241d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 ;format-warn-underline = #ff0000
@@ -640,12 +636,12 @@ expand-right = true
 format-spacing = 2
 
 label-open = "  "
-label-open-foreground = ${colors.foreground}
-format-underline = #ffffff
+label-open-foreground = #d65d0e
+;format-underline = #ffffff
 label-close = | Cancelar
 label-close-foreground = ${colors.alert}
 label-separator =|
-label-separator-foreground = ${colors.foreground}
+label-separator-foreground = #d65d0e
 
 menu-0-0 = "Sair"
 menu-0-0-exec = menu-open-1
@@ -697,8 +693,8 @@ label = Uptime : %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "
-;format-prefix-foreground = #C15D3E
-format-underline = #C15D3E
+format-prefix-foreground = #d65d0e
+;format-underline = #c15d3e
 
 ;==========================================================;
 ;			PACMAN UPDATES			   ;
@@ -713,9 +709,8 @@ label = Repo: %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
-;format-prefix-foreground = #FFBB00
-format-underline = #FFBB00
-;click-left = kitty -e sudo pacman -Syu
+format-prefix-foreground = #d65d0e
+;format-underline = #FFBB00
  
 ;==========================================================;
 ;			 AUR - UPDATES			   ;
@@ -730,40 +725,8 @@ label = Aur: %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
-;format-prefix-foreground = #FFBB00
-format-underline = #FFBB00
-
-;==========================================================;
-;	            MÓDULO REDES - NETWORK		   ;
-;==========================================================;
-
-[module/network]
-type = internal/network
-interface = enp0s3
-interval = 3.0
-
-; Tokens disponíveis;
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %upspeed%   [wireless+wired]
-;   %downspeed% [wireless+wired]
-;   %linkspeed% [wired]
-; Padrão: %ifname% %local_ip%
-label-connected =  %ifname%
-label-disconnected = %ifname% disconnected
-
-format-connected-foreground = ${colors.foreground}
-format-connected-background = ${colors.background}
-;format-connected-underline = #55aa55
-format-connected-prefix = " "
-;format-connected-prefix-foreground = #FFBB00 
-format-connected-prefix-background = ${colors.background}
-
-format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.alert}
-label-disconnected-foreground = ${colors.foreground}
+format-prefix-foreground = #d65d0e
+;format-underline = #ffbb00
 
 ;==========================================================;
 ;	            NETSPEED DOWN E UP			   ;
@@ -803,10 +766,8 @@ format-connected-prefix-foreground = #fefefe
 
 [module/protonmail]
 type = custom/text
-content = "  ProtonMail"
-content-foreground = ${colors.foreground}
-;content-underline = ${colors.foreground} 
-content-underline = #98971a
+content = "%{F#d65d0e}  %{F-} ProtonMail"
+;content-underline = #98971a
 click-left = xdg-open https://mail.protonmail.com/inbox
 
 ;==========================================================;
@@ -826,10 +787,21 @@ click-left = rofi -show drun -theme ~/.config/rofi/arch.rasi &
 
 [module/firefox]
 type = custom/text
-content = "  "
+content = "  "
 content-foreground = ${colors.foreground}
 ;content-underline = ${colors.foreground}
 click-left = exec firefox &
+
+;==========================================================;
+;			 MÓDULO GOOGLE                     ;
+;==========================================================;
+
+[module/google]
+type = custom/text
+content = " "
+content-foreground = ${colors.foreground}
+;content-underline = ${colors.foreground}
+click-left = exec /usr/bin/google-chrome-stable &
 
 ;==========================================================;
 ;			MÓDULO TELEGRAM		           ;
@@ -840,7 +812,17 @@ type = custom/text
 content = "  "
 content-foreground = ${colors.foreground}
 ;content-underline = ${colors.foreground}
-click-left = exec $HOME/.local/bin/telegram &
+;click-left = exec $HOME/.local/bin/telegram &
+click-left = exec /usr/bin/telegram-desktop &
+
+;==========================================================;
+;		        MÓDULO THUNAR	                   ;
+;==========================================================;
+
+[module/thunar]
+type = custom/text
+content = "%{F${colors.foreground} %{F-}"
+click-left = thunar &
 
 ;==========================================================;
 ;		        MÓDULO TERMINAL	                   ;
@@ -852,7 +834,6 @@ content = "  "
 content-foreground = ${colors.foreground}
 ;content-underline = ${colors.foreground}
 click-left = exec kitty &
-;click-left = exec urxvt &
 
 ;==========================================================;
 ;		        MÓDULO USUÁRIO                     ;
@@ -869,9 +850,9 @@ content = "%{F${colors.foreground}  %{F-} Olá, k4k4rot0"
 
 [module/linux]
 type = custom/text
-content = "%{F${colors.foreground}%{F-} Arch Linux"
+content = "%{F#d65d0e}  %{F-} Arch Linux"
 click-left = xdg-open https://wiki.archlinux.org/
-content-underline = ${colors.foreground}
+;content-underline = ${colors.foreground}
 
 ;==========================================================;
 ;		     MÓDULO REINICIAR - I3                 ;
@@ -891,9 +872,9 @@ click-left = i3-msg restart &
 type = custom/script
 interval = 1
 exec = pacman -Qq | wc -l
-label = "%{F${colors.foreground}  %{F-} %output:0:37:...%"
+label = "%{F#d65d0e}  %{F-} %output:0:37:...%"
 ;format-background = #d79921
-format-underline = #d79921
+;format-underline = #d79921
 
 ;==========================================================;
 ;		         MÓDULO KERNEL                     ;
@@ -906,8 +887,8 @@ exec = uname -r
 format-foreground = ${colors.foreground}
 format-background = ${colors.background} 
 format-prefix = "  " 
-;format-prefix-foreground = #d79921
-format-underline = #d79921
+format-prefix-foreground = #d65d0e
+;format-underline = #d79921
 
 ;==========================================================;
 ;		        MÓDULO LIXO                        ;
@@ -919,8 +900,8 @@ interval = 0.1
 exec = $HOME/.config/polybar/scripts/infotrash.sh
 click-left = thunar trash:///
 click-right= rm -rf .local/share/Trash/files
-label = "%{F#${colors.foreground}  %{F-} %output:0:37:...%"
-format-underline = ${colors.foreground}
+label = "%{F#d65d0e}  %{F-} %output:0:37:...%"
+;format-underline = ${colors.foreground}
 
 ;==========================================================;
 ;		       MÓDULO CALENDÁRIO                   ;
@@ -933,11 +914,10 @@ interval = 1
 exec = date "+%a %d %b, %y"
 ;exec = date "+%a, %d %b"
 ;exec = date "+%a %d %b, %Y - %H:%M:%S"
-label = "%{F${colors.foreground}  %{F-} %output:0:36:...%"
-;label = "%{F${colors.foreground} %{F-} %output:0:36:...%"
-click-left = notify-send "$(cal)"
+label = "%{F#d65d0e}  %{F-} %output:0:36:...%"
+click-left = notify-send -i "~/.config/dunst/calendar.png" "$(cal)"
 ;format-background = #98971a
-format-underline = #98971a
+;format-underline = #98971a
 
 ;==========================================================;
 ;		       MÓDULO BLUETOOTH                    ;
@@ -969,16 +949,36 @@ click-left = exec i3-sensible-terminal -e nmtui  &
 
 [module/rede]
 type = internal/network
-interface = enp0s3
-interval = 0.1
+interface = enp0s31f6
+interval = 3.0
+accumulate-stats = true
+unknown-as-up = true
 
-format-packetloss = <animation-packetloss>
 format-connected = <label-connected>
+format-connected-prefix = "%{F#d65d0e}   %{F-}"
+;format-connected-prefix-foreground = ${colors.secondary}
+
 format-disconnected = <label-disconnected>
-label-connected = Conectado
-label-connected-foreground = #64ff33
-label-disconnected = Desconectado
-label-disconnected-foreground = #fe2020
+format-disconnected-prefix = "%{F#d65d0e}   %{F-}"
+;format-disconnected-prefix-foreground = ${colors.secondary}
+
+format-packetloss = <label-packetloss>
+;format-packetloss-prefix = " "
+;format-packetloss-prefix-foreground = ${colors.secondary}
+
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %local_ip6% [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+;label-connected = %downspeed:3% %upspeed:3%
+;label-connected = %downspeed:%
+label-connected = conectado %downspeed%
+label-disconnected = offline
+label-packetloss = los
 
 ;==========================================================;
 ;		       MÓDULO WIRELESS                     ;
@@ -1011,5 +1011,80 @@ ramp-signal-2-foreground = #55ff00
 ;ramp-signal-5-foreground = #96DE72
 
 ;==========================================================;
+;		       MÓDULO WIRELESS                     ;
+;==========================================================;
+
+[module/eth]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected-prefix = " "
+label-connected = %essid% %downspeed:%
+format-disconnected-prefix = " "
+label-disconnected = offline
+
+label-connected-foreground = ${colors.principal}
+label-disconnected-foreground = ${colors.principal}
+format-connected-prefix-foreground = ${colors.secondary}
+format-disconnected-prefix-foreground = ${colors.secondary}
+
+;==========================================================;
+;		        MÓDULO BATERIA                     ;
+;==========================================================;
+
+[module/battery]
+type = internal/battery
+full-at = 98
+
+battery = BAT0
+adapter = ADP0
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+label-charging = %percentage%% 
+label-discharging = %percentage%%
+label-charging-padding = 0
+label-discharging-padding = 2
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${colors.secondary}
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = ${colors.secondary}
+ramp-capacity-2 = 
+ramp-capacity-2-foreground = ${colors.secondary}
+ramp-capacity-3 = 
+ramp-capacity-3-foreground = ${colors.secondary}
+ramp-capacity-4 = 
+ramp-capacity-4-foreground = ${colors.primary}
+
+bar-capacity-width = 10
+bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
+bar-capacity-fill = █
+bar-capacity-fill-foreground = #ddffffff
+bar-capacity-fill-font = 3
+bar-capacity-empty = █
+bar-capacity-empty-font = 3
+bar-capacity-empty-foreground = #44ffffff
+
+animation-charging-0 =   
+animation-charging-0-foreground = ${colors.primary}
+animation-charging-1 =   
+animation-charging-1-foreground = ${colors.primary}
+animation-charging-2 =   
+animation-charging-2-foreground = ${colors.primary}
+animation-charging-3 =   
+animation-charging-3-foreground = ${colors.primary}
+animation-charging-4 =   
+animation-charging-4-foreground = ${colors.primary}
+animation-charging-framerate = 750
+
+;==========================================================;
 ;		       	     FIM                           ;
 ;==========================================================;
+
+[module/sep]
+type = custom/text
+content = >>
