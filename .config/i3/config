@@ -162,7 +162,7 @@ bindsym $win+Shift+r restart
 bindsym $win+d exec --no-startup-id rofi -show drun -theme "~/.config/rofi/arch.rasi"
 
 # Screenshot
-bindsym Print exec --no-startup-id flameshot gui
+bindsym Print exec --no-startup-id flameshot gui 
 
 
 ####################################################################
@@ -236,6 +236,9 @@ for_window [class="Thunar"] move to workspace $ws4 focus
 
 # LibreOffice (Aplicativos Livre Para Escritório) ws=4
 for_window [class="libreoffice"] move to workspace $ws4 focus
+
+# Audacity (Programa de Edição Digital de Áudio) ws=5
+for_window [class="Audacity"] move to workspace $ws5 focus
 
 # Gimp (Programa de Criação e Edição de Imagens) ws=6
 for_window [class="(Gimp)"] move to workspace $ws6 focus
@@ -374,6 +377,12 @@ for_window [class="(libreoffice)"]floating enable, resize set 1280 720, move pos
 # SMPlayer (Tocador de Mídia)
 for_window [class="(smplayer)"]floating enable, move position center
 
+# Qt5ct (Permite aos user definir as config do Qt5 (tema, fonte, ícones, etc.) no DE/WM sem integração com o Qt.)
+for_window [class="(qt5)"]floating enable, move position center
+
+# Audacity (Programa de Edição Digital de Áudio)
+for_window [class="(Audacity)"]floating enable, move position center
+
 
 ####################################################################
 #                           R E S I Z E                            #
@@ -497,6 +506,9 @@ exec --no-startup-id setxkbmap br,us
 
 # Dunst - Notificação
 exec --no-startup-id dunst -b
+
+# Boas vindas
+exec --no-startup-id notify-send -i "~/.config/dunst/user.png"  "Olá $USER, Seja Bem-Vindo"
 
 # Xrandr - Brilho de Tela
 exec --no-startup-id xrandr --output DP1 --brightness 0.7  

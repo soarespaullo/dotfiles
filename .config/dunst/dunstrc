@@ -22,12 +22,12 @@
     indicate_hidden = yes
 
     # Reduza a janela se for menor que a largura. Será ignorado se a largura for 0.
-    # shrink = no
+    # Os valores possíveis são: yes ou no
     shrink = yes
 
     # A transparência da janela. Faixa: [0; 100].
     # Esta opção só funcionará se um gerenciador de janela de composição estiver presente
-    #(por exemplo, xcompmgr, compiz, etc.).
+    # (por exemplo, xcompmgr, compiz, etc.).
     transparency = 0
 
     # A altura de toda a notificação. Se a altura for menor que a altura da fonte e o preenchimento combinados,
@@ -36,7 +36,7 @@
 
     # Desenhe uma linha de altura de pixel de "separator_height" entre duas notificações.
     # Defina como 0 para desativar.
-    separator_height = 3
+    separator_height = 2
 
     # Preenchimento entre texto e separador.
     padding = 8
@@ -49,16 +49,16 @@
     frame_width = 2
 
     # Define a cor do quadro ao redor da janela de notificação.
-    frame_color = "#6e88c1"
-   
+    frame_color = "#d65d0e"
+    
 
     # Defina uma cor para o separador. os valores possíveis são;
     #  * auto: dunst tenta encontrar uma cor adequada ao fundo;
     #  * foreground: use a mesma cor do primeiro plano;
     #  * frame: use a mesma cor da moldura;
     #  * qualquer outra coisa será interpretada como uma cor X.
-    # separator_color = auto
-    separator_color = "#6e88c1"
+    # Os valores possíveis são: auto, foreground e frame.
+    separator_color = "#D79921"
 
     # Classifique as mensagens por urgência.
     sort = yes
@@ -113,12 +113,11 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Marcação é permitida
-    # format = "<b>%s</b>\n%b"
     format = "<b>%s </b>\n%b" 
 
 
     # Alinhamento do texto da mensagem.
-    # Os valores possíveis são "left", "center" e "right". 
+    # Os valores possíveis são: "left", "center" e "right". 
     alignment = left
     
 
@@ -128,7 +127,7 @@
     show_age_threshold = 60
 
     # Divida as notificações em várias linhas se elas não se encaixarem
-    # na geometria
+    # na geometria.
     word_wrap = yes
 
     # Quando word_wrap é definido como no, especifique onde fazer reticências nas linhas longas.
@@ -141,23 +140,23 @@
     # Empilhe notificações com o mesmo conteúdo. Os valores possíveis são "false" e "true". 
     stack_duplicates = true
 
-    # Ocultar a contagem de notificações empilhadas com o mesmo conteúdo
-    # Os valores possíveis são "false" e "true". 
+    # Ocultar a contagem de notificações empilhadas com o mesmo conteúdo.
+    # Os valores possíveis são: "false" e "true". 
     hide_duplicate_count = true
 
     # Indicadores de exibição para URLs (U) e ações (A).
-    # show_indicators = yes
+    # Os valores possíveis são: "yes" ou "no".
     show_indicators = no
 
     ##################################################
     #			 Icons    		     #
     ##################################################
 
-    # Alinhar ícones: left/right/off
-    icon_position = off
+    # Alinhar ícones: left/right/off.
+    icon_position = left
 
-    # Redimensione ícones maiores para este tamanho, defina como 0 para desativar
-    max_icon_size = 16
+    # Redimensione ícones maiores para este tamanho, defina como 0 para desativar.
+    max_icon_size = 48
 
     # Caminhos para ícones padrão.
      icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -210,25 +209,24 @@
     # Se o raio for 0, você não tem cantos arredondados.
     # O raio será reduzido automaticamente se exceder a metade da altura
     # da notificação para evitar o corte de texto e / ou ícones.
-    # corner_radius = 3
-    corner_radius = 0
+    corner_radius = 3
     
     ##################################################
     #		         Legacy       	             #
     ##################################################
 
-    # Use the Xinerama extension instead of RandR for multi-monitor support.
-    # This setting is provided for compatibility with older nVidia drivers that
-    # do not support RandR and using it on systems that support RandR is highly
-    # discouraged.
+    # Use a extensão Xinerama em vez de RandR para suporte a vários monitores.
+    # Esta configuração é fornecida para compatibilidade com drivers nVidia mais antigos
+    # que não suportam RandR e seu uso em sistemas que suportam RandR é altamente desencorajado.
     #
-    # By enabling this setting dunst will not be able to detect when a monitor
-    # is connected or disconnected which might break follow mode if the screen
-    # layout changes.
+    # 
+    # Ao habilitar essa configuração, o dunst não será capaz de detectar
+    # quando um monitor está conectado ou desconectado, o que pode interromper
+    # o modo de acompanhamento se o layout da tela mudar.
     force_xinerama = false
 
     ##################################################
-    #		         mouse     	             #
+    #		         Mouse     	             #
     ##################################################
 
     # Defines action of mouse event
@@ -242,14 +240,16 @@
     mouse_middle_click = close_all
     mouse_right_click = close_current
 
-    # Experimental features that may or may not work correctly. Do not expect them
-    # to have a consistent behaviour across releases.
+    # Recursos experimentais que podem ou não funcionar corretamente.
+    # Não espere que eles tenham um comportamento consistente entre as versões.
+
 [experimental]
-    # Calculate the dpi to use on a per-monitor basis.
-    # If this setting is enabled the Xft.dpi value will be ignored and instead
-    # dunst will attempt to calculate an appropriate dpi value for each monitor
-    # using the resolution and physical size. This might be useful in setups
-    # where there are multiple screens with very different dpi values.
+
+    # Calcule o dpi a ser usado por monitor.
+    # Se esta configuração estiver ativada, o valor Xft.dpi será ignorado e,
+    # em vez disso, dunst tentará calcular um valor de dpi apropriado para cada monitor usando
+    # a resolução e o tamanho físico. Isso pode ser útil em configurações onde há várias telas 
+    # com valores de dpi muito diferentes.
     per_monitor_dpi = false
 
 [shortcuts]
@@ -277,7 +277,7 @@
 
     background = "#2E3440"
     foreground = "#D8DEE9"
-    frame_color = "#6e88c1"
+    frame_color = "#d65d0e"
     timeout = 5
     # Ícone para notificações com baixa urgência, descomente para ativar.
     icon = ~/.config/dunst/normal.png
@@ -285,7 +285,7 @@
 [urgency_normal]
     background = "#2E3440"
     foreground = "#D8DEE9"
-    frame_color = "#6e88c1"
+    frame_color = "#d65d0e"
     timeout = 6
     # Ícone para notificações com urgência normal, descomente para ativar.
     icon = ~/.config/dunst/normal.png
@@ -293,7 +293,7 @@
 [urgency_critical]
     background = "#2E3440"
     foreground = "#D8DEE9"
-    frame_color = "#6e88c1"
+    frame_color = "#d65d0e"
     timeout = 8
     # Ícone para notificações com urgência crítica, descomente para ativar.
     icon = ~/.config/dunst/critical.png
@@ -301,7 +301,7 @@
 # Cada seção que não seja uma das anteriores é interpretada como uma regra para
 # anular as configurações de certas mensagens.
 #
-# Messages can be matched by
+# As mensagens podem ser correspondidas por
 #    appname (discouraged, see desktop_entry)
 #    body
 #    category
@@ -312,7 +312,7 @@
 #    stack_tag
 #    summary
 #
-# and you can override the
+# e você pode substituir o
 #    background
 #    foreground
 #    format
@@ -375,17 +375,17 @@
 #    script = dunst_test.sh
 
 #[ignore]
-#    # This notification will not be displayed
+#    # Esta notificação não será exibida
 #    summary = "foobar"
 #    format = ""
 
 #[history-ignore]
-#    # This notification will not be saved in history
+#    # Esta notificação não será exibida.
 #    summary = "foobar"
 #    history_ignore = yes
 
 #[skip-display]
-#    # This notification will not be displayed, but will be included in the history
+#    # Esta notificação não será exibida, mas será incluída no histórico.
 #    summary = "foobar"
 #    skip_display = yes
 
