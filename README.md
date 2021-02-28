@@ -28,7 +28,7 @@ Barra de Status | [Polybar](https://github.com/polybar/polybar)
 Visualizador de Imagens | [Viewnior](http://siyanpanayotov.com/project/viewnior) e [Feh](https://feh.finalrewind.org/)
 Daemon de Notificação | [Dunst](https://github.com/dunst-project/dunst)
 Conf. do Monitor | [ARandR](https://christian.amsuess.com/tools/arandr/)
-Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
+Tela de Bloqueio | [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) ou [i3lock-color](https://github.com/Raymo111/i3lock-color)
 Tema GTK | [Arc-Theme](https://github.com/horst3180/arc-theme)
 Tema Cursor | [WinConceptOS Cursors](https://github.com/yeyushengfan258/WinSur-white-cursors)
 
