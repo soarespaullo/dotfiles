@@ -93,8 +93,8 @@ bindsym $win+F5 exec --no-startup-id picom -c
 bindsym $win+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
 
 # Bloquear Tela
-# bindsym $win+x exec --no-startup-id $HOME/.local/bin/lockscreen
-bindsym $win+x exec --no-startup-id betterlockscreen -l dim -t "Digite a senha para Desbloquear"
+bindsym $win+x exec --no-startup-id $HOME/.local/bin/lockscreen
+#bindsym $win+x exec --no-startup-id betterlockscreen -l dim -t "Digite a senha para Desbloquear"
 
 # Iniciar Gravação de Tela (SimpleScreenRecorder)
 bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
@@ -111,15 +111,6 @@ bindsym $win+Shift+q kill
 #                            RECURSOS                              #
 ####################################################################
 
-
-# Desenho de marcas na decoração da janela
-# show_marks yes
-
-# Atraso na redefinição da dica de urgência na alteração da área de trabalho
-# force_display_urgency_hint 500 ms
-
-# Alternância automática ao alternar para o espaço de trabalho atual
-# workspace_auto_back_and_forth no
 
 # Opções
 focus_follows_mouse yes
@@ -166,7 +157,7 @@ bindsym Print exec --no-startup-id flameshot gui
 
 
 ####################################################################
-#                         ÁREA DE TRABALHO                         #
+#                            WORKSPACE                             #
 ####################################################################
 
 
@@ -208,7 +199,7 @@ bindsym $win+Shift+0 move container to workspace number $ws10
 
 
 ####################################################################
-#            APLICATIVOS ABERTOS NA ÁREA DE TRABALHO               #
+#                    APLICATIVOS ABERTOS NA WS                     #
 ####################################################################
 
 
@@ -508,7 +499,7 @@ exec --no-startup-id setxkbmap br,us
 exec --no-startup-id dunst -b
 
 # Boas vindas
-exec --no-startup-id notify-send -i "~/.config/dunst/user.png"  "Olá $USER, Seja Bem-Vindo"
+exec --no-startup-id notify-send -i "~/.config/dunst/user.png"  "Olá $USER, Seja Bem-vindo!"
 
 # Xrandr - Brilho de Tela
 exec --no-startup-id xrandr --output DP1 --brightness 0.7  

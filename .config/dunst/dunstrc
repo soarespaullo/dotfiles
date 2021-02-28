@@ -301,7 +301,7 @@
 # Cada seção que não seja uma das anteriores é interpretada como uma regra para
 # anular as configurações de certas mensagens.
 #
-# As mensagens podem ser correspondidas por
+# As mensagens podem ser correspondidas por;
 #    appname (discouraged, see desktop_entry)
 #    body
 #    category
@@ -324,42 +324,44 @@
 #    timeout
 #    urgency
 #
-# Shell-like globbing will get expanded.
+# A formação de bolhas em forma de concha será expandida.
 #
-# Instead of the appname filter, it's recommended to use the desktop_entry filter.
-# GLib based applications export their desktop-entry name. In comparison to the appname,
-# the desktop-entry won't get localized.
+# Em vez do filtro appname, é recomendado usar o filtro de entrada da área de trabalho.
+# Os aplicativos baseados em GLib exportam seus nomes de entrada na área de trabalho.
+# Em comparação com o appname, a entrada da área de trabalho não será localizada.
 #
 # SCRIPTING
-# You can specify a script that gets run when the rule matches by
-# setting the "script" option.
-# The script will be called as follows:
-#   script appname summary body icon urgency
-# where urgency can be "LOW", "NORMAL" or "CRITICAL".
+# Você pode especificar um script que será executado quando a regra corresponder,
+# definindo a opção "script". O script será chamado da seguinte maneira:
+# script appname resumo corpo ícone urgência
+# onde a urgência pode ser "LOW", "NORMAL" ou "CRITICAL".
 #
-# NOTE: if you don't want a notification to be displayed, set the format
-# to "".
-# NOTE: It might be helpful to run dunst -print in a terminal in order
-# to find fitting options for rules.
+# NOTA: se você não quiser que uma notificação seja exibida, defina o formato
+# para "". NOTA: Pode ser útil executar dunst -print em um terminal para
+# para encontrar opções de ajuste para regras.
 
-# Disable the transient hint so that idle_threshold cannot be bypassed from the
-# client
+# Desative a dica transitória para que idle_threshold não possa ser ignorado
+# do cliente.
 #[transient_disable]
 #    match_transient = yes
 #    set_transient = no
 #
-# Make the handling of transient notifications more strict by making them not
-# be placed in history.
+# Torne o tratamento de notificações temporárias mais estrito, 
+# fazendo com que não sejam colocadas no histórico.
 #[transient_history_ignore]
 #    match_transient = yes
 #    history_ignore = yes
 
-# fullscreen values
-# show: show the notifications, regardless if there is a fullscreen window opened
-# delay: displays the new notification, if there is no fullscreen window active
-#        If the notification is already drawn, it won't get undrawn.
-# pushback: same as delay, but when switching into fullscreen, the notification will get
-#           withdrawn from screen again and will get delayed like a new notification
+# Valores de tela cheia.
+#
+# show: Mostrar as notificações, independentemente de haver uma janela em tela cheia aberta.
+#
+# delay: Exibe a nova notificação, se não houver janela de tela cheia ativa.
+# Se a notificação já estiver desenhada, ela não será desfeita.
+#
+# pushback: Mesmo que atrasar, mas ao mudar para tela inteira, a notificação será retirada
+# da tela novamente e será atrasada como uma nova notificação.
+#
 #[fullscreen_delay_everything]
 #    fullscreen = delay
 #[fullscreen_show_critical]

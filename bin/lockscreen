@@ -1,6 +1,7 @@
 #!/bin/sh
 
-notify-send --expire-time=3000 --icon=changes-allow "Bloqueando a Tela" "LockScreen rodando"
+notify-send --expire-time=3000 -i ~/.config/dunst/cadeadoo.png "Bloqueando a Tela"
+
 B='#00000000'  # blank
 C='#ffffff22'  # clear ish
 D='#f1f1f1cc'  # default
@@ -8,9 +9,8 @@ T='#FFFFFFFF'  # text
 W='#73d216bb'  # wrong
 V='#FFFFFFFF'  # verifying
 
-#./x86_64-pc-linux-gnu/i3lock \
-i3lock-color \
--i ~/.config/i3lock/wallpaper.jpg \
+i3lock \
+-i ~/.config/i3lock/arch.jpg \
 --insidevercolor=$C   \
 --ringvercolor=$V     \
 \
@@ -21,9 +21,13 @@ i3lock-color \
 --ringcolor=$D        \
 --linecolor=$B        \
 --separatorcolor=$D   \
+--show-failed-attempts \
 \
---verifcolor=$T        \
---wrongcolor=$T        \
+--veriftext="Verificando" \
+--wrongtext="Erro" \
+--noinputtext="Vazio" \
+--verifcolor=$T       \
+--wrongcolor=$T       \
 --timecolor=$T        \
 --datecolor=$T        \
 --layoutcolor=$T      \
@@ -37,3 +41,7 @@ i3lock-color \
 --timestr="%H:%M:%S"  \
 --datestr="%A, %m %Y" \
 --keylayout 2  2>/dev/null  \
+\
+--greetertext="Digite a senha para desbloquear." \
+--greetercolor=$D \
+--greeterpos="816:700" \ 
