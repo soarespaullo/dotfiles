@@ -14,17 +14,32 @@
 ;==========================================================;
 
 [colors]
-;background = ${xrdb:color0:#222}
 background = #222
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = #DFDFDF
 ;foreground-alt = #555
-primary = #4682B4  
+primary = #FFFFFF
 secondary = #e60053
 
-;principal = #eee8d5
-;bateria = #a3be8c
+; Outras cores ...
+
+white = #FFFFFF
+black = #000000
+red = #EC7875
+pink = #EC6798
+purple = #BE78D1
+blue = #75A4CD
+cyan = #00C7DF
+teal = #00B19F
+green = #61C766
+lime = #B9C244
+yellow = #EBD369
+amber = #EDB83F
+orange = #E57C46
+brown = #AC8476
+gray = #9E9E9E
+indigo = #6C77BB
+blue-gray = #6D8895
 
 ; Alertas
 
@@ -36,7 +51,7 @@ alert = #bd2c40
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
-;dpi = 80
+;dpi = 96
 width = 100%
 height = 24
 ;offset-x = 1%
@@ -48,12 +63,10 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 2
-;line-color = #f00
 line-color = ${colors.foreground}
 
-;border-size = 2
-;border-color = #fff
-;border-color = ${colors.foreground}
+border-bottom-size = 2
+border-color = ${colors.foreground}
 
 padding-left = 0
 padding-right = 1
@@ -83,9 +96,9 @@ separator = |
 ;		       MÓDULOS BAR TOP                     ;
 ;==========================================================;
 
-modules-left = linux kernel mpd 
+modules-left = linux mpd 
 modules-center = xwindow 
-modules-right = pulse pacman calendar date pacman-updates aur-updates rede powermenu
+modules-right = pulse pacman calendar date rede powermenu
 
 ;==========================================================;
 ;			TRAY BAR TOP                       ;
@@ -135,11 +148,10 @@ foreground = ${colors.foreground}
 
 line-size = 2
 line-color = ${color.foreground}
-;line-color = #f00
 
-;border-size = 2
-;border-color = #fff
-;border-color = ${colors.foreground}
+border-top-size = 2
+border-color = ${colors.foreground}
+
 
 padding-left = 0
 padding-right = 2
@@ -169,9 +181,9 @@ separator = |
 ;		      MÓDULOS BAR BOTTOM                   ;
 ;==========================================================;
 
-modules-left = i3 tmpd
+modules-left = i3 
 modules-center = memory cpu filesystem filesystem2 temperature
-modules-right = xkeyboard protonmail uptime trash showdesktop
+modules-right = xkeyboard uptime trash
 
 ;==========================================================;
 ;			TRAY BAR BOTTOM                    ;
@@ -206,9 +218,9 @@ format-background = ${colors.background}
 
 label = %title%
 label-foreground = ${colors.foreground}
-label-maxlen = 50
+label-maxlen = 40
 
-label-empty = Sem Janelas
+label-empty = Desktop
 label-empty-foreground = ${colors.foreground}
 ;label-empty-underline = ${colors.foreground}
 
@@ -371,16 +383,10 @@ format-underline = #98971a
 ;			MÓDULO MPD			   ;
 ;==========================================================;
 
-; https://github.com/polybar/polybar/wiki/Module:-mpd
-
 [module/mpd]
 type = internal/mpd
 
-host = 127.0.0.1
-port = 6600
-
-format-online = <label-song> <icon-prev> <toggle> <icon-next> <icon-repeatone> <label-time> <icon-stop>
-format-offline = <label-offline>
+format-online = <label-song> <icon-prev> <toggle> <icon-next> <label-time> <icon-stop>
 
 ; Aplica-se apenas se <icon-X> for usado.
 icon-prev = 
@@ -403,8 +409,7 @@ bar-progress-fill = "─"
 bar-progress-fill-foreground = ${colors.alert}
 bar-progress-empty = "─"
 
-label-song = %{F#4682B4} %{F-}%title%
-label-offline = %{F#4682B4} %{F-}mpd está offline
+label-song = %{F#FFFFFF} %{F-}%title%
 
 ;==========================================================;
 ;		     MÓDULO XBACKLIGHT			   ;	
@@ -593,7 +598,6 @@ menu-0-3 = "Desligar"
 menu-0-3-exec = menu-open-4
 menu-1-0 = "Sair AGORA!"
 menu-1-0-exec = i3-msg exit
-;menu-1-0-exec = bspc quit
 menu-2-0 = "Suspender AGORA!"
 menu-2-0-exec = systemctl suspend
 menu-3-0 = "Reiniciar AGORA!"
@@ -757,7 +761,7 @@ content = "%{F${colors.foreground}  %{F-} Olá, k4k4rot0"
 
 [module/linux]
 type = custom/text
-content = "%{F#4682B4}  %{F-} Arch Linux"
+content = "%{F#FFFFFF}  %{F-} Arch Linux"
 ;content-underline = ${colors.foreground}
 click-left = xdg-open https://wiki.archlinux.org/
 
@@ -808,7 +812,7 @@ interval = 0.1
 exec = $HOME/.config/polybar/scripts/infotrash.sh
 click-left = thunar trash:///
 click-right= rm -rf .local/share/Trash/files
-label = "%{F#4682B4}  %{F-} %output:0:37:...%"
+label = "%{F#FFFFFF}  %{F-} %output:0:37:...%"
 ;format-underline = ${colors.foreground}
 
 ;==========================================================;
@@ -822,8 +826,8 @@ interval = 1
 ;exec = date "+%a %d %b, %y"
 exec = date "+%a, %d %b"
 ;exec = date "+%a %d %b, %Y - %H:%M:%S"
-label = "%{F#4682B4}  %{F-} %output:0:36:...%"
-click-left = notify-send -i "~/.config/dunst/calendario.png" "$(cal)"
+label = "%{F#FFFFFF}  %{F-} %output:0:36:...%"
+click-left = notify-send -i "/usr/share/icons/ePapirus/32x32/apps/calendar.svg" "$(cal)"
 ;format-background = #98971a
 ;format-underline = #98971a
 
@@ -854,8 +858,6 @@ click-left = exec i3-sensible-terminal -e nmtui  &
 ;		        MÓDULO REDE                        ;
 ;==========================================================;
 
-; https://github.com/polybar/polybar/wiki/Module:-network
-
 [module/rede]
 type = internal/network
 interface = enp0s31f6
@@ -885,7 +887,7 @@ format-packetloss = <label-packetloss>
 ;   %linkspeed% [wired]
 ;label-connected = %downspeed:3% %upspeed:3%
 ;label-connected = %downspeed:%
-label-connected = conectado %downspeed%
+label-connected = Conectado %downspeed%
 label-disconnected = offline
 label-packetloss = los
 
@@ -893,9 +895,8 @@ label-packetloss = los
 ;		       MÓDULO WIRELESS                     ;
 ;==========================================================;
 
-; https://github.com/polybar/polybar/wiki/Module:-network
-
 ; Obter os nomes das interfaces em sua máquina com "ip link"
+
 [module/wireless]
 type = internal/network
 interface = wlp3s0
@@ -914,8 +915,6 @@ format-disconnected-prefix-foreground = ${colors.secondary}
 ;==========================================================;
 ;		        MÓDULO BATERIA                     ;
 ;==========================================================;
-
-; https://github.com/polybar/polybar/wiki/Module:-battery
 
 [module/battery]
 type = internal/battery
@@ -969,10 +968,3 @@ animation-charging-framerate = 750
 ;==========================================================;
 ;		       	     FIM                           ;
 ;==========================================================;
-
-[module/tmpd]
-type = custom/text
-content = mpd
-click-left =  systemctl --user start mpd.service
-click-right = systemctl --user stop mpd.service
-

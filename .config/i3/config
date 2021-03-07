@@ -94,7 +94,7 @@ bindsym $win+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja
 
 # Bloquear Tela
 bindsym $win+x exec --no-startup-id $HOME/.local/bin/lockscreen
-#bindsym $win+x exec --no-startup-id betterlockscreen -l dim -t "Digite a senha para Desbloquear"
+# bindsym $win+x exec --no-startup-id betterlockscreen -l dim -t "Digite a senha para Desbloquear"
 
 # Iniciar Gravação de Tela (SimpleScreenRecorder)
 bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
@@ -499,7 +499,7 @@ exec --no-startup-id setxkbmap br,us
 exec --no-startup-id dunst -b
 
 # Boas vindas
-exec --no-startup-id notify-send -i "~/.config/dunst/user.png"  "Olá $USER, Seja Bem-vindo!"
+exec --no-startup-id notify-send -i "/usr/share/icons/ePapirus/32x32/apps/user_icon.svg"  "Olá $USER, Seja Bem-vindo!"
 
 # Xrandr - Brilho de Tela
 exec --no-startup-id xrandr --output DP1 --brightness 0.7  

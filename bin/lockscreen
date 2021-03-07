@@ -1,6 +1,6 @@
 #!/bin/sh
 
-notify-send --expire-time=3000 -i ~/.config/dunst/cadeadoo.png "Bloqueando a Tela"
+notify-send --expire-time=3000 -i "/usr/share/icons/Papirus/32x32/apps/yast-kerberos.svg" "Bloqueando a Tela"
 
 B='#00000000'  # blank
 C='#ffffff22'  # clear ish
