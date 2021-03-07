@@ -46,6 +46,10 @@ Tema Cursor | [WinConceptOS Cursors](https://github.com/yeyushengfan258/WinSur-w
 
 # Tela de Bloqueio - Betterlockscreen
 
-![screenshot](/screenshots/bloqueio.png)
+![screenshot](/screenshots/bloqueio-betterlockscreen.png)
+
+# Tela de Bloqueio - i3lock-color
+
+![screenshot](/screenshots/bloqueio-i3lock-color.png)
 
 _Sinta-se livre para copiar e fazer sua própria alteração!;-)_
