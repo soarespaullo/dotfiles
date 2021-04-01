@@ -1,7 +1,6 @@
 configuration {
   show-icons: true;
   icon-theme: "Papirus";
-  /*font: "FiraCode Regular Medium 11";*/
   font: "JetBrains Mono Medium 11";
   drun-display-format: "{icon} {name}";
   display-run: " ";
@@ -29,8 +28,8 @@ configuration {
     alternate-normal-foreground: @foreground;
     normal-background:           #1e1e1e;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  #6e88c1;
-    border-color:                #6e88c1;
+    selected-normal-background:  #ffffff;
+    border-color:                #ffffff;
     spacing:                     3;
     separatorcolor:              #2E3440;
     separator-style:             "solid";
@@ -54,12 +53,12 @@ configuration {
 }
 
 #mainbox {
-    border:  0;
-    padding: 0;
+    border:  2;
+    padding: 5;
 }
 
 #message {
-    border:       1px dash 0px 0px ;
+    border:       1px dash 0px 0px;
     border-color: @separatorcolor;
     padding:      1px;
 }
@@ -70,16 +69,15 @@ configuration {
 
 #listview {
     fixed-height: 0;
-    /* border:       2px dash 0px 0px ; */
     border-color: @separatorcolor;
     spacing:      2px;
-    scrollbar:    true;
-    padding:      2px 0px 0px ;
+    scrollbar:    false;
+    padding:      2px 0px 0px;
 }
 
 #element {
     border:  0;
-    padding: 2px ;
+    padding: 2px;
 }
 
 #element.normal.normal {
@@ -159,6 +157,8 @@ configuration {
     spacing:    0;
     text-color: @normal-foreground;
     padding:    2px;
+    placeholder:  "Pesquisar...";
+    
 }
 
 #prompt {

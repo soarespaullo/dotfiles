@@ -1,0 +1,23 @@
+/* Confirmar Diálogo */
+
+@import "colors.rasi"
+
+* {
+   background-color:    @bg;
+   text-color:          @fg;
+   font:	        "JetBrains Mono Medium 11";
+}
+
+window {
+    width:      	450px;
+    padding:            15px;
+    border:		2px;
+    border-color:       @ac;
+    location:           center;
+    y-offset:           -2em;
+}
+
+entry {
+    expand: 	        true;
+    text-color:		@ac;
+}

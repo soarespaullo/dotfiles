@@ -97,7 +97,7 @@ separator = |
 
 modules-left = linux mpd 
 modules-center = xwindow 
-modules-right = pulse pacman calendar date rede powermenu
+modules-right = pulse pacman calendar date rede sysmenu
 
 ;==========================================================;
 ;			TRAY BAR TOP                       ;
@@ -169,17 +169,17 @@ font-3 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-4 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 ;==========================================================;
-;		       SEPARADOR BAR TOP                   ;
+;		      SEPARADOR BAR TOP                    ;
 ;==========================================================;
 
 separator = |
 ;separator = /
 
 ;==========================================================;
-;		      MÓDULOS BAR BOTTOM                   ;
+;		     MÓDULOS BAR BOTTOM                    ;
 ;==========================================================;
 
-modules-left = i3 updates
+modules-left = i3 
 modules-center = memory cpu filesystem filesystem2 temperature
 modules-right = xkeyboard uptime trash 
 
@@ -500,6 +500,8 @@ label-muted =  Sem som
 label-muted-foreground = ${colors.alert}
 format-muted-underline = ${colors.alert}
 
+click-middle = pavucontrol
+
 ;==========================================================;
 ;		         MÓDULO ALSA                       ;
 ;==========================================================;
@@ -809,7 +811,7 @@ type = custom/script
 interval = 0.1
 exec = $HOME/.config/polybar/scripts/infotrash.sh
 click-left = thunar trash:///
-click-right = notify-send -i "/usr/share/icons/ePapirus/32x32/apps/trashindicator.svg" "Lixeira Limpa!!!" && rm -rf .local/share/Trash/files
+click-right = notify-send -i "/usr/share/icons/ePapirus/32x32/apps/trashindicator.svg" "Lixeira Limpa!" && rm -rf .local/share/Trash/files
 label = "%{F#FFFFFF}  %{F-} %output:0:37:...%"
 ;format-underline = ${colors.foreground}
 
@@ -893,8 +895,6 @@ label-packetloss = los
 ;		       MÓDULO WIRELESS                     ;
 ;==========================================================;
 
-; Obter os nomes das interfaces em sua máquina com "ip link"
-
 [module/wireless]
 type = internal/network
 interface = wlp3s0
@@ -967,14 +967,12 @@ animation-charging-framerate = 750
 ;		       	     FIM                           ;
 ;==========================================================;
 
-[module/updates]
-type = custom/script
+[module/sysmenu]
+type = custom/text
 
-exec = ~/.config/polybar/scripts/updates.sh
+format-spacing = 2
 
-tail = true
-interval = 5
+content = "  "
+content-foreground = ${colors.primary}
 
-format-background = ${colors.red}
-format-foreground = ${colors.foreground}
-format-padding = 10
+click-left = ~/.config/polybar/scripts/powermenu.sh &

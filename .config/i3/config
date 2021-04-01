@@ -213,6 +213,9 @@ assign [class="(firefox)"] $ws1
 # Browser (Google Chrome) ws=1
 for_window [class="(Google)"] move to workspace $ws1 focus
 
+# Browser (Brave) ws=1
+for_window [class="(Brave)"] move to workspace $ws1 focus
+
 # Terminal (Kitty) ws=2
 for_window [class="(kitty)"] move to workspace $ws2
 
@@ -353,7 +356,7 @@ for_window [class="(Anydesk)"]floating enable, move position center
 # TeamViewer (Acesso Remoto)
 for_window [class="(TeamViewer)"]floating enable, move position center
 
-# Atom (Editor de Texto)
+# Atom (Desenvolvimento Web)
 for_window [class="(Atom)"]floating enable, move position center
 
 # Thunderbird (Cliente de E-mails)
@@ -374,6 +377,11 @@ for_window [class="(qt5)"]floating enable, move position center
 # Audacity (Programa de Edição Digital de Áudio)
 for_window [class="(Audacity)"]floating enable, move position center
 
+# PuTTy (Software de Emulação de Terminal)
+for_window [class="(Putty)"]floating enable, move position center
+
+# Brackets (Desenvolvimento Web)
+for_window [class="(Brackets)"]floating enable, move position center
 
 ####################################################################
 #                           R E S I Z E                            #
@@ -462,7 +470,7 @@ mode "$mode_gaps_outer" {
 ####################################################################
 
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id  pactl set-sink-volume 0 +5% 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
@@ -478,7 +486,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
+exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh 
 
 # Wallpapers
 exec_always --no-startup-id nitrogen --restore
