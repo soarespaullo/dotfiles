@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 if [ "$(mocp -Q %state)" != "STOP" ];then
     SONG=$(mocp -Q %song)

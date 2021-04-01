@@ -33,7 +33,7 @@ configuration {
 }
 
 #textbox-prompt-colon {
-   padding: 		       6px 10px 4px 80px;
+   padding: 		       6px 7px 4px 7px;
    background-color: 	       @bgt;
    text-color: 		       @fg;
    expand: 		       false;
@@ -69,7 +69,7 @@ configuration {
    border:		       2px;
    border-color:	       @ac;
    children:                   [ inputbar, listview ];
-   spacing:                    30px;
+   spacing:                    6px;
    padding:                    6px;
 }
 
@@ -82,7 +82,7 @@ configuration {
 }
 
 #element-icon {
-   size:                       24px;
+   size:                       15px;
    border:                     0px;
 }
 

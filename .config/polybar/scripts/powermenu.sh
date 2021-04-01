@@ -12,10 +12,10 @@ rofi_command="rofi -theme $dir/powermenu.rasi"
 # Opções
 shutdown=" Desligar"
 reboot=" Reiniciar"
-lock=" Bloquear tela"
+lock=" Bloquear Tela"
 suspend=" Suspender"
-logout=" Encerrar sessão"
-user=" Trocar de usuário"
+logout=" Encerrar Sessão"
+user=" Trocar de Usuário"
 
 # Confirmação
 confirm_exit() {
@@ -90,7 +90,7 @@ case $chosen in
 			msg
         fi
         ;;
- $user)
+    $user)
 		ans=$(confirm_exit &)
 		if [[ $ans == "sim" || $ans == "SIM" || $ans == "s" || $ans == "S" ]]; then
 			if 
