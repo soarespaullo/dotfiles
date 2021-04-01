@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Créditos: @adi1090x
+
+# Modificado By: @k4k4rot0
+
 dir="~/.config/polybar/scripts/rofi"
 uptime=$( uptime --pretty | sed 's/up //' | sed 's/\ years\?,/y/' | sed 's/\ weeks\?,/w/' | sed 's/\ days\?,/d/' | sed 's/\ hours\?,\?/h/' | sed 's/\ minutes\?/m/')
 
@@ -32,7 +36,6 @@ msg() {
 # Variável passada para rofi
 options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
-
 chosen="$(echo -e "$options" | $rofi_command -p "Tempo de Atividade: $uptime" -dmenu -selected-row 0)"
 case $chosen in
     $shutdown)
@@ -57,7 +60,7 @@ case $chosen in
         ;;
     $lock)
 		if [[ -f /usr/bin/lockscreen ]]; then
-			i3lock-color
+			lockscreen
 		elif [[ -f /usr/bin/betterlockscreen ]]; then
 			betterlockscreen -l
 		fi
@@ -68,7 +71,7 @@ case $chosen in
 			mpc -q pause
 			amixer set Master mute
 			systemctl suspend
-		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
+		elif [[ $ans == "no" || $ans == "NAO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else
 			msg
