@@ -11,11 +11,11 @@ rofi_command="rofi -theme $dir/powermenu.rasi"
 
 # Opções
 shutdown=" Desligar"
-reboot=" Reiniciar"
+reboot=" Reiniciar"
 lock=" Bloquear tela"
-suspend=" Hibernar"
-logout=" Fazer Logoff"
-
+suspend=" Suspender"
+logout=" Encerrar sessão"
+user=" Trocar de usuário"
 
 # Confirmação
 confirm_exit() {
@@ -29,12 +29,12 @@ confirm_exit() {
 
 # Mensagem
 msg() {
-	rofi -theme "$dir/mensagem.rasi" -e " Opções disponíveis são: - sim / s / nao / n"
+	rofi -theme "$dir/mensagem.rasi" -e " Opções disponíveis são: - sim / SIM / s / S / não / NÃO / nao / n / N"
 }
 
 
 # Variável passada para rofi
-options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+options="$lock\n$suspend\n$logout\n$reboot\n$shutdown\n$user"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Tempo de Atividade: $uptime" -dmenu -selected-row 0)"
 case $chosen in
@@ -42,7 +42,7 @@ case $chosen in
 		ans=$(confirm_exit &)
 		if [[ $ans == "sim" || $ans == "SIM" || $ans == "s" || $ans == "S" ]]; then
 			systemctl poweroff
-		elif [[ $ans == "nao" || $ans == "NAO" || $ans == "n" || $ans == "N" ]]; then
+		elif [[ $ans == "não" || $ans == "nao" || $ans == "NÃO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else
 			msg
@@ -52,14 +52,14 @@ case $chosen in
 		ans=$(confirm_exit &)
 		if [[ $ans == "sim" || $ans == "SIM" || $ans == "s" || $ans == "S" ]]; then
 			systemctl reboot
-		elif [[ $ans == "nao" || $ans == "NAO" || $ans == "n" || $ans == "N" ]]; then
+		elif [[ $ans == "não" || $ans == "nao" || $ans == "NÃO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else
 			msg
         fi
         ;;
     $lock)
-		if [[ -f /usr/bin/lockscreen ]]; then
+		if [[ -f $HOME/.local/bin/lockscreen ]]; then
 			lockscreen
 		elif [[ -f /usr/bin/betterlockscreen ]]; then
 			betterlockscreen -l
@@ -71,7 +71,7 @@ case $chosen in
 			mpc -q pause
 			amixer set Master mute
 			systemctl suspend
-		elif [[ $ans == "no" || $ans == "NAO" || $ans == "n" || $ans == "N" ]]; then
+		elif [[ $ans == "não" || $ans == "nao" || $ans == "NÃO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else
 			msg
@@ -84,7 +84,20 @@ case $chosen in
 			[[ "$DESKTOP_SESSION" == "i3" ]]; then
 				i3-msg exit
 			fi
-		elif [[ $ans == "nao" || $ans == "NAO" || $ans == "n" || $ans == "N" ]]; then
+		elif [[ $ans == "não" || $ans == "nao" || $ans == "NÃO" || $ans == "n" || $ans == "N" ]]; then
+			exit 0
+        else
+			msg
+        fi
+        ;;
+ $user)
+		ans=$(confirm_exit &)
+		if [[ $ans == "sim" || $ans == "SIM" || $ans == "s" || $ans == "S" ]]; then
+			if 
+			[[ "$DESKTOP_SESSION" == "i3" ]]; then
+				i3-msg exit
+			fi
+		elif [[ $ans == "não" || $ans == "nao" || $ans == "NÃO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else
 			msg

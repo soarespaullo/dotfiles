@@ -9,15 +9,15 @@
 }
 
 window {
-    width:      	450px;
-    padding:            15px;
-    border:		2px;
-    border-color:       @ac;
-    location:           center;
-    y-offset:           -2em;
+   width:              450px;
+   padding:            15px;
+   border:	       2px;
+   border-color:       @ac;
+   location:           center;
+   y-offset:           -2em;
 }
 
 entry {
-    expand: 	        true;
-    text-color:		@ac;
+   expand: 	        true;
+   text-color:		@ac;
 }
