@@ -181,7 +181,7 @@ separator = |
 
 modules-left = i3 
 modules-center = memory cpu filesystem filesystem2 temperature
-modules-right = xkeyboard uptime trash 
+modules-right = xkeyboard uptime lixo
 
 ;==========================================================;
 ;			TRAY BAR BOTTOM                    ;
@@ -763,7 +763,8 @@ content = "%{F${colors.foreground}  %{F-} Olá, k4k4rot0"
 type = custom/text
 content = "%{F#FFFFFF}  %{F-} Arch Linux"
 ;content-underline = ${colors.foreground}
-click-left = xdg-open https://wiki.archlinux.org/
+;click-left = xdg-open https://wiki.archlinux.org/
+click-left = rofi -show drun -theme ~/.config/rofi/arch.rasi &
 
 ;==========================================================;
 ;		     MÓDULO REINICIAR - I3                 ;
@@ -795,7 +796,6 @@ format-prefix-foreground = ${colors.primary}
 [module/kernel]
 type = custom/script
 exec = uname -r
- 
 format-prefix = "  " 
 format-prefix-foreground = ${colors.primary}
 format-foreground = ${colors.foreground}
@@ -806,10 +806,10 @@ format-background = ${colors.background}
 ;		        MÓDULO LIXO                        ;
 ;==========================================================;
 
-[module/trash]
+[module/lixo]
 type = custom/script
 interval = 0.1
-exec = $HOME/.config/polybar/scripts/infotrash.sh
+exec = $HOME/.config/polybar/scripts/lixo.sh
 click-left = thunar trash:///
 click-right = notify-send -i "/usr/share/icons/ePapirus/32x32/apps/trashindicator.svg" "Lixeira Limpa!" && rm -rf .local/share/Trash/files
 label = "%{F#FFFFFF}  %{F-} %output:0:37:...%"
