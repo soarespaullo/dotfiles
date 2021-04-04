@@ -1,0 +1,176 @@
+## Arquivo de configuração para CAVA. Os valores padrão são comentados. Use ';' ou '#' para comentar.
+
+# =========================================================
+# == By: @k4k4rot0
+# =========================================================
+
+[general]
+
+# Modo de suavização. Pode ser 'normal', 'scientific / científico' ou 'waves / ondas'.
+# DESCONTINUADO a partir de 0.6.0
+; mode = normal
+
+# Aceita apenas valores não negativos.
+framerate = 60
+
+# 'autosens' tentará diminuir a sensibilidade se as barras atingirem o pico.
+# 1 = ligado, 0 = desligado novo a partir de 0.6.0 autosens de valores baixos
+# (faixa dinâmica) 'overshoot' permite que as barras ultrapassem (em % da altura do terminal)
+# sem iniciar autosens. DESCONTINUADO a partir de 0.6.0
+; autosens = 1
+; overshoot = 20
+
+# Sensibilidade manual em %. Autosens deve ser desligada para que isso tenha efeito.
+# 200 significa altura dupla. Aceita apenas valores não negativos.
+sensitivity = 200
+
+# O número de barras (0-200). 0 define para automático (encher o console).
+# Largura das barras e espaço entre as barras em número de caracteres.
+bars = 0
+bar_width = 2
+bar_spacing = 1
+
+
+# Freqüências de corte mais baixas e mais altas para as barras mais baixas e mais altas da largura de banda # do visualizador.
+# Nota: há uma largura de banda total mínima de 43Mhz x número de barras. Cava aumentará automaticamente
+# o corte mais alto se uma banda muito baixa for especificada.
+lower_cutoff_freq = 50
+higher_cutoff_freq = 10000
+
+# Segundos sem entrada antes de o cava entrar no modo de espera.
+# O Cava não executará FFT ou desenho e apenas verificará a entrada uma vez por segundo.
+# O Cava será ativado assim que a entrada for detectada. 0 = desativar.
+; sleep_timer = 0
+
+
+[input]
+
+# método de captura de áudio. Os métodos possíveis são: 'pulse', 'alsa', 'fifo', 'sndio' ou 'shmem' 
+# O padrão é 'pulse', 'alsa' ou 'fifo', nessa ordem, dependendo do suporte com o qual a cava foi construída.
+#
+# Todos os métodos de entrada usam a mesma variável de configuração 'source' 
+# para definir onde deve obter o áudio.
+#
+# Para pulseaudio, 'source' será a fonte. Padrão: 'auto', que usa a fonte de monitor do coletor padrão
+# (todos os coletores de áudio de pulso (saídas) têm fontes de monitor (entradas) associadas a eles).
+# 
+# Para alsa 'source' será o dispositivo de captura.
+# Para fifo, 'source' será o caminho para o arquivo fifo.
+#
+# Para shmem 'source' será / squeezelite-AA:BB:CC:DD:EE:FF onde 'AA:BB:CC:DD:EE:FF' será o endereço
+# MAC do squeezelite.
+
+method = pulse
+source = auto
+
+; method = alsa
+; source = hw:Loopback,1
+
+; method = fifo
+; source = /tmp/mpd.fifo
+; sample_rate = 44100
+; sample_bits = 16
+
+; method = shmem
+; source = /squeezelite-AA:BB:CC:DD:EE:FF
+
+; method = portaudio
+; source = auto
+
+
+[output]
+
+# Método de saída. Pode ser 'ncurses', 'noncurses' ou 'raw'.
+# 'noncurses' usa uma técnica de framebuffer personalizada e desenha apenas
+# alterações de quadro a quadro. 'ncurses' é o padrão se for suportado.
+#
+# raw 'é um fluxo de dados de 8 ou 16 bits (configurável por meio da opção 'bit_format')
+# das alturas da barra que pode ser usado para enviar para outros aplicativos.
+# O padrão 'bruto' é de 200 barras, que podem ser ajustadas na opção 'barras' acima.
+method = ncurses
+
+# Canais visuais. Pode ser: 'estéreo / stereo' ou 'mono'. 'Estéreo / stereo' reflete ambos os canais
+# com frequências baixas no centro. 'Mono' sai da esquerda para a direita das frequências mais baixas
+# para as mais altas. 'mono_option' define mono para obter a entrada de 'esquerda', 'direita' ou 'média'.
+; channels = stereo
+; mono_option = average
+
+# Destino de saída bruto. Um fifo será criado se o destino não existir.
+; raw_target = /dev/stdout
+
+# Formato de dados brutos. Pode ser 'binário' ou 'ascii'.
+; data_format = binary
+
+# Formato de bit binário, pode ser '8bits' (0-255) ou '16bits' (0-65530).
+; bit_format = 16bit
+
+# Valor máximo do Ascii. No modo 'ascii', o intervalo vai de 0 ao valor especificado aqui
+; ascii_max_range = 1000
+
+# Delimitadores Ascii. No formato ASCII, cada barra e quadro são separados por delimitadores.
+# Use o valor decimal na tabela ascii (ou seja, 59 = ';' e 10 = '\ n' (avanço de linha)).
+bar_delimiter = 59
+; frame_delimiter = 10
+
+
+
+[color]
+
+# As cores podem ser uma das sete predefinidas: black, blue, cyan, green, magenta, red, white, yellow.
+# Ou definido pelo código hexadecimal '#xxxxxx' (o código hexadecimal deve estar entre '').
+# As cores definidas pelo usuário requerem o método de saída ncurses e um terminal que pode alterar as
+# definições de cores, como Gnome-terminal ou rxvt. se suportado, o modo ncurses será forçado se as cores
+# definidas pelo usuário forem usadas. o padrão é manter a cor atual do terminal
+; background = default
+; foreground = default
+
+
+# Modo gradiente, apenas cores definidas hexadecimais (e, portanto, modo ncurses) são suportados,
+# o fundo também deve ser definido em hexadecimal ou permanecer comentado. 1 = ligado, 0 = desligado.
+# Você pode definir até 8 cores diferentes. Eles variam de baixo para cima da tela
+
+; gradient = 1
+; gradient_count = 8
+; gradient_color_1 = '#59cc33'
+; gradient_color_2 = '#80cc33'
+; gradient_color_3 = '#a6cc33'
+; gradient_color_4 = '#cccc33'
+; gradient_color_5 = '#cca633'
+; gradient_color_6 = '#cc8033'
+; gradient_color_7 = '#cc5933'
+; gradient_color_8 = '#cc3333'
+
+
+[smoothing]
+
+# Valor percentual para suavização integral. Aceita valores de 0 a 100.
+# Valores mais altos significam mais suave, mas menos preciso. 0 para desativar.
+integral = 77
+
+# Desativa ou ativa a chamada "suavização Monstercat" com ou sem "waves / ondas".
+# Defina como 0 para desativar.
+
+; monstercat = 0
+waves = 0
+
+# Defina a porcentagem de gravidade para "queda". Valores mais altos significam que as barras
+# cairão mais rápido.
+# Aceita apenas valores não negativos. 50 significa meia gravidade, 200 significa o dobro.
+# Defina como 0 para desativar "drop off".
+gravity = 50
+
+
+# Na altura da barra, barras que seriam mais baixas que esta não serão desenhadas.
+ignore = 0
+
+
+[eq]
+
+# Este é complicado. Você pode ter quantas chaves quiser.
+# Lembre-se de descomentar mais de uma tecla! Mais chaves = mais precisão.
+# Consulte readme.md no github para mais explicações e exemplos.
+; 1 = 1 # bass
+; 2 = 1
+; 3 = 1 # midtone
+; 4 = 1
+; 5 = 1 # treble
