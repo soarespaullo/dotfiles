@@ -23,6 +23,8 @@ secondary = #E60053
 
 ; Outras cores ...
 
+arch = #164F6C
+
 white = #FFFFFF
 black = #000000
 red = #EC7875
@@ -66,7 +68,7 @@ line-size = 2
 line-color = ${colors.foreground}
 
 border-bottom-size = 2
-border-color = ${colors.foreground}
+border-color = ${colors.arch}
 
 padding-left = 0
 padding-right = 1
@@ -78,11 +80,12 @@ module-margin-right = 2
 ; 		        FONTS BAR TOP			   ;	
 ;==========================================================;
 
-font-0 = "Poppins:style=Regular:pixelsize=10;1"
-font-1 = fixed:pixelsize=10;1
-font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-3 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-4 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
+; fc-match -s | grep -i Roboto / fc-list | grep -i Roboto 
+; fc-cache -fv
+
+font-0 = "Roboto:size=9:weight=bold;2"
+font-1 = "Poppins:style=Regular:pixelsize=10;1"
+font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 ;==========================================================;
 ;		      SEPARADOR BAR TOP                    ;
@@ -149,7 +152,7 @@ line-size = 2
 line-color = ${color.foreground}
 
 border-top-size = 2
-border-color = ${colors.foreground}
+border-color = ${colors.arch}
 
 
 padding-left = 0
@@ -162,11 +165,12 @@ module-margin-right = 2
 ;		      FONTS BAR BOTTOM   	           ;	
 ;==========================================================;
 
-font-0 = "Poppins:style=Regular:pixelsize=10;1"
-font-1 = fixed:pixelsize=10;1
-font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-3 = "xos4 Terminess Powerline:pixelsize=13;1"
-font-4 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
+; fc-match -s | grep -i Roboto / fc-list | grep -i Roboto 
+; fc-cache -fv
+
+font-0 = "Roboto:size=9:weight=bold;2"
+font-1 = "Poppins:style=Regular:pixelsize=10;1"
+font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
 ;==========================================================;
 ;		      SEPARADOR BAR TOP                    ;
@@ -181,7 +185,7 @@ separator = |
 
 modules-left = i3 
 modules-center = memory cpu filesystem filesystem2 temperature
-modules-right = xkeyboard uptime lixo
+modules-right = xkeyboard pacman-updates aur-updates lixo
 
 ;==========================================================;
 ;			TRAY BAR BOTTOM                    ;
@@ -363,19 +367,6 @@ label-urgent-padding = 2
 label-separator = |
 label-separator-padding = 2
 label-separator-foreground = ${colors.foreground}
-
-;==========================================================;
-;		        PLAYER - MOC                       ;
-;==========================================================;
-
-[module/player-moc]
-type = custom/script
-exec = ~/.config/polybar/scripts/player-moc.sh
-interval = 3
-click-left = mocp -f &
-click-right = mocp -r &
-click-middle = mocp -G &
-format-underline = #98971a
 
 ;==========================================================;
 ;			MÓDULO MPD			   ;
@@ -747,15 +738,6 @@ content-foreground = ${colors.foreground}
 click-left = exec kitty &
 
 ;==========================================================;
-;		        MÓDULO USUÁRIO                     ;
-;==========================================================;
-
-[module/user]
-type = custom/text
-content = "%{F${colors.foreground}  %{F-} Olá, k4k4rot0"
-;content-underline = #5e8d87
-
-;==========================================================;
 ;		         MÓDULO LINUX                      ;
 ;==========================================================;
 
@@ -974,5 +956,4 @@ format-spacing = 2
 
 content = "  "
 content-foreground = ${colors.primary}
-
 click-left = ~/.config/polybar/scripts/powermenu.sh &

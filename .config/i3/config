@@ -60,7 +60,7 @@ new_window pixel 2
 
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #458588 #458588 #458588 #458588   #458588
+client.focused          #184f6d #184f6d #184f6d #184f6d   #184f6d
 client.focused_inactive #ffffff #ffffff #ffffff #ff5555   #ff5555
 client.unfocused        #ffffff #ff5555 #ffffff #ffffff   #ff5555
 client.urgent           #ff5555 #ff5555 #ff5555 #ff5555   #ff5555
@@ -382,6 +382,10 @@ for_window [class="(Putty)"]floating enable, move position center
 
 # Brackets (Desenvolvimento Web)
 for_window [class="(Brackets)"]floating enable, move position center
+
+# OnionShare (Compartilha arquivos através da rede Tor)
+for_window [class="(onionshare)"]floating enable, move position center
+
 
 ####################################################################
 #                           R E S I Z E                            #

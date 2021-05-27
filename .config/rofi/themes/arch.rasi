@@ -28,8 +28,8 @@ configuration {
     alternate-normal-foreground: @foreground;
     normal-background:           #1e1e1e;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  #ffffff;
-    border-color:                #ffffff;
+    selected-normal-background:  #184f6d;
+    border-color:                #184f6d;
     spacing:                     3;
     separatorcolor:              #2E3440;
     separator-style:             "solid";
@@ -53,7 +53,7 @@ configuration {
 }
 
 #mainbox {
-    border:  2;
+    border:  0;
     padding: 5;
 }
 
@@ -71,12 +71,13 @@ configuration {
     fixed-height: 0;
     border-color: @separatorcolor;
     spacing:      2px;
-    scrollbar:    false;
+    scrollbar:    true;
     padding:      2px 0px 0px;
 }
 
 #element {
     border:  0;
+    border-radius: 2px;
     padding: 2px;
 }
 
@@ -125,15 +126,20 @@ configuration {
     text-color:       @alternate-active-foreground;
 }
 
+#button {
+    background-color: #333;
+}
+
 #scrollbar {
-    width:        4px ;
+    width:        8px;
     border:       0;
-    handle-width: 8px ;
-    padding:      0;
+    handle-width: 7px;
+    handle-color: #333;
+    padding:      0 3px 3px 3px;
 }
 
 #sidebar {
-    border:       2px dash 0px 0px ;
+    border:       2px dash 0px 0px;
     border-color: @separatorcolor;
 }
 
@@ -157,8 +163,7 @@ configuration {
     spacing:    0;
     text-color: @normal-foreground;
     padding:    2px;
-    placeholder:  "Pesquisar...";
-    
+    placeholder: "Pesquisar...";    
 }
 
 #prompt {

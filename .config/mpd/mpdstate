@@ -2,12 +2,32 @@ sw_volume: 100
 audio_device_state:1:pulse audio
 audio_device_state:1:FIFO
 state: stop
-random: 0
-repeat: 0
-single: 0
-consume: 0
+current: 18
+random: 1
+repeat: 1
+single: 1
+consume: 1
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
+0:Músicas/Bruna Karla - 🎉 Corpo Perfeito _ Bruna Kids-mWhFaVG6EuY.mp3
+1:Músicas/Bruna Karla - 🎉 Parabéns _ Bruna Kids-AoX7v7VoldU.mp3
+2:Músicas/Bruna Karla - 😥 Deixar a Lágrima Rolar (Clipe Oficial MK Music)-y8lXOe6zSww.mp3
+3:Músicas/Andra & Mara - Sweet Dreams.mp3
+4:Músicas/Era Eu - Casa Worship (Clipe Oficial)-UsVFERf_5K0.mp3
+5:Músicas/Eu Te Vejo Em Tudo - Casa Worship (Clipe Oficial)-SFiu3KLNd34.mp3
+6:Músicas/Gabriel Guedes - Ele Vem (Ao Vivo) _ feat. Gabriela Rocha-YudXB8MZRTs.mp3
+7:Músicas/Gabriela Gomes - Deus Proverá-1i1673ILdVI.mp3
+8:Músicas/Jozyanne - Se Eu não conseguir falar - Clipe oficial-X-pjQqVAyxA.mp3
+9:Músicas/Julia Vitoria - Tudo o Que Sou (Live Session)-ZQqLTGsUVK8.mp3
+10:Músicas/Liberta-me de Mim - Luma Elpídio (Oficial)-4vkhEgq3WvQ.mp3
+11:Músicas/Paulo César Baruk - Santo Espírito (Holy Spirit) ft. Leonardo Gonçalves (Ao Vivo)-1Xprfo5-6OU.mp3
+12:Músicas/Paulo Neto - ✍ Ponto Final (Clipe Oficial MK Music)-WoTZZwVikTM.mp3
+13:Músicas/Preto no Branco - Eu Te Agradeço (Ao Vivo) ft. Israel Salazar-eiJ-9wg5W9g.mp3
+14:Músicas/Preto no Branco - Me Deixe Aqui (Video Oficial) ft. Priscilla Alcantara-Rd5vNgJvFQo.mp3
+15:Músicas/Pr. Lucas - 🎨 Pintor do Mundo (Clipe Oficial MK Music)-gHg8Ujrfwqk.mp3
+16:Músicas/Quando eu Chorar  - Bruna Karla-yAbcAZHq-Og.mp3
+17:Músicas/Que Amor É Esse - Luma Elpidio-xu8Zel1u-6k.mp3
+18:Músicas/Quero Conhecer Jesus (Cover Alessandro Villas Boas).mp3
 playlist_end

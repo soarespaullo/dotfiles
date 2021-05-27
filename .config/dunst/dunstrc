@@ -49,7 +49,7 @@
     frame_width = 2
 
     # Define a cor do quadro ao redor da janela de notificação.
-    frame_color = "#d65d0e"
+    frame_color = "#164F6C"
     
 
     # Defina uma cor para o separador. os valores possíveis são;
@@ -58,7 +58,7 @@
     #  * frame: use a mesma cor da moldura;
     #  * qualquer outra coisa será interpretada como uma cor X.
     # Os valores possíveis são: auto, foreground e frame.
-    separator_color = "#D79921"
+    separator_color = "#FFFFFF"
 
     # Classifique as mensagens por urgência.
     sort = yes
@@ -124,7 +124,7 @@
     # Mostra a idade da mensagem se a mensagem for mais antiga do que "show_age_threshold"
     # segundos.
     # Defina como -1 para desativar.
-    show_age_threshold = 60
+    show_age_threshold = 10
 
     # Divida as notificações em várias linhas se elas não se encaixarem
     # na geometria.
@@ -159,7 +159,7 @@
     max_icon_size = 48
 
     # Caminhos para ícones padrão.
-     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+     icon_path = /usr/share/icons/ePapirus/32x32/status/:/usr/share/icons/ePapirus/32x32/devices/:/usr/share/icons/ePapirus/32x32/apps/
 
     ##################################################
     #			History         	     #
@@ -277,26 +277,26 @@
 
     background = "#2E3440"
     foreground = "#D8DEE9"
-    frame_color = "#d65d0e"
+    frame_color = "#164F6C"
     timeout = 5
     # Ícone para notificações com baixa urgência, descomente para ativar.
-    icon = ~/.config/dunst/normal.png
+    icon = /usr/share/icons/ePapirus/32x32/apps/worms.svg
 
 [urgency_normal]
     background = "#2E3440"
     foreground = "#D8DEE9"
-    frame_color = "#d65d0e"
+    frame_color = "#164F6C"
     timeout = 6
     # Ícone para notificações com urgência normal, descomente para ativar.
-    icon = ~/.config/dunst/normal.png
+    icon = /usr/share/icons/ePapirus/32x32/apps/worms.svg
 
 [urgency_critical]
     background = "#2E3440"
     foreground = "#D8DEE9"
-    frame_color = "#d65d0e"
+    frame_color = "#164F6C"
     timeout = 8
     # Ícone para notificações com urgência crítica, descomente para ativar.
-    icon = ~/.config/dunst/critical.png
+    icon = /usr/share/icons/ePapirus/32x32/apps/worms.svg
 
 # Cada seção que não seja uma das anteriores é interpretada como uma regra para
 # anular as configurações de certas mensagens.
