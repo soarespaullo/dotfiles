@@ -206,68 +206,65 @@ bindsym $win+Shift+0 move container to workspace number $ws10
 # Ativar o floating e mover a janela para o centro:[..., floating enable, move position center]
 
  
-# Browser (Firefox) ws=1
+# Browser	ws=1
 #for_window [class="(firefox)"] move to workspace $ws1 focus
 assign [class="(firefox)"] $ws1
 
-# Browser (Google Chrome) ws=1
+# Browser	ws=1
 for_window [class="(Google)"] move to workspace $ws1 focus
 
-# Browser (Brave) ws=1
+# Browser	ws=1
 for_window [class="(Brave)"] move to workspace $ws1 focus
 
-# Terminal (Kitty) ws=2
+# Terminal	ws=2
 for_window [class="(kitty)"] move to workspace $ws2
 
-# Terminal (Termite) ws=2
-for_window [class="(Termite)"] move to workspace $ws2 focus
-
-# Telegram (Serviço de mensagens instantâneas) ws=3
+# Telegram	ws=3
 for_window [class="(Telegram)"] move to workspace $ws3 focus
 
-# Thunar (Gerenciador de Arquivos) ws=4
+# Thunar	ws=4
 for_window [class="Thunar"] move to workspace $ws4 focus
 
-# LibreOffice (Aplicativos Livre Para Escritório) ws=4
+# LibreOffice	ws=4
 for_window [class="libreoffice"] move to workspace $ws4 focus
 
-# Audacity (Programa de Edição Digital de Áudio) ws=5
+# Audacity	ws=5
 for_window [class="Audacity"] move to workspace $ws5 focus
 
-# Gimp (Programa de Criação e Edição de Imagens) ws=6
+# Gimp  ws=6
 for_window [class="(Gimp)"] move to workspace $ws6 focus
 
-# Inkscape (Software para Editoração Eletrônica de Imagens) ws=6
+# Inkscape	ws=6
 for_window [class="(Inkscape)"] move to workspace $ws6
 
-# MPV (Tocador de Mídia) ws=7
+# MPV	ws=7
 for_window [class="(mpv)"] move to workspace $ws7 focus
 
-# SMPlayer (Tocador de Mídia) ws=7
+# SMPlayer	ws=7
 for_window [class="(smplayer)"] move to workspace $ws7 focus
 
-# Discord (Aplicativo de Voz Sobre IP) ws=8
+# Discord	ws=8
 for_window [class="(discord)"] move to workspace $ws8 focus
 
-# BalenaEtcher (Crie USB inicializáveis) ws=8
+# BalenaEtcher	ws=8
 for_window [class="(etcher)"] move to workspace $ws8 focus
 
-# WoeUSB (Crie USB inicializáveis ​​do Windows a partir do Linux) ws=8
+# WoeUSB	ws=8
 for_window [class="(Woeusb)"] move to workspace $ws8 focus
 
-# VirtualBox (Máquina virtual) ws=8
+# VirtualBox	ws=8
 for_window [class="(VirtualBox)"] move to workspace $ws8 focus
 
-# SimpleScreenRecorder (ScreenCast) ws=8
+# SimpleScreenRecorder  ws=8
 for_window [class="(SimpleScreenRecorder)"] move to workspace $ws8
 
-# Qbittorrent (Cliente P2P) ws=9
+# Qbittorrent	ws=9
 for_window [class="(qBittorrent)"] move to workspace $ws9 focus
 
-# Steam (Loja de Games) ws=10
+# Steam  ws=10
 for_window [class="(Steam)"] move to workspace $ws10 floating enable, move position center
 
-# KeePassXC (BD de Senha Criptografada) ws=10
+# KeePassXC	ws=10
 for_window [class="(KeePassXC)"] move to workspace $ws10
 
 
@@ -278,114 +275,116 @@ for_window [class="(KeePassXC)"] move to workspace $ws10
 # Ativar o floating e mover a janela para o centro:[..., floating enable, move position center]
 
 
-# Kitty (Terminal)
+# Kitty 
 for_window [class="(kitty)"]floating enable, move position center
 
-# Termite (Terminal)
-for_window [class="(Termite)"]floating enable, move position center
-
-# Telegram (Desktop)
+# Telegram
 for_window [class="(Telegram)"]floating enable, move position center
 
-# MPV (Player de Música/Vídeo)
+# MPV
 for_window [class="(mpv)"]floating enable, move position center
 
-# Thunar (Gerenciador de Arquivos)
+# Thunar
 for_window [class="Thunar"] move position center
 
-# Leafpad (Bloco de Notas)
+# Leafpad
 for_window [class="Leafpad"]floating enable, move position center
 
-# Viewnior (Gerenciador de Imagens)
+# Viewnior
 for_window [class="(Viewnior)"]floating enable
 
-# Gucharmap (Mapa de Caracteres)
+# Gucharmap
 for_window [class="(Gucharmap)"]floating enable
 
-# Qbittorrent (Gerenciador Torrent)
+# Qbittorrent
 for_window [class="(qBittorrent)"]floating enable, move position center 
 
-# Galculator (Calculadora)
+# Galculator
 for_window [class="(Galculator)"]floating enable, move position center 
 
-# Pavucontrol (Gerenciador de Aúdio)
+# Pavucontrol
 for_window [class="(Pavucontrol)"]floating enable, move position center
 
-# LxAppearance (Gerenciador de Temas)
+# LxAppearance
 for_window [class="(Lxappearance)"]floating enable, move position center
 
-# Discord (Aplicativo de voz Sobre IP)
+# Discord
 for_window [class="(discord)"]floating enable, move position center
 
-# WoeUSB (Crie USB inicializáveis ​​do Windows a Partir do Linux))
+# WoeUSB
 for_window [class="(Woeusb)"]floating enable, move position center
 
-# SimpleScreenRecorder (ScreenCast)
+# SimpleScreenRecorder
 for_window [class="(SimpleScreenRecorder)"]floating enable, move position center
 
-# Bluetooth (Bluetooth)
+# Bluetooth
 for_window [class="(Blueman-manager)"]floating enable
 
-# Steam (Loja de games)
+# Steam
 for_window [class="(Steam)"]floating enable, move position center
 
-# Lutris (Gerenciador de games)
+# Lutris
 for_window [class="(Lutris)"]floating enable, move position center
 
-# VirtualBox (Maquina Virtual)
+# VirtualBox
 for_window [class="(VirtualBox)"]floating enable, resize set 1280 800, move position center
 
-# Evince (Leitor de PDF)
+# Evince
 for_window [class="(Evince)"]floating enable, move position center
 
-# KeePassXC (Gerenciador de senhas)
+# KeePassXC
 for_window [class="(KeePassXC)"]floating enable
 
-# Flameshot (PrintScreen)
+# Flameshot 
 for_window [class="(flameshot)"]floating enable, move position center
 
 # Nitrogen
 for_window [class="(Nitrogen)"]floating enable, move position center 
 
-# Gparted (Edição de Partições)
+# Gparted
 for_window [class="(GParted)"]floating enable, move position center
 
-# AnyDesk (Acesso Remoto)
+# AnyDesk
 for_window [class="(Anydesk)"]floating enable, move position center
 
-# TeamViewer (Acesso Remoto)
+# TeamViewer
 for_window [class="(TeamViewer)"]floating enable, move position center
 
-# Atom (Desenvolvimento Web)
+# Atom
 for_window [class="(Atom)"]floating enable, move position center
 
-# Thunderbird (Cliente de E-mails)
+# Thunderbird
 for_window [class="(Thunderbird)"]floating enable, move position center
 
-# ARandR (Editor de Disposição de Tela ARandR) 
+# ARandR
 for_window [class="Arandr"]floating enable, resize set 740 580, move position center
 
-# libreoffice (Aplicativos Livre Para Escritório)
+# libreoffice
 for_window [class="(libreoffice)"]floating enable, resize set 1280 720, move position center
 
-# SMPlayer (Tocador de Mídia)
+# SMPlayer
 for_window [class="(smplayer)"]floating enable, move position center
 
-# Qt5ct (Permite aos user definir as config do Qt5 (tema, fonte, ícones, etc.) no DE/WM sem integração com o Qt.)
+# Qt5ct 
 for_window [class="(qt5)"]floating enable, move position center
 
-# Audacity (Programa de Edição Digital de Áudio)
+# Audacity
 for_window [class="(Audacity)"]floating enable, move position center
 
-# PuTTy (Software de Emulação de Terminal)
+# PuTTy
 for_window [class="(Putty)"]floating enable, move position center
 
-# Brackets (Desenvolvimento Web)
+# Brackets
 for_window [class="(Brackets)"]floating enable, move position center
 
-# OnionShare (Compartilha arquivos através da rede Tor)
+# OnionShare
 for_window [class="(onionshare)"]floating enable, move position center
 
+# Gajim
+for_window [class="(Gajim)"]floating enable, move position center
+
+# Lightdm
+for_window [class="Lightdm-gtk-greeter-settings"] floating enable
 
 ####################################################################
 #                           R E S I Z E                            #
