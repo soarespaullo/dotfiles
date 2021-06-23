@@ -100,7 +100,7 @@ separator = |
 
 modules-left = linux mpd 
 modules-center = xwindow 
-modules-right = pulse pacman calendar date rede sysmenu
+modules-right = pulse pacman calendar date rede powermenu
 
 ;==========================================================;
 ;			TRAY BAR TOP                       ;
@@ -948,12 +948,3 @@ animation-charging-framerate = 750
 ;==========================================================;
 ;		       	     FIM                           ;
 ;==========================================================;
-
-[module/sysmenu]
-type = custom/text
-
-format-spacing = 2
-
-content = "  "
-content-foreground = ${colors.primary}
-click-left = ~/.config/polybar/scripts/powermenu.sh &
