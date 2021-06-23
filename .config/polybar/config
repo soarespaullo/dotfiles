@@ -375,6 +375,8 @@ label-separator-foreground = ${colors.foreground}
 [module/mpd]
 type = internal/mpd
 
+; https://mpd.readthedocs.io/en/stable/user.html
+
 format-online = <label-song> <icon-prev> <toggle> <icon-next> <label-time> <icon-stop>
 
 ; Aplica-se apenas se <icon-X> for usado.
@@ -513,18 +515,6 @@ format-muted-underline = ${colors.alert}
 label-muted = Sem som
 
 ;==========================================================;
-;     	    MÓDULO MOSTRAR ÁREA DE TRABALHO     	   ;		
-;==========================================================;
-
-[module/showdesktop]
-type = custom/script
-exec = echo " "
-click-left = exec i3-msg move scratchpad
-click-right = exec i3-msg [class=.*] scratchpad show
-format-foreground = ${colors.primary}
-;format-underline = #ff0000
-
-;==========================================================;
 ;     		   MÓDULO TEMPERADURA - CPU     	   ;		
 ;==========================================================;
 
@@ -634,6 +624,8 @@ format-prefix-foreground = ${colors.primary}
 ;==========================================================;
 ;			PACMAN UPDATES			   ;
 ;==========================================================;
+
+;sudo  pacman -S pacman-contrib
 
 [module/pacman-updates]
 type = custom/script
@@ -854,10 +846,6 @@ format-connected-prefix-foreground = ${colors.primary}
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = "  "
 format-disconnected-prefix-foreground = ${colors.primary}
-
-format-packetloss = <label-packetloss>
-;format-packetloss-prefix = " "
-;format-packetloss-prefix-foreground = ${colors.primary}
 
 ;   %ifname%    [wireless+wired]
 ;   %local_ip%  [wireless+wired]
