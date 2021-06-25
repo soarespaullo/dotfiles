@@ -206,65 +206,68 @@ bindsym $win+Shift+0 move container to workspace number $ws10
 # Ativar o floating e mover a janela para o centro:[..., floating enable, move position center]
 
  
-# Browser	ws=1
+# Browser (Firefox) ws=1
 #for_window [class="(firefox)"] move to workspace $ws1 focus
 assign [class="(firefox)"] $ws1
 
-# Browser	ws=1
+# Browser (Google Chrome) ws=1
 for_window [class="(Google)"] move to workspace $ws1 focus
 
-# Browser	ws=1
+# Browser (Brave) ws=1
 for_window [class="(Brave)"] move to workspace $ws1 focus
 
-# Terminal	ws=2
+# Terminal (Kitty) ws=2
 for_window [class="(kitty)"] move to workspace $ws2
 
-# Telegram	ws=3
+# Telegram  ws=3
 for_window [class="(Telegram)"] move to workspace $ws3 focus
 
-# Thunar	ws=4
+# Thunar  ws=4
 for_window [class="Thunar"] move to workspace $ws4 focus
 
-# LibreOffice	ws=4
+# LibreOffice  ws=4
 for_window [class="libreoffice"] move to workspace $ws4 focus
 
-# Audacity	ws=5
+# Audacity  ws=5
 for_window [class="Audacity"] move to workspace $ws5 focus
 
 # Gimp  ws=6
 for_window [class="(Gimp)"] move to workspace $ws6 focus
 
-# Inkscape	ws=6
+# Inkscape  ws=6
 for_window [class="(Inkscape)"] move to workspace $ws6
 
-# MPV	ws=7
+# MPV  ws=7
 for_window [class="(mpv)"] move to workspace $ws7 focus
 
-# SMPlayer	ws=7
+# SMPlayer  ws=7
 for_window [class="(smplayer)"] move to workspace $ws7 focus
 
-# Discord	ws=8
+# Obs-Studio	ws=7
+for_window [class="(obs)"] move to workspace $ws7 focus
+
+# Discord  ws=8
 for_window [class="(discord)"] move to workspace $ws8 focus
 
-# BalenaEtcher	ws=8
+# BalenaEtcher  ws=8
 for_window [class="(etcher)"] move to workspace $ws8 focus
 
-# WoeUSB	ws=8
+# WoeUSB  ws=8
 for_window [class="(Woeusb)"] move to workspace $ws8 focus
 
-# VirtualBox	ws=8
+# VirtualBox  ws=8
 for_window [class="(VirtualBox)"] move to workspace $ws8 focus
 
 # SimpleScreenRecorder  ws=8
 for_window [class="(SimpleScreenRecorder)"] move to workspace $ws8
 
-# Qbittorrent	ws=9
+# Qbittorrent  ws=9
 for_window [class="(qBittorrent)"] move to workspace $ws9 focus
 
 # Steam  ws=10
 for_window [class="(Steam)"] move to workspace $ws10 floating enable, move position center
 
-# KeePassXC	ws=10
+# KeePassXC  ws=10
 for_window [class="(KeePassXC)"] move to workspace $ws10
 
 
@@ -316,6 +319,9 @@ for_window [class="(Woeusb)"]floating enable, move position center
 
 # SimpleScreenRecorder
 for_window [class="(SimpleScreenRecorder)"]floating enable, move position center
+
+# Obs-Studio
+for_window [class="(obs)"]floating enable, move position center
 
 # Bluetooth
 for_window [class="(Blueman-manager)"]floating enable
