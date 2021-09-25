@@ -44,8 +44,6 @@ Tema Cursor | [WinConceptOS Cursors](https://github.com/yeyushengfan258/WinSur-w
 
 ![screenshot](/screenshots/rofi.png)
 
-![screenshot](/screenshots/ncmpcpp.png)
-
 # Ranger - Gerenciador de arquivos
 
 ![screenshot](/screenshots/ranger.png)
