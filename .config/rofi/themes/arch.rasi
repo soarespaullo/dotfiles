@@ -1,173 +1,51 @@
-configuration {
-  show-icons: true;
-  icon-theme: "Papirus";
-  font: "JetBrains Mono Medium 11";
-  drun-display-format: "{icon} {name}";
-  display-run: " ";
-  display-drun: " ";
-  display-window: " ";
-  sidebar-mode: true;
-}
-
 * {
-    selected-normal-foreground:  #000000;
-    foreground:                  #e6d4a3;
-    background:                  #1e1e1e;
-    normal-foreground:           @foreground;
-    alternate-normal-background: #1e1e1e;
-    red:                         rgba ( 220, 50, 47, 100 % );
-    selected-urgent-foreground:  rgba ( 29, 32, 33, 100 % );
-    blue:                        rgba ( 38, 139, 210, 100 % );
-    urgent-foreground:           rgba ( 29, 32, 33, 100 % );
-    alternate-urgent-background: rgba ( 204, 36, 29, 100 % );
-    active-foreground:           rgba ( 29, 32, 33, 100 % );
-    lightbg:                     rgba ( 238, 232, 213, 100 % );
-    selected-active-foreground:  rgba ( 29, 32, 33, 100 % );
-    alternate-active-background: #1e1e1e;
-    bordercolor:                 #1e1e1e;
-    alternate-normal-foreground: @foreground;
-    normal-background:           #1e1e1e;
-    lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  #184f6d;
-    border-color:                #184f6d;
-    spacing:                     3;
-    separatorcolor:              #2E3440;
-    separator-style:             "solid";
-    urgent-background:           #3b4252;
-    selected-urgent-background:  #3b4252;
-    alternate-urgent-foreground: @urgent-foreground;
-    background-color:            rgba ( 0, 0, 0, 0 % );
-    alternate-active-foreground: @active-foreground;
-    active-background:           rgba ( 215, 153, 33, 100 % );
-    selected-active-background:  rgba ( 250, 189, 47, 100 % );
+  background-color: #181818;
+  border-color: #202020;
+  text-color: #ffffff;
+  spacing: 0;
+  width: 500px;
+  height:400px;
 }
 
-#window {
-    background-color: @background;
-    border:           1;
-    padding:          2;
-    height:           400px;
-    width:            500px;
-    x-offset:         0;
-    y-offset:         0;
+inputbar {
+  border: 0 0 1px 0;
+  children: [prompt,entry];
 }
 
-#mainbox {
-    border:  0;
-    padding: 5;
+prompt {
+  padding: 8px;
+  border: 0 1px 0 0;
 }
 
-#message {
-    border:       1px dash 0px 0px;
-    border-color: @separatorcolor;
-    padding:      1px;
+textbox {
+  background-color: #181818;
+  border: 0 0 1px 0;
+  border-color: #202020;
+  padding: 4px 8px;
 }
 
-#textbox {
-    text-color: @foreground;
+entry {
+  padding: 8px;
 }
 
-#listview {
-    fixed-height: 0;
-    border-color: @separatorcolor;
-    spacing:      2px;
-    scrollbar:    true;
-    padding:      2px 0px 0px;
+listview {
+  cycle: false;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
 }
 
-#element {
-    border:  0;
-    border-radius: 2px;
-    padding: 2px;
+element {
+  border: 0 0 1px 0;
+  padding: 8px;
 }
 
-#element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
+element selected {
+  background-color: #202020;
+}
+window {
+    padding:          5;
+    border:           4;
+    fullscreen:	      false;
 }
 
-#element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
-}
-
-#element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
-}
-
-#element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-}
-
-#element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
-}
-
-#element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
-}
-
-#element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
-}
-
-#element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
-}
-
-#element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
-}
-
-#button {
-    background-color: #333;
-}
-
-#scrollbar {
-    width:        8px;
-    border:       0;
-    handle-width: 7px;
-    handle-color: #333;
-    padding:      0 3px 3px 3px;
-}
-
-#sidebar {
-    border:       2px dash 0px 0px;
-    border-color: @separatorcolor;
-}
-
-#button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-}
-
-#inputbar {
-    spacing:    2;
-    text-color: @normal-foreground;
-    padding:    2px;
-}
-
-#case-indicator {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-
-#entry {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    2px;
-    placeholder: "Pesquisar...";    
-}
-
-#prompt {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    2px;
-}
+element-icon { size: 1.1em ;}

@@ -14,7 +14,7 @@
 ;==========================================================;
 
 [colors]
-background = #222
+background = #181818
 background-alt = #444
 foreground = #DFDFDF
 foreground-alt = #555
@@ -53,7 +53,7 @@ alert = #bd2c40
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
-;dpi = 96
+dpi = 96
 width = 100%
 height = 24
 ;offset-x = 1%
@@ -100,16 +100,7 @@ separator = |
 
 modules-left = linux mpd 
 modules-center = xwindow 
-modules-right = pulse pacman calendar date rede powermenu
-
-;==========================================================;
-;			TRAY BAR TOP                       ;
-;==========================================================;
-
-;tray-position = right
-;tray-padding = 2
-;tray-background = #0063ff
-;tray-background = ${colors.background}
+modules-right = pulse calendar date rede powermenu
 
 ;==========================================================;
 ;		      OPTIONS IGNORE			   ;	
@@ -135,7 +126,7 @@ cursor-scroll = ns-resize
 
 [bar/bottom]
 ;monitor = ${env:MONITOR:HDMI-1}
-;dpi = 80
+dpi = 96
 width = 100%
 height = 24
 ;offset-x = 1%
@@ -153,7 +144,6 @@ line-color = ${color.foreground}
 
 border-top-size = 2
 border-color = ${colors.arch}
-
 
 padding-left = 0
 padding-right = 2
@@ -269,7 +259,6 @@ format = <label>
 format-mounted = <label-mounted>
 
 label-mounted = %used%
-;label-mounted = %free%
 label-unmounted = %mountpoint% Não montado
 ;label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -297,7 +286,6 @@ format = <label>
 format-mounted = <label-mounted>
 
 label-mounted =  %used%
-;label-mounted = %free%
 label-unmounted = %mountpoint% Não montado
 ;label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -462,9 +450,9 @@ label = %percentage_used%%
 
 [module/date]
 type = internal/date
+
 interval = 1
 
-;time = %I:%M:%S %p
 time = %H:%M
 
 format-prefix = "  "
@@ -496,33 +484,14 @@ format-muted-underline = ${colors.alert}
 click-middle = pavucontrol
 
 ;==========================================================;
-;		         MÓDULO ALSA                       ;
-;==========================================================;
-
-[module/alsa]
-type = internal/alsa
-use-ui-max = true
-
-format-volume = <label-volume>
-format-volume-prefix = " 墳 "
-format-volume-underline = ${colors.foreground}
-format-volume-prefix-foreground = ${colors.foreground}
-label-volume = %percentage%%
-
-format-muted-prefix = " "
-format-muted-foreground = ${colors.alert}
-format-muted-underline = ${colors.alert}
-label-muted = Sem som
-
-;==========================================================;
 ;     		   MÓDULO TEMPERADURA - CPU     	   ;		
 ;==========================================================;
 
 [module/temperature]
 type = internal/temperature
 interval = 4
-;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 ;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 thermal-zone = 0
 warn-temperature = 60
@@ -605,23 +574,6 @@ margin-bottom = 5
 ; vim:ft=dosini
 
 ;==========================================================;
-;		      TEMPO DE ATIVIDADE   	       	   ;
-;==========================================================;
-
-[module/uptime]
-type = custom/script
-;exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
-exec = uptime --pretty | sed 's/up //' | sed 's/\ years\?,/y/' | sed 's/\ weeks\?,/w/' | sed 's/\ days\?,/d/' | sed 's/\ hours\?,\?/h/' | sed 's/\ minutes\?/m/'
-interval = 60
-label = Up: %output%
-
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = " "
-format-prefix-foreground = ${colors.primary}
-;format-underline = #c15d3e
-
-;==========================================================;
 ;			PACMAN UPDATES			   ;
 ;==========================================================;
 
@@ -656,80 +608,6 @@ format-prefix-foreground = ${colors.primary}
 ;format-underline = #ffbb00
 
 ;==========================================================;
-;		       MÓDULO PROTONMAIL		   ;
-;==========================================================;
-
-[module/protonmail]
-type = custom/text
-content = "%{F#4682B4}  %{F-} ProtonMail"
-;content-underline = #98971a
-click-left = xdg-open https://mail.protonmail.com/inbox
-
-;==========================================================;
-;			  MÓDULO MENU		           ;
-;==========================================================;
-
-[module/menu]
-type = custom/text
-content = "%{F${colors.foreground}  %{F-} Menu"
-content-foreground = ${colors.foreground}
-;content-underline = ${colors.foreground}
-click-left = rofi -show drun -theme ~/.config/rofi/arch.rasi &
-
-;==========================================================;
-;			 MÓDULO FIREFOX		           ;
-;==========================================================;
-
-[module/firefox]
-type = custom/text
-content = "  "
-content-foreground = ${colors.foreground}
-;content-underline = ${colors.foreground}
-click-left = exec firefox &
-
-;==========================================================;
-;			 MÓDULO GOOGLE                     ;
-;==========================================================;
-
-[module/google]
-type = custom/text
-content = " "
-content-foreground = ${colors.foreground}
-;content-underline = ${colors.foreground}
-click-left = exec /usr/bin/google-chrome-stable &
-
-;==========================================================;
-;			MÓDULO TELEGRAM		           ;
-;==========================================================;
-
-[module/telegram]
-type = custom/text
-content = "  "
-content-foreground = ${colors.foreground}
-;content-underline = ${colors.foreground}
-click-left = exec /usr/bin/telegram-desktop &
-
-;==========================================================;
-;		        MÓDULO THUNAR	                   ;
-;==========================================================;
-
-[module/thunar]
-type = custom/text
-content = "%{F${colors.foreground} %{F-}"
-click-left = thunar &
-
-;==========================================================;
-;		        MÓDULO TERMINAL	                   ;
-;==========================================================;
-
-[module/terminal]
-type = custom/text
-content = "  "
-content-foreground = ${colors.foreground}
-;content-underline = ${colors.foreground}
-click-left = exec kitty &
-
-;==========================================================;
 ;		         MÓDULO LINUX                      ;
 ;==========================================================;
 
@@ -739,16 +617,6 @@ content = "%{F#FFFFFF}  %{F-} Arch Linux"
 ;content-underline = ${colors.foreground}
 ;click-left = xdg-open https://wiki.archlinux.org/
 click-left = rofi -show drun -theme ~/.config/rofi/arch.rasi &
-
-;==========================================================;
-;		     MÓDULO REINICIAR - I3                 ;
-;==========================================================;
-
-[module/refresh]
-type = custom/text
-content = "  "
-content-foreground = ${colors.foreground}
-click-left = i3-msg restart &
 
 ;==========================================================;
 ;		         MÓDULO PACMAN                     ;
@@ -761,19 +629,6 @@ exec = pacman -Qq | wc -l
 format-prefix = "   " 
 format-prefix-foreground = ${colors.primary}
 ;format-background = #d79921
-;format-underline = #d79921
-
-;==========================================================;
-;		         MÓDULO KERNEL                     ;
-;==========================================================;
-
-[module/kernel]
-type = custom/script
-exec = uname -r
-format-prefix = "  " 
-format-prefix-foreground = ${colors.primary}
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
 ;format-underline = #d79921
 
 ;==========================================================;
@@ -793,15 +648,14 @@ label = "%{F#FFFFFF}  %{F-} %output:0:37:...%"
 ;		       MÓDULO CALENDÁRIO                   ;
 ;==========================================================;
 
+; Dependências - yad, xdotool
+
 [module/calendar]
 type = custom/script
 interval = 1
-;exec = date "+%a, %d %b %Y"
-;exec = date "+%a %d %b, %y"
 exec = date "+%a, %d %b"
-;exec = date "+%a %d %b, %Y - %H:%M:%S"
 label = "%{F#FFFFFF}  %{F-} %output:0:36:...%"
-click-left = notify-send -i "/usr/share/icons/ePapirus/32x32/apps/calendar.svg" "$(cal)"
+click-left = ~/.config/polybar/scripts/popup-calendar.sh --popup &
 ;format-background = #98971a
 ;format-underline = #98971a
 
@@ -856,8 +710,8 @@ format-disconnected-prefix-foreground = ${colors.primary}
 ;   %downspeed% [wireless+wired]
 ;   %linkspeed% [wired]
 ;label-connected = %downspeed:3% %upspeed:3%
-;label-connected = %downspeed:%
-label-connected = Conectado %downspeed%
+label-connected = %downspeed:%
+;label-connected = Conectado %downspeed%
 label-disconnected = offline
 label-packetloss = los
 

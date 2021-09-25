@@ -3,7 +3,6 @@ title = Dunst
 class = Dunst
 monitor = 0
 follow = mouse
-/*geometry = "350x6+24+60"*/
 geometry = "320x6-20+40" # top right
 indicate_hidden = yes
 shrink = yes
@@ -16,12 +15,13 @@ frame_width = 6
 frame_color = "#2E3440"
 separator_color = "#404859"
 
-/*font = Inconsolata Bold 13*/
-font = JetBrains Mono Medium 9
+
+font = Inconsolata Bold 11
+
 
 line_height = 0
 markup = full
-format = "<span size='x-large' font_desc='Inconsolata 11' weight='bold' foreground='#c394b4'>%s</span>\n\n%b"
+format = "<span size='x-large' font_desc='Inconsolata 11' weight='bold' foreground='#75A4CD'>%s</span>\n\n%b"
 alignment = center
 
 idle_threshold = 120
@@ -39,7 +39,7 @@ corner_radius = 0
 icon_position = left
 max_icon_size = 96
 
-icon_path = /usr/share/icons/Papirus-Dark-Custom/48x48/actions/:/usr/share/icons/Papirus-Dark-Custom/48x48/apps/:/usr/share/icons/Papirus-Dark-Custom/48x48/devices/:/usr/share/icons/Papirus-Dark-Custom/48x48/emblems/:/usr/share/icons/Papirus-Dark-Custom/48x48/emotes/:/usr/share/icons/Papirus-Dark-Custom/48x48/mimetypes/:/usr/share/icons/Papirus-Dark-Custom/48x48/places/:/usr/share/icons/Papirus-Dark-Custom/48x48/status/
+icon_path = /usr/share/icons/Papirus-Dark/48x48/actions/:/usr/share/icons/Papirus-Dark/48x48/apps/:/usr/share/icons/Papirus-Dark/48x48/devices/:/usr/share/icons/Papirus-Dark/48x48/emblems/:/usr/share/icons/Papirus-Dark/48x48/emotes/:/usr/share/icons/Papirus-Dark/48x48/mimetypes/:/usr/share/icons/Papirus-Dark/48x48/places/:/usr/share/icons/Papirus-Dark/48x48/status/
 
 browser = google-chrome-stable
 
@@ -56,20 +56,20 @@ context = ctrl+shift+period
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#2E3440"
+    background = "#181818"
     foreground = "#D8DEE9"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     # icon = /path/to/icon
 
 [urgency_normal]
-    background = "#2E3440"
+    background = "#181818"
     foreground = "#D8DEE9"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     # icon = /path/to/icon
 
 [urgency_critical]
-    background = "#2E3440"
+    background = "#181818"
     foreground = "#D8DEE9"
     timeout = 120

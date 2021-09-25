@@ -207,8 +207,10 @@ bindsym $win+Shift+0 move container to workspace number $ws10
 
  
 # Firefox	ws=1
-#for_window [class="(firefox)"] move to workspace $ws1 focus
-assign [class="(firefox)"] $ws1
+for_window [class="(firefox)"] move to workspace $ws1 focus
+
+# Chromium	ws=1
+for_window [class="(Chromium)"] move to workspace $ws1 focus
 
 # Goggle	ws=1
 for_window [class="(Google)"] move to workspace $ws1 focus
@@ -282,118 +284,125 @@ for_window [class="(KeePassXC)"] move to workspace $ws10
 
 
 # Kitty 
-for_window [class="(kitty)"]floating enable, move position center
+for_window [class="(kitty)"] floating enable, move position center
 
 # Telegram
-for_window [class="(Telegram)"]floating enable, move position center
+for_window [class="(Telegram)"] floating enable, move position center
 
 # MPV
-for_window [class="(mpv)"]floating enable, move position center
+for_window [class="(mpv)"] floating enable, move position center
 
 # Thunar
 for_window [class="Thunar"] move position center
 
 # Leafpad
-for_window [class="Leafpad"]floating enable, move position center
+for_window [class="Leafpad"] floating enable, move position center
 
 # Viewnior
-for_window [class="(Viewnior)"]floating enable
+for_window [class="(Viewnior)"] floating enable
 
 # Gucharmap
-for_window [class="(Gucharmap)"]floating enable
+for_window [class="(Gucharmap)"] floating enable
 
 # Qbittorrent
-for_window [class="(qBittorrent)"]floating enable, move position center 
+for_window [class="(qBittorrent)"] floating enable, move position center 
 
 # Galculator
-for_window [class="(Galculator)"]floating enable, move position center 
+for_window [class="(Galculator)"] floating enable, move position center 
 
 # Pavucontrol
-for_window [class="(Pavucontrol)"]floating enable, move position center
+for_window [class="(Pavucontrol)"] floating enable, move position center
 
 # LxAppearance
-for_window [class="(Lxappearance)"]floating enable, move position center
+for_window [class="(Lxappearance)"] floating enable, move position center
 
 # Discord
-for_window [class="(discord)"]floating enable, move position center
+for_window [class="(discord)"] floating enable, move position center
 
 # WoeUSB
-for_window [class="(Woeusb)"]floating enable, move position center
+for_window [class="(Woeusb)"] floating enable, move position center
 
 # SimpleScreenRecorder
-for_window [class="(SimpleScreenRecorder)"]floating enable, move position center
+for_window [class="(SimpleScreenRecorder)"] floating enable, move position center
 
 # Obs-Studio	
-for_window [class="(obs)"]floating enable, move position center
+for_window [class="(obs)"] floating enable, move position center
 
 # Bluetooth
-for_window [class="(Blueman-manager)"]floating enable
+for_window [class="(Blueman-manager)"] floating enable
 
 # Steam
-for_window [class="(Steam)"]floating enable, move position center
+for_window [class="(Steam)"] floating enable, move position center
 
 # Lutris
-for_window [class="(Lutris)"]floating enable, move position center
+for_window [class="(Lutris)"] floating enable, move position center
 
 # VirtualBox
-for_window [class="(VirtualBox)"]floating enable, resize set 1280 800, move position center
+for_window [class="(VirtualBox)"] floating enable, resize set 1280 800, move position center
 
 # Evince
-for_window [class="(Evince)"]floating enable, move position center
+for_window [class="(Evince)"] floating enable, move position center
 
 # KeePassXC
-for_window [class="(KeePassXC)"]floating enable
+for_window [class="(KeePassXC)"] floating enable
 
 # Flameshot 
-for_window [class="(flameshot)"]floating enable, move position center
+for_window [class="(flameshot)"] floating enable, move position center
 
 # Nitrogen
-for_window [class="(Nitrogen)"]floating enable, move position center 
+for_window [class="(Nitrogen)"] floating enable, move position center 
 
 # Gparted
-for_window [class="(GParted)"]floating enable, move position center
+for_window [class="(GParted)"] floating enable, move position center
 
 # AnyDesk
-for_window [class="(Anydesk)"]floating enable, move position center
+for_window [class="(Anydesk)"] floating enable, move position center
 
 # TeamViewer
-for_window [class="(TeamViewer)"]floating enable, move position center
+for_window [class="(TeamViewer)"] floating enable, move position center
 
 # Atom
-for_window [class="(Atom)"]floating enable, move position center
+for_window [class="(Atom)"] floating enable, move position center
 
 # Thunderbird
-for_window [class="(Thunderbird)"]floating enable, move position center
+for_window [class="(Thunderbird)"] floating enable, move position center
 
 # ARandR
-for_window [class="Arandr"]floating enable, resize set 740 580, move position center
+for_window [class="Arandr"] floating enable, resize set 740 580, move position center
 
 # libreoffice
-for_window [class="(libreoffice)"]floating enable, resize set 1280 720, move position center
+for_window [class="(libreoffice)"] floating enable, resize set 1280 720, move position center
 
 # SMPlayer
-for_window [class="(smplayer)"]floating enable, move position center
+for_window [class="(smplayer)"] floating enable, move position center
 
 # Qt5ct 
-for_window [class="(qt5)"]floating enable, move position center
+for_window [class="(qt5)"] floating enable, move position center
 
 # Audacity
-for_window [class="(Audacity)"]floating enable, move position center
+for_window [class="(Audacity)"] floating enable, move position center
 
 # PuTTy
-for_window [class="(Putty)"]floating enable, move position center
+for_window [class="(Putty)"] floating enable, move position center
 
 # Brackets
-for_window [class="(Brackets)"]floating enable, move position center
+for_window [class="(Brackets)"] floating enable, move position center
 
 # OnionShare
-for_window [class="(onionshare)"]floating enable, move position center
+for_window [class="(onionshare)"] floating enable, move position center
 
 # Gajim
-for_window [class="(Gajim)"]floating enable, move position center
+for_window [class="(Gajim)"] floating enable, move position center
 
 # Lightdm
-for_window [class="Lightdm-gtk-greeter-settings"] floating enable
+for_window [class="Lightdm-gtk-greeter-settings"] floating enable, move position center
+
+# Filezilla
+for_window [class="Filezilla"] floating enable, move position center
+
+# Impressora
+for_window [class="System-config-printer"] floating enable, resize set 740 580, move position center
+
 
 ####################################################################
 #                           R E S I Z E                            #
@@ -522,7 +531,7 @@ exec --no-startup-id dunst -b
 exec --no-startup-id notify-send -i "/usr/share/icons/ePapirus/32x32/apps/user_icon.svg"  "Olá $USER, Seja Bem-vindo!"
 
 # Xrandr - Brilho de Tela
-exec --no-startup-id xrandr --output DP1 --brightness 0.7  
+# exec --no-startup-id xrandr --output DP1 --brightness 0.7  
 
 
 ####################################################################
