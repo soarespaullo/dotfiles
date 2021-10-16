@@ -11,9 +11,9 @@ transparency = 0
 separator_height = 2
 padding = 6
 horizontal_padding = 10
-frame_width = 6
-frame_color = "#2E3440"
-separator_color = "#404859"
+frame_width = 3
+frame_color = "#4C566A"
+separator_color = "#2E3440"
 
 
 font = Inconsolata Bold 11
@@ -21,7 +21,7 @@ font = Inconsolata Bold 11
 
 line_height = 0
 markup = full
-format = "<span size='x-large' font_desc='Inconsolata 11' weight='bold' foreground='#75A4CD'>%s</span>\n\n%b"
+format = "<span size='x-large' font_desc='Inconsolata 11' weight='bold' foreground='#81A1C1'>%s</span>\n\n%b"
 alignment = center
 
 idle_threshold = 120
@@ -54,22 +54,22 @@ history = ctrl+Escape
 context = ctrl+shift+period
 
 [urgency_low]
-    # IMPORTANT: colors have to be defined in quotation marks.
-    # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#181818"
+    # IMPORTANTE: as cores devem ser definidas entre aspas.
+    # Caso contrário, o "#" e o seguinte seriam interpretados como um comentário.
+    background = "#434C5E"
     foreground = "#D8DEE9"
     timeout = 10
-    # Icon for notifications with low urgency, uncomment to enable
+    # Ícone para notificações com baixa urgência, descomente para ativar
     # icon = /path/to/icon
 
 [urgency_normal]
-    background = "#181818"
+    background = "#434C5E"
     foreground = "#D8DEE9"
     timeout = 10
-    # Icon for notifications with normal urgency, uncomment to enable
+    # Ícone para notificações com baixa urgência, descomente para ativar
     # icon = /path/to/icon
 
 [urgency_critical]
-    background = "#181818"
+    background = "#434C5E"
     foreground = "#D8DEE9"
     timeout = 120

@@ -17,6 +17,8 @@
 ## para localização alternativa para o arquivo de configuração que define isso ao iniciar o ncmpcpp.
 ##
 #
+# https://pkgbuild.com/~jelle/ncmpcpp/
+#
 ncmpcpp_directory = "~/.ncmpcpp"
 #
 ##

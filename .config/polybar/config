@@ -14,34 +14,12 @@
 ;==========================================================;
 
 [colors]
-background = #181818
+background = #2E3440
 background-alt = #444
 foreground = #DFDFDF
 foreground-alt = #555
 primary = #FFFFFF
 secondary = #E60053
-
-; Outras cores ...
-
-arch = #164F6C
-
-white = #FFFFFF
-black = #000000
-red = #EC7875
-pink = #EC6798
-purple = #BE78D1
-blue = #75A4CD
-cyan = #00C7DF
-teal = #00B19F
-green = #61C766
-lime = #B9C244
-yellow = #EBD369
-amber = #EDB83F
-orange = #E57C46
-brown = #AC8476
-gray = #9E9E9E
-indigo = #6C77BB
-blue-gray = #6D8895
 
 ; Alertas
 
@@ -67,8 +45,8 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = ${colors.foreground}
 
-border-bottom-size = 2
-border-color = ${colors.arch}
+;border-bottom-size = 2
+;border-color = ${colors.arch}
 
 padding-left = 0
 padding-right = 1
@@ -142,8 +120,8 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = ${color.foreground}
 
-border-top-size = 2
-border-color = ${colors.arch}
+;border-top-size = 2
+;border-color = ${colors.arch}
 
 padding-left = 0
 padding-right = 2
@@ -189,8 +167,7 @@ tray-scale = 1.0
 tray-transparent = false
 tray-offset-x = 0
 tray-offset-y = 0
-tray-background = ${colors.background}
-;tray-background = #0063ff
+;tray-background = #D8DEE9
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -205,8 +182,8 @@ type = internal/xwindow
 format =     <label>
 format-foreground = ${colors.primary}
 format-background = ${colors.background}
-;format-underline = ${colors.foreground}
-;label-underline = ${colors.foreground}
+format-underline = #D8DEE9
+label-underline = #D8DEE9
 
 label = %title%
 label-foreground = ${colors.foreground}
@@ -214,7 +191,7 @@ label-maxlen = 30
 
 label-empty = Desktop
 label-empty-foreground = ${colors.foreground}
-;label-empty-underline = ${colors.foreground}
+label-empty-underline = ${colors.foreground}
 
 ;==========================================================;
 ;		      MÓDULO DO TECLADO		           ;
@@ -226,17 +203,14 @@ blacklist-1 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.primary}
-;format-prefix-underline = ${colors.background}
-format-prefix-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 label-layout = %layout%
-;label-layout-underline = #3ecfb2
+label-layout-underline = #D8DEE9
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.background}
-;label-indicator-underline = ${colors.foreground}
+label-indicator-underline = #D8DEE9
 
 ;==========================================================;
 ;	           MÓDULO FILESISTEM - HOME                ;
@@ -252,8 +226,8 @@ mount-0 = /home
 
 format-mounted-prefix = "  "
 format-mounted-prefix-foreground = ${colors.primary}
-;label-mounted-underline = #ffffff
-;format-mounted-prefix-underline = #ffffff
+label-mounted-underline = #D8DEE9
+format-mounted-prefix-underline = #D8DEE9
 format = <label>
 
 format-mounted = <label-mounted>
@@ -276,10 +250,9 @@ mount-0 = /
 
 format-mounted-prefix = " 濫 "
 format-mounted-prefix-foreground = ${colors.primary}
-;format-mounted-foreground = ${colors.foreground}
-;label-mounted-underline = ${colors.foreground}
-;format-mounted-prefix-underline = ${colors.foreground} 
-;label-mounted-underline = #3ecfb2 
+label-mounted-underline = #D8DEE9
+format-mounted-prefix-underline = #D8DEE9 
+
 
 format = <label>
 
@@ -327,13 +300,13 @@ label-mode-padding = 2
 label-focused = %name%
 label-focused-foreground = ${colors.background}
 label-focused-background = ${colors.foreground}
-label-focused-underline = ${colors.alert}
+label-focused-underline = #D8DEE9
 label-focused-padding = 2
 
 label-unfocused = %name%
 label-unfocused-foreground = ${colors.foreground}
 label-unfocused-background = ${colors.background}
-#label-unfocused-underline = ${colors.foreground}
+;label-unfocused-underline = ${colors.foreground}
 label-unfocused-padding = 2
 
 label-visible = %index%
@@ -429,7 +402,7 @@ type = internal/cpu
 interval = 1.5
 format-prefix = "  "
 format-prefix-foreground = ${colors.primary}
-;format-underline = #98971a
+format-underline = #D8DEE9
 label = %percentage%%
 
 ;==========================================================;
@@ -441,7 +414,7 @@ type = internal/memory
 interval = 2
 format-prefix = "  "
 format-prefix-foreground = ${colors.primary}
-;format-underline = #c15d3e
+format-underline = #D8DEE9
 label = %percentage_used%%
 
 ;==========================================================;
@@ -457,8 +430,7 @@ time = %H:%M
 
 format-prefix = "  "
 format-prefix-foreground = ${colors.primary}
-;format-underline = #cc241d
-;format-background = #cc241d
+format-underline = #D8DEE9
 
 label = %date% %time%
 
@@ -471,8 +443,7 @@ type = internal/pulseaudio
 use-ui-max = true
 
 format-volume = <label-volume>
-;format-volume-underline = #458588
-;format-volume-background = #458588
+format-volume-underline = #D8DEE9
 format-volume-prefix = "  " 
 format-volume-prefix-foreground = ${colors.primary}
 label-volume = %percentage%%
@@ -490,17 +461,16 @@ click-middle = pavucontrol
 [module/temperature]
 type = internal/temperature
 interval = 4
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
-;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 ;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-;format-underline = #cc241d
+format-underline = #D8DEE9
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
-;format-warn-underline = #ff0000
 
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -532,7 +502,7 @@ format-spacing = 2
 
 label-open = "  "
 label-open-foreground = ${colors.primary}
-;format-underline = #ffffff
+format-underline = #D8DEE9
 label-close = | Cancelar
 label-close-foreground = ${colors.alert}
 label-separator =|
@@ -589,7 +559,7 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
 format-prefix-foreground = ${colors.primary}
-;format-underline = #FFBB00
+format-underline = #D8DEE9
  
 ;==========================================================;
 ;			 AUR - UPDATES			   ;
@@ -605,7 +575,7 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
 format-prefix-foreground = ${colors.primary}
-;format-underline = #ffbb00
+format-underline = #D8DEE9
 
 ;==========================================================;
 ;		         MÓDULO LINUX                      ;
@@ -614,8 +584,8 @@ format-prefix-foreground = ${colors.primary}
 [module/linux]
 type = custom/text
 content = "%{F#FFFFFF}  %{F-} Arch Linux"
-;content-underline = ${colors.foreground}
-;click-left = xdg-open https://wiki.archlinux.org/
+content-underline = #D8DEE9
+click-right = xdg-open https://wiki.archlinux.org/
 click-left = rofi -show drun -theme ~/.config/rofi/arch.rasi &
 
 ;==========================================================;
@@ -628,8 +598,7 @@ interval = 1
 exec = pacman -Qq | wc -l
 format-prefix = "   " 
 format-prefix-foreground = ${colors.primary}
-;format-background = #d79921
-;format-underline = #d79921
+format-underline = #D8DEE9
 
 ;==========================================================;
 ;		        MÓDULO LIXO                        ;
@@ -642,7 +611,7 @@ exec = $HOME/.config/polybar/scripts/lixo.sh
 click-left = thunar trash:///
 click-right = notify-send -i "/usr/share/icons/ePapirus/32x32/apps/trashindicator.svg" "Lixeira Limpa!" && rm -rf .local/share/Trash/files
 label = "%{F#FFFFFF}  %{F-} %output:0:37:...%"
-;format-underline = ${colors.foreground}
+format-underline = #D8DEE9
 
 ;==========================================================;
 ;		       MÓDULO CALENDÁRIO                   ;
@@ -656,8 +625,7 @@ interval = 1
 exec = date "+%a, %d %b"
 label = "%{F#FFFFFF}  %{F-} %output:0:36:...%"
 click-left = ~/.config/polybar/scripts/popup-calendar.sh --popup &
-;format-background = #98971a
-;format-underline = #98971a
+format-underline = #D8DEE9
 
 ;==========================================================;
 ;		       MÓDULO BLUETOOTH                    ;
@@ -669,7 +637,7 @@ content = "  "
 content-foreground = ${colors.foreground}
 click-left = exec blueman-applet &
 click-right = exec blueman-manager &
-;content-underline = ${colors.foreground}
+;content-underline = #D8DEE9
 
 ;==========================================================;
 ;		        MÓDULO WI-FI                       ;
@@ -679,7 +647,7 @@ click-right = exec blueman-manager &
 type = custom/text
 content = " "
 content-foreground = ${colors.foreground}
-;content-underline = ${colors.foreground}
+;content-underline = #D8DEE9
 click-left = exec i3-sensible-terminal -e nmtui  &
 
 ;==========================================================;
@@ -696,6 +664,7 @@ unknown-as-up = true
 format-connected = <label-connected>
 format-connected-prefix = "  " 
 format-connected-prefix-foreground = ${colors.primary}
+format-connected-prefix-underline = #D8DEE9
 
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = "  "
@@ -711,6 +680,7 @@ format-disconnected-prefix-foreground = ${colors.primary}
 ;   %linkspeed% [wired]
 ;label-connected = %downspeed:3% %upspeed:3%
 label-connected = %downspeed:%
+label-connected-underline = #D8DEE9
 ;label-connected = Conectado %downspeed%
 label-disconnected = offline
 label-packetloss = los

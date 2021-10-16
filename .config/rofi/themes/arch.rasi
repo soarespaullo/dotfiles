@@ -1,6 +1,6 @@
 * {
-  background-color: #181818;
-  border-color: #202020;
+  background-color: #404552;
+  border-color: #2E3440;
   text-color: #ffffff;
   spacing: 0;
   width: 500px;
@@ -8,24 +8,25 @@
 }
 
 inputbar {
-  border: 0 0 1px 0;
+  border: 0 0 0 0;
   children: [prompt,entry];
 }
 
 prompt {
-  padding: 8px;
-  border: 0 1px 0 0;
+  padding: 2px;
+  border: 0 0 0 0;
 }
 
 textbox {
-  background-color: #181818;
+  background-color: #4C566A;
   border: 0 0 1px 0;
-  border-color: #202020;
+  border-color: #4C566A;
   padding: 4px 8px;
 }
 
 entry {
-  padding: 8px;
+  padding: 5px;
+  placeholder: "Pesquisar..."; 
 }
 
 listview {
@@ -35,17 +36,17 @@ listview {
 }
 
 element {
-  border: 0 0 1px 0;
-  padding: 8px;
+  border: 0 0 0 0;
+  padding: 6px;
 }
 
 element selected {
-  background-color: #202020;
+  background-color: #2E3440;
 }
 window {
-    padding:          5;
+    padding:          2;
     border:           4;
     fullscreen:	      false;
 }
 
-element-icon { size: 1.1em ;}
+element-icon { size: 1.3em ;}
