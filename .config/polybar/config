@@ -203,8 +203,8 @@ blacklist-1 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.primary}
+format-prefix-underline = #D8DEE9
 format-foreground = ${colors.foreground}
-format-background = ${colors.background}
 
 label-layout = %layout%
 label-layout-underline = #D8DEE9
