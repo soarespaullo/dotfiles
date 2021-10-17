@@ -48,6 +48,10 @@ Tema Cursor | [WinConceptOS Cursors](https://github.com/yeyushengfan258/WinSur-w
 
 ![screenshot](/screenshots/ranger.png)
 
+# Telegram - Desktop
+
+![screenshot](/screenshots/telegram.png)
+
 # Tela de Bloqueio - Betterlockscreen
 
 ![screenshot](/screenshots/bloqueio-betterlockscreen.png)
