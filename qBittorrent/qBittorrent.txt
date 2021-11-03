@@ -1,0 +1,11 @@
+Como aplicar:
+
+1 / No link do GitHub, clique no botão verde "Clonar ou Baixar" e depois Baixar ZIP
+
+2 / Descompacte o arquivo em qualquer lugar (por exemplo, criei uma pasta de temas no diretório de instalação qBittorrent)
+
+3 / Abra o qBittorrent, vá em: "Ferramentas \ Preferências \ Comportamento". Na seção "Interface", você tem "Tema". Clique no menu suspenso, clique em Selecionar. Vá aonde quer que você descompactou seu arquivo GitHub e selecione arch-dark.qbtheme
+
+4 / Clique em "Aplicar" (canto inferior direito) e depois em "OK"
+
+5 / Reinicie o qbittorrent. (Você pode ter que clicar duas vezes para iniciar o programa)
