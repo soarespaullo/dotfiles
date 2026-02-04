@@ -3,8 +3,7 @@ configuration {
 	icon-theme: "Papirus-Dark";
 	display-drun: "";
 	font: "Ubuntu 11";
-	theme: "materia";
 }
 
-@import "~/.config/rofi/themes/arch.rasi"
+@theme "~/.config/rofi/themes/arch.rasi"
 
