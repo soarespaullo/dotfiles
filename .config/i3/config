@@ -511,7 +511,8 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh 
 
 # Wallpapers
-exec_always --no-startup-id nitrogen --restore
+# exec_always --no-startup-id nitrogen --restore
+exec --no-startup-id feh --bg-scale ~/Wallpaper/nord.png
 
 # Flameshot
 exec --no-startup-id flameshot
