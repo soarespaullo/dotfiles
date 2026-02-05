@@ -609,7 +609,7 @@ type = custom/script
 interval = 0.1
 exec = $HOME/.config/polybar/scripts/lixo.sh
 click-left = thunar trash:///
-click-right = notify-send -i "/usr/share/icons/ePapirus/32x32/apps/trashindicator.svg" "Lixeira Limpa!" && rm -rf .local/share/Trash/files
+click-right = notify-send -i "/usr/share/icons/Papirus/32x32/apps/trashindicator.svg" "Lixeira Limpa!" && rm -rf .local/share/Trash/files
 label = "%{F#FFFFFF}  %{F-} %output:0:37:...%"
 format-underline = #D8DEE9
 
