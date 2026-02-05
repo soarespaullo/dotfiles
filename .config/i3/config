@@ -512,7 +512,7 @@ exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 
 # Wallpapers
 # exec_always --no-startup-id nitrogen --restore
-exec --no-startup-id feh --bg-scale ~/Wallpaper/nord.png
+exec --no-startup-id feh --bg-scale ~/wallpaper/nord.png
 
 # Flameshot
 exec --no-startup-id flameshot
@@ -530,7 +530,7 @@ exec --no-startup-id setxkbmap br,us
 exec --no-startup-id dunst -b
 
 # Boas vindas
-exec --no-startup-id notify-send -i "/usr/share/icons/ePapirus/32x32/apps/user_icon.svg"  "Olá $USER, Seja Bem-vindo!"
+exec --no-startup-id notify-send -i "/usr/share/icons/Papirus/32x32/apps/user_icon.svg"  "Olá $USER, Seja Bem-vindo!"
 
 # Xrandr - Brilho de Tela
 # exec --no-startup-id xrandr --output DP1 --brightness 0.7  
