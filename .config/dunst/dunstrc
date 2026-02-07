@@ -73,3 +73,4 @@ context = ctrl+shift+period
     background = "#434C5E"
     foreground = "#D8DEE9"
     timeout = 120
+
