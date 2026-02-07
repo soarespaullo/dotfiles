@@ -404,6 +404,9 @@ for_window [class="Filezilla"] floating enable, move position center
 # Impressora
 for_window [class="System-config-printer"] floating enable, resize set 740 580, move position center
 
+# Nvidia-settings
+for_window [class="Nvidia-settings"] floating enable, resize set 1080 720, move position center
+
 
 ####################################################################
 #                           R E S I Z E                            #
