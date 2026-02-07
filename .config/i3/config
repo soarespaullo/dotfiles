@@ -501,12 +501,12 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 
+
 ####################################################################
 #                         CONTROLE DE BRILHO                       #
 ####################################################################
 
 
-# sudo pacman -S xorg-xev brightnessctl
 # xev | grep keysym
 
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
