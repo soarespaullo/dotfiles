@@ -549,14 +549,24 @@ margin-bottom = 5
 
 ;sudo  pacman -S pacman-contrib
 
+;[module/pacman-updates]
+;type = custom/script
+;exec = pacman -Qu | wc -l
+;exec = checkupdates | wc -l
+;interval = 600
+;label = Repo: %output%
+;format-foreground = ${colors.foreground}
+;format-background = ${colors.background}
+;format-prefix = "  "
+;format-prefix-foreground = ${colors.primary}
+;format-underline = #D8DEE9
+
+
 [module/pacman-updates]
 type = custom/script
-;exec = pacman -Qu | wc -l
-exec = checkupdates | wc -l
-interval = 600
+exec = ~/.config/polybar/scripts/pacman-updates.sh
 label = Repo: %output%
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+interval = 600
 format-prefix = "  "
 format-prefix-foreground = ${colors.primary}
 format-underline = #D8DEE9
