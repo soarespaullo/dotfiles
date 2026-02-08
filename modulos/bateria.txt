@@ -2,6 +2,7 @@
 type = internal/battery
 full-at = 98
 
+; ls -1 /sys/class/power_supply/
 battery = BAT0
 adapter = ADP0
 
