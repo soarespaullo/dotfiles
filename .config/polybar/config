@@ -715,51 +715,62 @@ format-connected-prefix-foreground = ${colors.secondary}
 format-disconnected-prefix-foreground = ${colors.secondary}
 
 ;==========================================================;
-;		                     MÓDULO BATERIA                     ;
+;		                    MÓDULO BATERIA    		                ;
 ;==========================================================;
 
 [module/battery]
 type = internal/battery
-full-at = 98
+
+; Considera a bateria cheia a partir de 99%
+full-at = 99
+
+; Usa formato "low" quando chegar a 10% 
+low-at = 10
 
 ; ls -1 /sys/class/power_supply/
 battery = BAT0
 adapter = ADP0
 
+; Polling a cada 5 segundos (fallback)
+poll-interval = 5
+
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #D8DEE9
+
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = #D8DEE9
+
 format-full = <ramp-capacity> <label-full>
 format-full-underline = #D8DEE9
 
-label-charging = %percentage%% 
+format-low = <animation-low> <label-low>
+format-low-underline = #D8DEE9
+
+label-charging = %percentage%%
 label-charging-underline = #D8DEE9
-label-discharging = %percentage%%
 label-charging-padding = 0
-label-discharging-padding = 0
+
+label-discharging = %percentage%%
 label-discharging-underline = #D8DEE9
+label-discharging-padding = 0
+
+
+label-low = %percentage%%
+label-low-underline = #D8DEE9
+label-low-padding = 0
 
 ramp-capacity-0 = 
 ramp-capacity-0-foreground = ${colors.secondary}
 ramp-capacity-1 = 
-ramp-capacity-1-foreground = ${colors.secondary}
+ramp-capacity-1-foreground = ${colors.primary}
 ramp-capacity-2 = 
-ramp-capacity-2-foreground = ${colors.secondary}
+ramp-capacity-2-foreground = ${colors.primary}
 ramp-capacity-3 = 
-ramp-capacity-3-foreground = ${colors.secondary}
+ramp-capacity-3-foreground = ${colors.primary}
 ramp-capacity-4 = 
 ramp-capacity-4-foreground = ${colors.primary}
 
-bar-capacity-width = 10
-bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
-bar-capacity-fill = █
-bar-capacity-fill-foreground = #ddffffff
-bar-capacity-fill-font = 3
-bar-capacity-empty = █
-bar-capacity-empty-font = 3
-bar-capacity-empty-foreground = #44ffffff
-
+; Animação de carregamento
 animation-charging-0 = 
 animation-charging-0-foreground = ${colors.primary}
 animation-charging-1 = 
@@ -772,6 +783,13 @@ animation-charging-4 = 
 animation-charging-4-foreground = ${colors.primary}
 animation-charging-framerate = 750
 
+; Animação para estado crítico
+animation-low-0 = 
+animation-low-0-foreground = ${colors.primary}
+animation-low-1 = 
+animation-low-1-foreground = ${colors.primary}
+animation-low-framerate = 300
+
 ;==========================================================;
-;		       	                  FIM                           ;
-;==========================================================;
+;		       	              FIM                               ;
+;==========================================================; 
