@@ -9,9 +9,8 @@
 ;                       __/ |                 
 ;                      |___/                  
 ; By: @soarespaullo
-;==========================================================;
-;		                        CORES                           ;
-;==========================================================;
+;
+;====================   CORES     ====================;
 
 [colors]
 background = #2E3440
@@ -25,9 +24,7 @@ secondary = #E60053
 
 alert = #bd2c40
 
-;==========================================================;
-;		                       BARRA TOP                        ;
-;==========================================================;
+;====================   BARRA TOP     ====================;
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -54,9 +51,7 @@ padding-right = 1
 module-margin-left = 2
 module-margin-right = 2
 
-;==========================================================;
-; 		                 FONTS BAR TOP			                      ;	
-;==========================================================;
+;====================   FONTS BAR TOP     ====================;
 
 ; fc-match -s | grep -i Roboto / fc-list | grep -i Roboto 
 ; fc-cache -fv
@@ -65,24 +60,18 @@ font-0 = "Roboto:size=9:weight=bold;2"
 font-1 = "Poppins:style=Regular:pixelsize=10;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
-;==========================================================;
-;		                 SEPARADOR BAR TOP                      ;
-;==========================================================;
+;====================   SEPARADOR BAR TOP     ====================;
 
 separator = |
 ;separator = /
 
-;==========================================================;
-;		                MÓDULOS BAR TOP                         ;
-;==========================================================;
+;====================   MÓDULOS BAR TOP     ====================;
 
 modules-left = linux mpd 
 modules-center = xwindow 
 modules-right = pulse calendar date rede powermenu
 
-;==========================================================;
-;		                   OPTIONS IGNORE		                 	   ;	
-;==========================================================;
+;====================   OPTIONS IGNORE     ====================;
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -97,10 +86,8 @@ modules-right = pulse calendar date rede powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-
-;==========================================================;
-;		                    BARRA BOTTOM                        ;
-;==========================================================;
+         
+;====================   BARRA BOTTOM     ====================;
 
 [bar/bottom]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -129,9 +116,7 @@ padding-right = 2
 module-margin-left = 2
 module-margin-right = 2
 
-;==========================================================;
-;		                 FONTS BAR BOTTOM   	                   ;	
-;==========================================================;
+;====================   FONTS BAR BOTTOM     ====================;
 
 ; fc-match -s | grep -i Roboto / fc-list | grep -i Roboto 
 ; fc-cache -fv
@@ -140,24 +125,18 @@ font-0 = "Roboto:size=9:weight=bold;2"
 font-1 = "Poppins:style=Regular:pixelsize=10;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 
-;==========================================================;
-;		                   SEPARADOR BAR TOP                    ;
-;==========================================================;
+;====================   SEPARADOR BAR TOP     ====================;
 
 separator = |
 ;separator = /
 
-;==========================================================;
-;		                  MÓDULOS BAR BOTTOM                    ;
-;==========================================================;
+;====================   MÓDULOS BAR BOTTOM     ====================;
 
 modules-left = i3 
 modules-center = memory cpu filesystem filesystem2 temperature
 modules-right = xkeyboard pacman-updates aur-updates lixo
 
-;==========================================================;
-;		                	TRAY BAR BOTTOM                        ;
-;==========================================================;
+;====================   TRAY BAR BOTTOM     ====================;
 
 tray-position = right
 tray-detached = false
@@ -172,9 +151,7 @@ tray-offset-y = 0
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-;==========================================================;
-;		                   MÓDULO XWINDOW                       ;
-;==========================================================;
+;====================   MÓDULO XWINDOW     ====================;
 
 [module/xwindow]
 type = internal/xwindow
@@ -193,9 +170,7 @@ label-empty = Desktop
 label-empty-foreground = ${colors.foreground}
 label-empty-underline = ${colors.foreground}
 
-;==========================================================;
-;		                 MÓDULO DO TECLADO		                    ;
-;==========================================================;
+;====================   MÓDULO DO TECLADO     ====================;
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -212,9 +187,7 @@ label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-underline = #D8DEE9
 
-;==========================================================;
-;	                 MÓDULO FILESISTEM - HOME                ;
-;==========================================================;
+;====================   MÓDULO FILESISTEM - HOME     ====================;
 
 [module/filesystem]
 type = internal/fs
@@ -236,9 +209,7 @@ label-mounted = %used%
 label-unmounted = %mountpoint% Não montado
 ;label-unmounted-foreground = ${colors.foreground-alt}
 
-;==========================================================;
-;		              MÓDULO FILESISTEM - ROOT		                ;	
-;==========================================================;
+;====================   MÓDULO FILESISTEM - ROOT     ====================;
 
 [module/filesystem2]
 type = internal/fs
@@ -262,9 +233,7 @@ label-mounted =  %used%
 label-unmounted = %mountpoint% Não montado
 ;label-unmounted-foreground = ${colors.foreground-alt}
 
-;==========================================================;
-;		                 MÓDULO I3-GAPS 			                     ;
-;==========================================================;
+;====================   MÓDULO I3-GAPS     ====================;
 
 [module/i3]
 type = internal/i3
@@ -321,17 +290,13 @@ label-urgent-background = ${colors.alert}
 label-urgent-underline = ${colors.foreground}
 label-urgent-padding = 2
 
-;==========================================================;
-;	           SEPARADOR WS (WORKSAPCES) i3WM                ;
-;==========================================================;
+;====================   SEPARADOR WS (WORKSAPCES) i3WM     ====================;
 
 label-separator = |
 label-separator-padding = 2
 label-separator-foreground = ${colors.foreground}
 
-;==========================================================;
-;		                 	MÓDULO MPD			                         ;
-;==========================================================;
+;====================   MÓDULO MPD     ====================;
 
 [module/mpd]
 type = internal/mpd
@@ -363,9 +328,7 @@ bar-progress-empty = "─"
 
 label-song = %{F#FFFFFF} %{F-}%title%
 
-;==========================================================;
-;		                  MÓDULO XBACKLIGHT		               	   ;	
-;==========================================================;
+;====================   MÓDULO XBACKLIGHT     ====================;
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -384,18 +347,14 @@ bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
-;==========================================================;
-;	               MÓDULO XBACKLIGHT - ACPI                  ;
-;==========================================================;
+;====================   MÓDULO XBACKLIGHT - ACPI     ====================;
 
 [module/backlight-acpi]
 inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
 
-;==========================================================;
-;		                    MÓDULO CPU                     		   ;
-;==========================================================;
+;====================   MÓDULO CPU     ====================;
 
 [module/cpu]
 type = internal/cpu
@@ -405,9 +364,7 @@ format-prefix-foreground = ${colors.primary}
 format-underline = #D8DEE9
 label = %percentage%%
 
-;==========================================================;
-; 	    	                 MÓDULO MEMORY         	           ;		
-;==========================================================;
+;====================   MÓDULO MEMORY     ====================;
 
 [module/memory]
 type = internal/memory
@@ -417,9 +374,7 @@ format-prefix-foreground = ${colors.primary}
 format-underline = #D8DEE9
 label = %percentage_used%%
 
-;==========================================================;
-; 		                  MÓDULO DATE		                        ;
-;==========================================================;
+;====================   MÓDULO DATE     ====================;
 
 [module/date]
 type = internal/date
@@ -434,9 +389,7 @@ format-underline = #D8DEE9
 
 label = %date% %time%
 
-;==========================================================;
-;  	                  MÓDULO PULSEAUDIO	                   ;
-;==========================================================;
+;====================   MÓDULO PULSEAUDIO     ====================;
 
 [module/pulse]
 type = internal/pulseaudio
@@ -453,17 +406,15 @@ label-muted-foreground = ${colors.alert}
 format-muted-underline = ${colors.alert}
 
 click-middle = pavucontrol
-
-;==========================================================;
-;     		           MÓDULO TEMPERADURA - CPU            	   ;		
-;==========================================================;
+	
+;====================   MÓDULO TEMPERADURA - CPU     ====================;
 
 [module/temperature]
 type = internal/temperature
 interval = 4
-;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+
 thermal-zone = 0
 warn-temperature = 60
 
@@ -489,9 +440,7 @@ ramp-4-foreground = #f84f0b
 ramp-5 = 
 ramp-5-foreground = #ff0000
 
-;==========================================================;
-;		                     MÓDULO POWEMENU	                   ;	
-;==========================================================;
+;====================   MÓDULO POWEMENU     ====================;
 
 [module/powermenu]
 type = custom/menu
@@ -525,9 +474,7 @@ menu-3-0-exec = systemctl reboot
 menu-4-0 = "Desligar AGORA!"
 menu-4-0-exec = systemctl poweroff
 
-;==========================================================;
-;		                  	IGNORE OPTIONS          		       	   ;
-;==========================================================;
+;====================   IGNORE OPTIONS     ====================;
 
 [settings]
 screenchange-reload = true
@@ -543,9 +490,7 @@ margin-bottom = 5
 
 ; vim:ft=dosini
 
-;==========================================================;
-;		                  	PACMAN UPDATES			                    ;
-;==========================================================;
+;====================   PACMAN UPDATES    ====================;
 
 ;sudo  pacman -S pacman-contrib
 
@@ -570,10 +515,8 @@ interval = 600
 format-prefix = "  "
 format-prefix-foreground = ${colors.primary}
 format-underline = #D8DEE9
- 
-;==========================================================;
-;		                   	 AUR - UPDATES			                   ;
-;==========================================================;
+
+;====================   AUR - UPDATES    ====================;
 
 [module/aur-updates]
 type = custom/script
@@ -587,9 +530,7 @@ format-prefix = "  "
 format-prefix-foreground = ${colors.primary}
 format-underline = #D8DEE9
 
-;==========================================================;
-;		         MÓDULO LINUX                      ;
-;==========================================================;
+;====================   MÓDULO LINUX    ====================;
 
 [module/linux]
 type = custom/text
@@ -598,9 +539,7 @@ content-underline = #D8DEE9
 click-right = xdg-open https://wiki.archlinux.org/
 click-left = rofi -show drun -theme ~/.config/rofi/arch.rasi &
 
-;==========================================================;
-;		                   MÓDULO PACMAN                        ;
-;==========================================================;
+;====================   MÓDULO PACMAN    ====================;
 
 [module/pacman] 
 type = custom/script
@@ -610,9 +549,7 @@ format-prefix = "   "
 format-prefix-foreground = ${colors.primary}
 format-underline = #D8DEE9
 
-;==========================================================;
-;		                    MÓDULO LIXO                         ;
-;==========================================================;
+;====================   MÓDULO LIXO    ====================;
 
 [module/lixo]
 type = custom/script
@@ -623,9 +560,7 @@ click-right = notify-send -i "/usr/share/icons/Papirus/32x32/apps/trashindicator
 label = "%{F#FFFFFF}  %{F-} %output:0:37:...%"
 format-underline = #D8DEE9
 
-;==========================================================;
-;		                 MÓDULO CALENDÁRIO                      ;
-;==========================================================;
+;====================   MÓDULO CALENDÁRIO    ====================;
 
 ; Dependências - yad, xdotool
 
@@ -637,9 +572,7 @@ label = "%{F#FFFFFF}  %{F-} %output:0:36:...%"
 click-left = ~/.config/polybar/scripts/popup-calendar.sh --popup &
 format-underline = #D8DEE9
 
-;==========================================================;
-;		                   MÓDULO BLUETOOTH                     ;
-;==========================================================;
+;====================   MÓDULO BLUETOOTH   ====================;
 
 [module/bluetooth]
 type = custom/text
@@ -649,9 +582,7 @@ click-left = exec blueman-applet &
 click-right = exec blueman-manager &
 ;content-underline = #D8DEE9
 
-;==========================================================;
-;		                    MÓDULO WI-FI                        ;
-;==========================================================;
+;====================   MÓDULO WI-FI   ====================;
 
 [module/wifi]
 type = custom/text
@@ -660,9 +591,7 @@ content-foreground = ${colors.foreground}
 ;content-underline = #D8DEE9
 click-left = exec i3-sensible-terminal -e nmtui  &
 
-;==========================================================;
-;		                     MÓDULO REDE                        ;
-;==========================================================;
+;====================   MÓDULO REDE   ====================;
 
 [module/rede]
 type = internal/network
@@ -695,9 +624,7 @@ label-connected-underline = #D8DEE9
 label-disconnected = offline
 label-packetloss = los
 
-;==========================================================;
-;		                    MÓDULO WIRELESS                     ;
-;==========================================================;
+;====================   MÓDULO WIRELESS   ====================;
 
 [module/wireless]
 type = internal/network
@@ -714,9 +641,7 @@ label-disconnected-foreground = ${colors.principal}
 format-connected-prefix-foreground = ${colors.secondary}
 format-disconnected-prefix-foreground = ${colors.secondary}
 
-;==========================================================;
-;		                    MÓDULO BATERIA    		                ;
-;==========================================================;
+;====================   MÓDULO BATERIA   ====================;
 
 [module/battery]
 type = internal/battery
@@ -790,4 +715,4 @@ animation-low-1 = 
 animation-low-1-foreground = ${colors.primary}
 animation-low-framerate = 300
 
-;===========   FIM   ===========;
+;====================   FIM   ====================;
