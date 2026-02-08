@@ -1,6 +1,6 @@
-[![Meu Telegram](https://img.shields.io/badge/Meu-Telegram-red)](https://t.me/k4k4rot0)
-![GitHub repo size](https://img.shields.io/github/repo-size/k4k4rot0/dotfiles?label=Repositorio)
-![GitHub contributors](https://img.shields.io/github/contributors/k4k4rot0/config?label=contribuidores)
+[![Meu Telegram](https://img.shields.io/badge/Meu-Telegram-red)](https://t.me/soarespaullo)
+![GitHub repo size](https://img.shields.io/github/repo-size/soarespaullo/dotfiles?label=Repositorio)
+![GitHub contributors](https://img.shields.io/github/contributors/soarespaullo/config?label=contribuidores)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 ![screenshot](/screenshots/dotfiles.png)
