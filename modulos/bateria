@@ -1,0 +1,54 @@
+[module/battery]
+type = internal/battery
+full-at = 98
+
+battery = BAT0
+adapter = ADP0
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.primary}
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${colors.primary}
+format-full = <ramp-capacity> <label-full>
+format-full-underline = ${colors.primary}
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+label-charging-padding = 0
+label-discharging-padding = 0
+
+; Ícones com gradiente (10 níveis, de 10% em 10%)
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${colors.alert}       
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = ${colors.secondary}   
+ramp-capacity-2 = 
+ramp-capacity-2-foreground = #ff8000               
+ramp-capacity-3 = 
+ramp-capacity-3-foreground = #ffaa00               
+ramp-capacity-4 = 
+ramp-capacity-4-foreground = #ffd500               
+ramp-capacity-5 = 
+ramp-capacity-5-foreground = #e4fc5e               
+ramp-capacity-6 = 
+ramp-capacity-6-foreground = #a4fc5e               
+ramp-capacity-7 = 
+ramp-capacity-7-foreground = #6ffc5e               
+ramp-capacity-8 = 
+ramp-capacity-8-foreground = ${colors.primary}     
+ramp-capacity-9 = 
+ramp-capacity-9-foreground = #00ff00               
+
+; Animação de carregamento (também com gradiente)
+animation-charging-0 = 
+animation-charging-0-foreground = ${colors.alert}
+animation-charging-1 = 
+animation-charging-1-foreground = ${colors.secondary}
+animation-charging-2 = 
+animation-charging-2-foreground = #ffd500
+animation-charging-3 = 
+animation-charging-3-foreground = #6ffc5e
+animation-charging-4 = 
+animation-charging-4-foreground = #00ff00
+animation-charging-framerate = 750
