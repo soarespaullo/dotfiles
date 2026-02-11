@@ -549,7 +549,9 @@ exec --no-startup-id notify-send -i "/usr/share/icons/Papirus/32x32/apps/user_ic
 # Xrandr - Brilho de Tela
 # exec --no-startup-id xrandr --output DP1 --brightness 0.7  
 
+# Polkit
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 ####################################################################
-#                         	FIM                                #
+#                              	FIM                                #
 ####################################################################
