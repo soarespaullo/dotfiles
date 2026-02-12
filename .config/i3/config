@@ -407,6 +407,9 @@ for_window [class="System-config-printer"] floating enable, resize set 740 580, 
 # Nvidia-settings
 for_window [class="Nvidia-settings"] floating enable, resize set 1080 720, move position center
 
+# Virt-manager
+for_window [class="Virt-manager"] floating enable, resize set 1080 720, move position center
+
 
 ####################################################################
 #                           R E S I Z E                            #
