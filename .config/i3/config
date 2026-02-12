@@ -555,6 +555,10 @@ exec --no-startup-id notify-send -i "/usr/share/icons/Papirus/32x32/apps/user_ic
 # Polkit
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
+# Inicia nm-applet (ícone vai para o tray) 
+exec --no-startup-id nm-applet
+
+
 ####################################################################
 #                              	FIM                                #
 ####################################################################
