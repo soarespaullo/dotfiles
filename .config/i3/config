@@ -558,6 +558,10 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # Inicia nm-applet (ícone vai para o tray) 
 exec --no-startup-id nm-applet
 
+# Bloqueio automático com xss-lock
+exec --no-startup-id xss-lock --transfer-sleep-lock -- $HOME/.local/bin/lockscreen.sh
+exec --no-startup-id xset s 600  # 600 segundos = 10 minutos
+
 
 ####################################################################
 #                              	FIM                                #
