@@ -69,7 +69,7 @@ separator = |
 
 modules-left = linux mpd 
 modules-center = xwindow 
-modules-right = pulse calendar date rede powermenu
+modules-right = bluetooth pulse calendar date wireless battery powermenu
 
 ;====================   OPTIONS IGNORE     ====================;
 
@@ -304,6 +304,11 @@ type = internal/mpd
 ; https://mpd.readthedocs.io/en/stable/user.html
 
 format-online = <label-song> <icon-prev> <toggle> <icon-next> <label-time> <icon-stop>
+format-online-underline = #D8DEE9
+format-offline = <label-offline>
+format-offline-underline = #D8DEE9
+format-stopped = <icon-play> Player
+format-stopped-underline = #D8DEE9
 
 ; Aplica-se apenas se <icon-X> for usado.
 icon-prev = 
@@ -327,6 +332,7 @@ bar-progress-fill-foreground = ${colors.alert}
 bar-progress-empty = "─"
 
 label-song = %{F#FFFFFF} %{F-}%title%
+label-offline =  mpd Offline
 
 ;====================   MÓDULO XBACKLIGHT     ====================;
 
@@ -580,7 +586,7 @@ content = "  "
 content-foreground = ${colors.foreground}
 click-left = exec blueman-applet &
 click-right = exec blueman-manager &
-;content-underline = #D8DEE9
+content-underline = #D8DEE9
 
 ;====================   MÓDULO WI-FI   ====================;
 
@@ -636,10 +642,12 @@ label-connected = %essid% %downspeed:%
 format-disconnected-prefix = " "
 label-disconnected = offline
 
-label-connected-foreground = ${colors.principal}
-label-disconnected-foreground = ${colors.principal}
-format-connected-prefix-foreground = ${colors.secondary}
-format-disconnected-prefix-foreground = ${colors.secondary}
+label-connected-foreground = ${colors.primary}
+label-disconnected-foreground = ${colors.primary}
+format-connected-prefix-foreground = ${colors.primary}
+format-connected-underline = #D8DEE9
+format-disconnected-prefix-foreground = ${colors.primary}
+format-disconnected-underline = #D8DEE9
 
 ;====================   MÓDULO BATERIA   ====================;
 
