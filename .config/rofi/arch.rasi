@@ -3,6 +3,7 @@ configuration {
 	icon-theme: "Papirus-Dark";
 	display-drun: "";
 	font: "Ubuntu 11";
+    run-command: "/home/soarespaullo/.local/bin/rofi-run.sh {cmd}";
 }
 
 @theme "~/.config/rofi/themes/arch.rasi"
