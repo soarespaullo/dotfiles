@@ -410,6 +410,12 @@ for_window [class="Nvidia-settings"] floating enable, resize set 1080 720, move 
 # Virt-manager
 for_window [class="Virt-manager"] floating enable, resize set 1080 720, move position center
 
+# File Roller
+for_window [class="org.gnome.FileRoller"] floating enable, resize set 740 580, move position center
+
+# Remmina
+for_window [class="org.remmina.Remmina"] floating enable, resize set 1080 720, move position center
+
 
 ####################################################################
 #                           R E S I Z E                            #
