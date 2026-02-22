@@ -225,6 +225,9 @@ for_window [class="(kitty)"] move to workspace $ws2
 # Telegram	ws=3
 for_window [class="(Telegram)"] move to workspace $ws3 focus
 
+# Gajim
+for_window [class="gajim"] move to workspace $ws3 focus
+
 # Thunar	ws=4
 for_window [class="Thunar"] move to workspace $ws4 focus
 
